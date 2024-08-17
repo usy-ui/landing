@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
@@ -5,7 +7,7 @@ import StyledComponentsRegistry from "@/lib/styled.registry";
 
 import "@usy-ui/themes/dist/styles.css";
 import { Header } from "./_layout/header";
-import { StyledAppContainer } from "./layout.styled";
+import { Main } from "./_layout/main";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,11 +19,11 @@ export const metadata: Metadata = {
   description: "A lightweight UI components for ReactJS and NextJS",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type RootLayoutProps = {
   children: React.ReactNode;
-}>) {
+};
+
+const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -29,12 +31,12 @@ export default function RootLayout({
       </head>
       <body className={poppins.className}>
         <StyledComponentsRegistry>
-          <StyledAppContainer>
-            <Header />
-            {children}
-          </StyledAppContainer>
+          <Header />
+          <Main>{children}</Main>
         </StyledComponentsRegistry>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

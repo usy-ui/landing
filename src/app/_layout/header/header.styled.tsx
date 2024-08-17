@@ -7,14 +7,24 @@ import {
   usySpacing,
 } from "@usy-ui/themes";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { MAX_WIDTH, HEADER_HEIGHT } from "@/constants/layout.constants";
 
 export const HeaderContainer = styled.header`
   width: 100%;
+  height: ${HEADER_HEIGHT};
+  max-width: ${MAX_WIDTH};
+  max-height: ${HEADER_HEIGHT};
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   padding: ${usySpacing.px10} ${usySpacing.px20};
+  backdrop-filter: blur(4px);
 `;
 
 export const LogoAndNavContainer = styled.div`
@@ -38,12 +48,16 @@ export const Navigation = styled.nav`
   margin-left: ${usySpacing.px32};
 `;
 
-export const NavItem = styled(Link)`
+export const NavItem = styled(Link)<{ $isActive: boolean }>`
   margin: 0 ${usySpacing.px16};
   font-size: ${usyFontSize.small};
-  font-weight: ${usyFontWeight.semibold};
-  color: ${usyColor.dark1};
+
   cursor: pointer;
+
+  ${({ $isActive }) => css`
+    font-weight: ${$isActive ? usyFontWeight.semibold : usyFontWeight.normal};
+    color: ${$isActive ? usyColor.dark4 : usyColor.dark1};
+  `}
 `;
 
 export const SearchDocsInput = styled.div`

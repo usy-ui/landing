@@ -1,9 +1,9 @@
 "use client";
 import { redirect, usePathname } from "next/navigation";
 
-const Docs = () => {
+const Overview = () => {
   const pathname = usePathname();
-  redirect(`${pathname}/overview`);
+  redirect(`${pathname}/introduction`);
 };
 
-export default Docs;
+export default Overview;

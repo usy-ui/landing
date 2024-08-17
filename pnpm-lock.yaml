@@ -376,7 +376,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
   '@usy-ui/themes@file:../themes/usy-ui-themes-1.0.0.tgz':
-    resolution: {integrity: sha512-uWFnIb3rykFOG/7fPsZ79PZHBfXkwLSG2hc/SnPLP+ymmz7zLnsbRRNlUXgQ/4fFyYz5QORPpUkz700jyyqT4Q==, tarball: file:../themes/usy-ui-themes-1.0.0.tgz}
+    resolution: {integrity: sha512-lYP3Z6xlmpTnHnNK9TlgEuhgrrbBW+mbAnU8fhZNO04/uOsaZN1CxanDb8l5StK0kBFOkgiACg9p3lAe+weUBA==, tarball: file:../themes/usy-ui-themes-1.0.0.tgz}
     version: 1.0.0
     peerDependencies:
       '@types/react': '*'

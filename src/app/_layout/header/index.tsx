@@ -1,12 +1,10 @@
-import {
-  BrandGithubIcon,
-  Flex,
-  Input,
-  SunIcon,
-  usySpacing,
-} from "@usy-ui/themes";
+"use client";
+import { useMemo } from "react";
+
+import { BrandGithubIcon, SunIcon } from "@usy-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   HeaderContainer,
@@ -18,6 +16,37 @@ import {
 } from "./header.styled";
 
 export const Header = () => {
+  const pathname = usePathname();
+  const routing = useMemo(() => {
+    return [
+      {
+        url: "/docs",
+        label: "Docs",
+        isActive: pathname.startsWith("/docs"),
+      },
+      {
+        url: "/playground",
+        label: "Playground",
+        isActive: pathname.startsWith("/playground"),
+      },
+      {
+        url: "/use-cases",
+        label: "Use Cases",
+        isActive: pathname.startsWith("/use-cases"),
+      },
+      {
+        url: "/icons",
+        label: "Icons",
+        isActive: pathname.startsWith("/icons"),
+      },
+      {
+        url: "/colors",
+        label: "Colors",
+        isActive: pathname.startsWith("/colors"),
+      },
+    ];
+  }, [pathname]);
+
   const renderLogoAndNav = () => {
     return (
       <LogoAndNavContainer>
@@ -25,12 +54,11 @@ export const Header = () => {
           <Image width={40} height={40} src="/favicon.svg" alt="usy-ui" />
         </Link>
         <Navigation>
-          <NavItem href="/docs">Docs</NavItem>
-          <NavItem href="/components">Components</NavItem>
-          <NavItem href="/playground">Playground</NavItem>
-          <NavItem href="/use-cases">Use Cases</NavItem>
-          <NavItem href="/icons">Icons</NavItem>
-          <NavItem href="/colors">Colors</NavItem>
+          {routing.map(({ url, label, isActive }) => (
+            <NavItem key={url} href={url} $isActive={isActive}>
+              {label}
+            </NavItem>
+          ))}
         </Navigation>
       </LogoAndNavContainer>
     );
@@ -40,7 +68,9 @@ export const Header = () => {
     return (
       <SearchDocsAndLinksContainer>
         <SearchDocsInput>Search documents...</SearchDocsInput>
-        <BrandGithubIcon width="24px" height="24px" />
+        <Link href="https://github.com/usy-ui/themes" target="_blank">
+          <BrandGithubIcon width="24px" height="24px" />
+        </Link>
         <SunIcon width="24px" height="24px" />
       </SearchDocsAndLinksContainer>
     );
