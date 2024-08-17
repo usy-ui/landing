@@ -1,8 +1,5 @@
-"use client";
-import { HomeWrapper } from "./page.styled";
-
 const Home = () => {
-  return <HomeWrapper>Home</HomeWrapper>;
+  return <div />;
 };
 
 export default Home;

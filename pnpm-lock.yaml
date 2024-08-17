@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@usy-ui/themes':
-        specifier: ^1.0.0
-        version: 1.0.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ../themes/usy-ui-themes-1.0.0.tgz
+        version: file:../themes/usy-ui-themes-1.0.0.tgz(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -375,8 +375,9 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@usy-ui/themes@1.0.0':
-    resolution: {integrity: sha512-m1XdKwDpj+Xp8BMnlFNGrsLr/kBKaa7HQOnWHXhKmbOPhsLpUnTuyTafNdSiP0dd+cgjv2qvHUnNs7XuLSNWrA==}
+  '@usy-ui/themes@file:../themes/usy-ui-themes-1.0.0.tgz':
+    resolution: {integrity: sha512-uWFnIb3rykFOG/7fPsZ79PZHBfXkwLSG2hc/SnPLP+ymmz7zLnsbRRNlUXgQ/4fFyYz5QORPpUkz700jyyqT4Q==, tarball: file:../themes/usy-ui-themes-1.0.0.tgz}
+    version: 1.0.0
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
@@ -2297,7 +2298,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@usy-ui/themes@1.0.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@usy-ui/themes@file:../themes/usy-ui-themes-1.0.0.tgz(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
