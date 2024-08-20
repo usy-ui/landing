@@ -1,10 +1,10 @@
 "use client";
 import { useMemo } from "react";
 
-import { BrandGithubIcon, SunIcon } from "@usy-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BrandGithubIcon, SunIcon } from "usy-ui";
 
 import {
   HeaderContainer,

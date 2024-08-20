@@ -1,16 +1,16 @@
 "use client";
 import { FC, ReactNode, useMemo } from "react";
 
-import { Flex, Scrollable } from "@usy-ui/themes";
 import { usePathname } from "next/navigation";
-
-import { HEADER_HEIGHT, MAIN_PADDING_TOP } from "@/constants/layout.constants";
+import { Flex } from "usy-ui";
 
 import { MenuHierarchy, MenuItemType } from "./constants";
 import {
   DocsContainer,
+  MenuHeading,
   MenuHierarchyContainer,
   MenuItem,
+  MenuScrollableContainer,
 } from "./layout.styled";
 
 type DocsLayoutProps = {
@@ -35,11 +35,14 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
 
   const renderMenuHierarchy = () => {
     const itemComponents = flattenItems.map((item) => {
+      if ((item.items || []).length > 0) {
+        return <MenuHeading key={item.id}>{item.label}</MenuHeading>;
+      }
+
       return (
         <MenuItem
           key={item.id}
           href={item.url || ""}
-          $isHighligh={(item.items || []).length > 0}
           $isActivated={pathname.endsWith(item.id)}
         >
           {item.label}
@@ -47,20 +50,25 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
       );
     });
 
-    return <MenuHierarchyContainer>{itemComponents}</MenuHierarchyContainer>;
+    return (
+      <MenuScrollableContainer>
+        <MenuHierarchyContainer>{itemComponents}</MenuHierarchyContainer>
+      </MenuScrollableContainer>
+    );
+  };
+
+  const renderChildren = () => {
+    return (
+      <Flex direction="column" grow={1}>
+        {children}
+      </Flex>
+    );
   };
 
   return (
     <DocsContainer>
-      <Scrollable
-        widthProps={{ width: "300px" }}
-        heightProps={{
-          maxHeight: `calc(100vh - ${HEADER_HEIGHT} - ${MAIN_PADDING_TOP} - 40px)`,
-        }}
-      >
-        {renderMenuHierarchy()}
-      </Scrollable>
-      <Flex grow={1}>{children}</Flex>
+      {renderMenuHierarchy()}
+      {renderChildren()}
     </DocsContainer>
   );
 };

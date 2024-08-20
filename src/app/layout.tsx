@@ -5,7 +5,7 @@ import { Poppins } from "next/font/google";
 
 import StyledComponentsRegistry from "@/lib/styled.registry";
 
-import "@usy-ui/themes/dist/styles.css";
+import "usy-ui/dist/styles.css";
 import { Header } from "./_layout/header";
 import { Main } from "./_layout/main";
 

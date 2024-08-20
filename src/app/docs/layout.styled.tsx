@@ -1,16 +1,29 @@
 "use client";
+import Link from "next/link";
+import styled, { css } from "styled-components";
 import {
+  Scrollable,
   usyColor,
   usyFontSize,
   usyFontWeight,
   usySpacing,
-} from "@usy-ui/themes";
-import Link from "next/link";
-import styled, { css } from "styled-components";
+} from "usy-ui";
 
-export const DocsContainer = styled.section`
+import { HEADER_HEIGHT, MAIN_PADDING_TOP } from "@/constants/layout.constants";
+
+export const DocsContainer = styled.div`
   display: flex;
   gap: ${usySpacing.px32};
+`;
+
+/**
+ * Menu
+ */
+
+export const MenuScrollableContainer = styled(Scrollable)`
+  width: 100%;
+  max-width: 260px;
+  max-height: calc(100vh - ${HEADER_HEIGHT} - ${MAIN_PADDING_TOP} - 40px);
 `;
 
 export const MenuHierarchyContainer = styled.aside`
@@ -18,8 +31,15 @@ export const MenuHierarchyContainer = styled.aside`
   flex-direction: column;
 `;
 
+export const MenuHeading = styled.h2`
+  color: ${usyColor.dark4};
+  font-size: ${usyFontSize.small};
+  font-weight: ${usyFontWeight.semibold};
+  padding: ${usySpacing.px4} ${usySpacing.px12};
+  margin: ${usySpacing.px28} 0 0;
+`;
+
 export const MenuItem = styled(Link)<{
-  $isHighligh: boolean;
   $isActivated: boolean;
 }>`
   width: 160px;
@@ -33,24 +53,15 @@ export const MenuItem = styled(Link)<{
   border-top-right-radius: ${usySpacing.px10};
   border-bottom-right-radius: ${usySpacing.px10};
 
-  ${({ $isHighligh, $isActivated }) =>
-    $isHighligh &&
-    !$isActivated &&
-    css`
-      margin-top: ${usySpacing.px28};
-      font-weight: ${usyFontWeight.medium};
-      color: ${usyColor.dark4};
-    `}
-
   ${({ $isActivated }) =>
     $isActivated &&
     css`
-      background-color: ${usyColor.primary};
-      color: ${usyColor.white};
+      font-weight: ${usyFontWeight.semibold};
+      text-decoration: none !important;
+      color: ${usyColor.primary};
     `}
 
   &:hover {
-    background-color: ${usyColor.primary};
-    color: ${usyColor.white};
+    text-decoration: underline;
   }
 `;

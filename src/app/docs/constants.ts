@@ -49,11 +49,25 @@ const ComponentMenu: MenuItemType = {
   ],
 };
 
+const VariablesMenu: MenuItemType = {
+  id: "variables",
+  label: "Variables",
+  items: [
+    { id: "color", label: "Color" },
+    { id: "element", label: "Element" },
+    { id: "font-size", label: "Font size" },
+    { id: "font-weight", label: "Font weight" },
+    { id: "layout", label: "Layout" },
+    { id: "spacing", label: "Spacing" },
+    { id: "z-index", label: "Z-index" },
+  ],
+};
+
 const UtilitiesMenu: MenuItemType = {
   id: "utilities",
   label: "Utilities",
   items: [
-    { id: "helpers", label: "Helpers" },
+    { id: "formatting", label: "Formatting" },
     { id: "helpers", label: "Helpers" },
   ],
 };
@@ -62,5 +76,6 @@ export const MenuHierarchy = [
   OverviewMenu,
   LayoutMenu,
   ComponentMenu,
+  VariablesMenu,
   UtilitiesMenu,
 ];
