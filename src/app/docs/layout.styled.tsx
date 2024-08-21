@@ -31,12 +31,12 @@ export const MenuHierarchyContainer = styled.aside`
   flex-direction: column;
 `;
 
-export const MenuHeading = styled.h2`
+export const MenuHeading = styled.h3`
   color: ${usyColor.dark4};
   font-size: ${usyFontSize.small};
   font-weight: ${usyFontWeight.semibold};
   padding: ${usySpacing.px4} ${usySpacing.px12};
-  margin: ${usySpacing.px28} 0 0;
+  margin: ${usySpacing.px20} 0 0;
 `;
 
 export const MenuItem = styled(Link)<{

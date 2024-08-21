@@ -14,6 +14,7 @@
     "usy-ui": "../themes/usy-ui-1.0.0.tgz",
     "next": "14.2.5",
     "react": "^18",
+    "react-code-blocks": "^0.1.6",
     "react-dom": "^18"
   },
   "devDependencies": {

@@ -31,6 +31,7 @@ const ComponentMenu: MenuItemType = {
   id: "components",
   label: "Components",
   items: [
+    { id: "accordion", label: "Accordion" },
     { id: "avatar", label: "Avatar" },
     { id: "badge", label: "Badge" },
     { id: "checkbox", label: "Checkbox" },
@@ -67,6 +68,7 @@ const UtilitiesMenu: MenuItemType = {
   id: "utilities",
   label: "Utilities",
   items: [
+    { id: "typescript", label: "Typescript" },
     { id: "formatting", label: "Formatting" },
     { id: "helpers", label: "Helpers" },
   ],

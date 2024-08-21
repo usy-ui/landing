@@ -1,6 +1,11 @@
 import { FC, ReactNode, useMemo } from "react";
 
-import { ArticleLayout } from "@/components/article-layout";
+import {
+  MainToCItem,
+  SubToCItem,
+  ToCItemType,
+} from "@/components/docs/_constants/table-of-contents";
+import { SpecificationLayout } from "@/components/docs/specification-layout";
 
 type AvatarLayoutProps = {
   children: ReactNode;
@@ -8,20 +13,22 @@ type AvatarLayoutProps = {
 
 const AvatarLayout: FC<AvatarLayoutProps> = ({ children }) => {
   const toCItems = useMemo(
-    () => [
-      {
-        sectionId: "#api-reference",
-        label: "API Reference",
-      },
-      {
-        sectionId: "#radius",
-        label: "Radius",
-      },
-    ],
+    () =>
+      [
+        MainToCItem.overview,
+        MainToCItem.apiReference,
+        MainToCItem.examples,
+        SubToCItem.size,
+        SubToCItem.color,
+        SubToCItem.radius,
+        SubToCItem.fallback,
+      ] as ToCItemType[],
     []
   );
 
-  return <ArticleLayout toCItems={toCItems}>{children}</ArticleLayout>;
+  return (
+    <SpecificationLayout toCItems={toCItems}>{children}</SpecificationLayout>
+  );
 };
 
 export default AvatarLayout;
