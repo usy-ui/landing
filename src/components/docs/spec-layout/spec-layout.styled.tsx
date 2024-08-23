@@ -2,19 +2,19 @@
 import styled, { css } from "styled-components";
 import { usyColor, usyFontSize, usyFontWeight, usySpacing } from "usy-ui";
 
-export const SpecificationLayoutContainer = styled.div`
+export const SpecLayoutContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 `;
 
-export const SpecificationLayoutArticle = styled.article`
+export const SpecLayoutArticle = styled.article`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 `;
 
-export const SpecificationLayoutTableOfContent = styled.aside`
+export const SpecLayoutTableOfContent = styled.aside`
   width: 100%;
   max-width: 300px;
   display: flex;

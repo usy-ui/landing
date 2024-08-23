@@ -5,7 +5,7 @@ import {
   SubToCItem,
   ToCItemType,
 } from "@/components/docs/_constants/table-of-contents";
-import { SpecificationLayout } from "@/components/docs/specification-layout";
+import { SpecLayout } from "@/components/docs/spec-layout";
 
 type AvatarLayoutProps = {
   children: ReactNode;
@@ -26,9 +26,7 @@ const AvatarLayout: FC<AvatarLayoutProps> = ({ children }) => {
     []
   );
 
-  return (
-    <SpecificationLayout toCItems={toCItems}>{children}</SpecificationLayout>
-  );
+  return <SpecLayout toCItems={toCItems}>{children}</SpecLayout>;
 };
 
 export default AvatarLayout;

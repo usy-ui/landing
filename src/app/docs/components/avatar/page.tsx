@@ -1,7 +1,10 @@
 "use client";
 
+import { SpecApiReference } from "@/components/docs/spec-api-reference";
+import { SpecOverview } from "@/components/docs/spec-overview";
+
+import { propsDataRows } from "./avatar.constants";
 // import { avatarUrl } from "@/constants/media.constants";
-import { SpecificationOverview } from "@/components/docs/specification-overview";
 
 const AvatarDoc = () => {
   // const tabs = [
@@ -30,12 +33,16 @@ const AvatarDoc = () => {
 
   return (
     <>
-      <SpecificationOverview
+      <SpecOverview
         compName="Avatar"
         compDescription="An image element with a fallback for representing the user."
         viewSourceUrl="https://github.com/usy-ui/themes/tree/main/src/components/Avatar"
         reportAnIssueUrl="https://github.com/usy-ui/themes/issues/new?title=[Avatar]%20Issue"
         importCommand={`import { Avatar } from "usy-ui"`}
+      />
+      <SpecApiReference
+        description="This component inherits props from the Avatar primitive."
+        dataRows={propsDataRows}
       />
     </>
   );

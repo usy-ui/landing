@@ -11,7 +11,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "usy-ui": "../themes/usy-ui-1.0.0.tgz",
+    "usy-ui": "../themes/usy-ui-1.0.2.tgz",
     "next": "14.2.5",
     "react": "^18",
     "react-code-blocks": "^0.1.6",

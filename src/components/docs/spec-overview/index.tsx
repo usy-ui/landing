@@ -2,9 +2,9 @@ import { FC } from "react";
 
 import { ArrowRightIcon, Copyable, Flex, PanelTitle, usySpacing } from "usy-ui";
 
-import { Link } from "./specification-overview.styled";
+import { Link } from "./spec-overview.styled";
 
-type SpecificationOverviewProps = {
+type SpecOverviewProps = {
   compName: string;
   compDescription: string;
   viewSourceUrl: string;
@@ -12,7 +12,7 @@ type SpecificationOverviewProps = {
   importCommand: string;
 };
 
-export const SpecificationOverview: FC<SpecificationOverviewProps> = ({
+export const SpecOverview: FC<SpecOverviewProps> = ({
   compName,
   compDescription,
   viewSourceUrl,

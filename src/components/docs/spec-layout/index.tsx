@@ -3,30 +3,27 @@ import { FC, ReactNode } from "react";
 import { ToCItemType } from "../_constants/table-of-contents";
 
 import {
-  SpecificationLayoutArticle,
-  SpecificationLayoutContainer,
-  SpecificationLayoutTableOfContent,
+  SpecLayoutArticle,
+  SpecLayoutContainer,
+  SpecLayoutTableOfContent,
   QuickNavHeading,
   SubToCItem,
   ToCItem,
-} from "./specification-layout.styled";
+} from "./spec-layout.styled";
 
-type SpecificationLayoutProps = {
+type SpecLayoutProps = {
   children: ReactNode;
   toCItems?: ToCItemType[];
 };
 
-export const SpecificationLayout: FC<SpecificationLayoutProps> = ({
-  children,
-  toCItems,
-}) => {
+export const SpecLayout: FC<SpecLayoutProps> = ({ children, toCItems }) => {
   const renderTableOfContent = () => {
     if (!toCItems || toCItems?.length === 0) {
       return null;
     }
 
     return (
-      <SpecificationLayoutTableOfContent>
+      <SpecLayoutTableOfContent>
         <QuickNavHeading>Quick nav</QuickNavHeading>
         {toCItems.map((item) => {
           const RenderToCItem = item.hasIndent ? SubToCItem : ToCItem;
@@ -42,14 +39,14 @@ export const SpecificationLayout: FC<SpecificationLayoutProps> = ({
             </RenderToCItem>
           );
         })}
-      </SpecificationLayoutTableOfContent>
+      </SpecLayoutTableOfContent>
     );
   };
 
   return (
-    <SpecificationLayoutContainer>
-      <SpecificationLayoutArticle>{children}</SpecificationLayoutArticle>
+    <SpecLayoutContainer>
+      <SpecLayoutArticle>{children}</SpecLayoutArticle>
       {renderTableOfContent()}
-    </SpecificationLayoutContainer>
+    </SpecLayoutContainer>
   );
 };
