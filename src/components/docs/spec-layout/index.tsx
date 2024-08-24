@@ -1,33 +1,39 @@
 "use client";
 import { FC, ReactNode } from "react";
 
-import { ToCItemType } from "../docs.constants";
+import { QuickNavItemType } from "@/@types/quick-nav";
 
 import {
-  SpecLayoutArticle,
+  SpecLayoutDoc,
   SpecLayoutContainer,
   SpecLayoutTableOfContent,
   QuickNavHeading,
-  SubToCItem,
-  ToCItem,
+  QuickNavMainItemStyled,
+  QuickNavSubItemStyled,
 } from "./spec-layout.styled";
 
 type SpecLayoutProps = {
   children: ReactNode;
-  toCItems?: ToCItemType[];
+  quickNavItems?: QuickNavItemType[];
 };
 
-export const SpecLayout: FC<SpecLayoutProps> = ({ children, toCItems }) => {
+export const SpecLayout: FC<SpecLayoutProps> = ({
+  children,
+  quickNavItems,
+}) => {
   const renderTableOfContent = () => {
-    if (!toCItems || toCItems?.length === 0) {
+    if (!quickNavItems || quickNavItems?.length === 0) {
       return null;
     }
 
     return (
       <SpecLayoutTableOfContent>
         <QuickNavHeading>Quick nav</QuickNavHeading>
-        {toCItems.map((item) => {
-          const RenderToCItem = item.hasIndent ? SubToCItem : ToCItem;
+        {quickNavItems.map((item) => {
+          const RenderQuickNavItemStyled = item.hasIndent
+            ? QuickNavSubItemStyled
+            : QuickNavMainItemStyled;
+
           const scrollIntoView = () => {
             if (!document || !item.sectionId) {
               return;
@@ -39,13 +45,13 @@ export const SpecLayout: FC<SpecLayoutProps> = ({ children, toCItems }) => {
           };
 
           return (
-            <RenderToCItem
+            <RenderQuickNavItemStyled
               key={item.name}
               onClick={scrollIntoView}
               $isHover={Boolean(item.sectionId)}
             >
               {item.name}
-            </RenderToCItem>
+            </RenderQuickNavItemStyled>
           );
         })}
       </SpecLayoutTableOfContent>
@@ -54,7 +60,7 @@ export const SpecLayout: FC<SpecLayoutProps> = ({ children, toCItems }) => {
 
   return (
     <SpecLayoutContainer>
-      <SpecLayoutArticle>{children}</SpecLayoutArticle>
+      <SpecLayoutDoc>{children}</SpecLayoutDoc>
       {renderTableOfContent()}
     </SpecLayoutContainer>
   );

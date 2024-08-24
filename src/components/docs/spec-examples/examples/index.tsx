@@ -12,7 +12,8 @@ import {
   usySpacing,
 } from "usy-ui";
 
-import { SubToCItem, SubToCItemType } from "../../docs.constants";
+import { DocsQuickNavExampleItemConst } from "../../docs.constants";
+import { DocsQuickNavExampleItemUnion } from "../../docs.types";
 
 import { ExampleContainer } from "./example.styled";
 
@@ -22,7 +23,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 type ExampleProps = {
-  type: SubToCItemType;
+  type: DocsQuickNavExampleItemUnion;
   description: string;
   uiPreview: ReactNode;
   code: string;
@@ -34,7 +35,7 @@ export const Example: FC<ExampleProps> = ({
   uiPreview,
   code,
 }) => {
-  const { name, sectionId } = SubToCItem[type];
+  const { name, sectionId } = DocsQuickNavExampleItemConst[type];
   const tabs: TabItemType[] = useMemo(
     () => [
       {

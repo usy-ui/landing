@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CheckCircleIcon, usyColor, usySpacing } from "usy-ui";
+import { CheckCircleIcon, usyColor, usyFontSize, usySpacing } from "usy-ui";
 
 export const SpecApiContainer = styled.section`
   margin-top: ${usySpacing.px56};
@@ -7,7 +7,7 @@ export const SpecApiContainer = styled.section`
 
 export const BadgePropName = styled.span`
   color: ${usyColor.white};
-  font-size: 0.8rem;
+  font-size: ${usyFontSize.small};
   background-color: ${usyColor.primary};
   padding: 0 ${usySpacing.px4};
   border-radius: ${usySpacing.px4};

@@ -7,7 +7,7 @@ export const SpecLayoutContainer = styled.div`
   align-items: flex-start;
 `;
 
-export const SpecLayoutArticle = styled.article`
+export const SpecLayoutDoc = styled.article`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -30,7 +30,7 @@ export const QuickNavHeading = styled.h3`
   margin: 0 0 ${usySpacing.px24} 0;
 `;
 
-export const ToCItem = styled.button<{ $isHover: boolean }>`
+export const QuickNavMainItemStyled = styled.button<{ $isHover: boolean }>`
   font-size: ${usyFontSize.medium};
   color: ${usyColor.dark1};
   background-color: transparent;
@@ -49,6 +49,6 @@ export const ToCItem = styled.button<{ $isHover: boolean }>`
     `}
 `;
 
-export const SubToCItem = styled(ToCItem)`
+export const QuickNavSubItemStyled = styled(QuickNavMainItemStyled)`
   margin-left: ${usySpacing.px16};
 `;

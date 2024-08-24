@@ -24,7 +24,7 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
     return MenuHierarchyConst.reduce((acc, item) => {
       const subItems = (item.items || []).map((subItem) => ({
         ...subItem,
-        url: `/docs/${item.id}/${subItem.id}`,
+        url: `/docs/${item.url}/${subItem.url}`,
       }));
 
       acc.push(item);
@@ -43,7 +43,7 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
         <MenuItemLink
           key={item.id}
           href={item.url || ""}
-          $isActivated={pathname.endsWith(item.id)}
+          $isActivated={pathname.endsWith(item.url)}
         >
           {item.label}
         </MenuItemLink>

@@ -1,3 +1,4 @@
+"use client";
 import { SpecApiPropsRowType } from "@/components/docs/spec-api";
 import { getCommonSpecApiRows } from "@/components/docs/spec-api/spec-api.constants";
 

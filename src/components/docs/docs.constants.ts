@@ -1,11 +1,14 @@
-export type ToCItemType = {
-  name: string;
-  sectionId?: string;
-  hasIndent?: boolean;
-};
+import { QuickNavItemType } from "@/@types/quick-nav";
 
-export type MainToCItemType = "overview" | "apiReference" | "examples";
-export const MainToCItem: Record<MainToCItemType, ToCItemType> = {
+import {
+  DocsQuickNavMainItemUnion,
+  DocsQuickNavExampleItemUnion,
+} from "./docs.types";
+
+export const DocsQuickNavMainItemConst: Record<
+  DocsQuickNavMainItemUnion,
+  QuickNavItemType
+> = {
   overview: {
     name: "Overview",
     sectionId: "#overview",
@@ -19,13 +22,10 @@ export const MainToCItem: Record<MainToCItemType, ToCItemType> = {
   },
 };
 
-export type SubToCItemType =
-  | "variant"
-  | "size"
-  | "color"
-  | "radius"
-  | "fallback";
-export const SubToCItem: Record<SubToCItemType, ToCItemType> = {
+export const DocsQuickNavExampleItemConst: Record<
+  DocsQuickNavExampleItemUnion,
+  QuickNavItemType
+> = {
   variant: {
     name: "Variant",
     sectionId: "variant",

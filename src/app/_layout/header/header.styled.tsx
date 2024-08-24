@@ -68,6 +68,6 @@ export const SearchDocsInput = styled.div`
   color: ${usyColor.dark0};
   border: 1px solid ${usyColor.light3};
   border-radius: ${usySpacing.px10};
-  font-size: 0.8rem;
+  font-size: ${usyFontSize.small};
   padding: 0 ${usySpacing.px10};
 `;
