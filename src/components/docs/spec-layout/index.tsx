@@ -1,6 +1,7 @@
+"use client";
 import { FC, ReactNode } from "react";
 
-import { ToCItemType } from "../_constants/table-of-contents";
+import { ToCItemType } from "../docs.constants";
 
 import {
   SpecLayoutArticle,
@@ -27,15 +28,23 @@ export const SpecLayout: FC<SpecLayoutProps> = ({ children, toCItems }) => {
         <QuickNavHeading>Quick nav</QuickNavHeading>
         {toCItems.map((item) => {
           const RenderToCItem = item.hasIndent ? SubToCItem : ToCItem;
+          const scrollIntoView = () => {
+            if (!document || !item.sectionId) {
+              return;
+            }
+
+            document
+              .getElementById(item.sectionId)
+              ?.scrollIntoView({ block: "center" });
+          };
 
           return (
             <RenderToCItem
-              key={item.id}
-              href={item.sectionId}
-              $isClickable={Boolean(item.sectionId)}
-              target="_self"
+              key={item.name}
+              onClick={scrollIntoView}
+              $isHover={Boolean(item.sectionId)}
             >
-              {item.label}
+              {item.name}
             </RenderToCItem>
           );
         })}

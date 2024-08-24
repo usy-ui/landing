@@ -4,7 +4,7 @@ import {
   MainToCItem,
   SubToCItem,
   ToCItemType,
-} from "@/components/docs/_constants/table-of-contents";
+} from "@/components/docs/docs.constants";
 import { SpecLayout } from "@/components/docs/spec-layout";
 
 type AvatarLayoutProps = {

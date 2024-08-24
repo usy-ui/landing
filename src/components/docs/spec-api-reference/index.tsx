@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 
 import { PanelTitle, Table, TableColumnType, usySpacing } from "usy-ui";

@@ -1,0 +1,15 @@
+import { Avatar } from "usy-ui";
+
+import { avatarUrl } from "@/constants/mock.constants";
+
+export const Size = () => {
+  return (
+    <>
+      <Avatar url={avatarUrl} imgAlt="avatar" size="extra-small" />
+      <Avatar url={avatarUrl} imgAlt="avatar" size="small" />
+      <Avatar url={avatarUrl} imgAlt="avatar" size="medium" />
+      <Avatar url={avatarUrl} imgAlt="avatar" size="large" />
+      <Avatar url={avatarUrl} imgAlt="avatar" size="extra-large" />
+    </>
+  );
+};

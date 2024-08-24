@@ -11,6 +11,7 @@ const OverviewMenu: MenuItemType = {
   items: [
     { id: "introduction", label: "Introduction" },
     { id: "getting-started", label: "Getting started" },
+    { id: "typescript", label: "Typescript" },
     { id: "theming", label: "Theming" },
     { id: "change-logs", label: "Change logs" },
   ],

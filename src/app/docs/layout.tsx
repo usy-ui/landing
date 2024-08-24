@@ -4,7 +4,7 @@ import { FC, ReactNode, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { Flex } from "usy-ui";
 
-import { MenuHierarchy, MenuItemType } from "./constants";
+import { MenuHierarchy, MenuItemType } from "./docs.constants";
 import {
   DocsContainer,
   MenuHeading,

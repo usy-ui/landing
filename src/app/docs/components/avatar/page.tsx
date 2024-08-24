@@ -1,31 +1,18 @@
-"use client";
-
+import {
+  getCompSourceUrl,
+  getReportIssueUrl,
+} from "@/components/docs/docs.utils";
 import { SpecApiReference } from "@/components/docs/spec-api-reference";
+import { SpecExamples } from "@/components/docs/spec-examples";
+import { Example } from "@/components/docs/spec-examples/examples";
 import { SpecOverview } from "@/components/docs/spec-overview";
 
 import { propsDataRows } from "./avatar.constants";
-// import { avatarUrl } from "@/constants/media.constants";
+import { Fallback, Radius, Size } from "./examples";
 
 const AvatarDoc = () => {
-  // const tabs = [
-  //   {
-  //     id: "preview",
-  //     label: "Preview",
-  //     content: (
-  //       <Flex
-  //         heightProps={{ minHeight: "200px" }}
-  //         justifyContent="center"
-  //         alignItems="center"
-  //         gap={usySpacing.px32}
-  //       >
-  //         <Avatar url={avatarUrl} imgAlt="avatar" radius="none" />
-  //         <Avatar url={avatarUrl} imgAlt="avatar" radius="small" />
-  //         <Avatar url="" imgAlt="avatar" fallback="A" />
-  //       </Flex>
-  //     ),
-  //   },
-  //   { id: "code", label: "Coding", content: <div>Coding</div> },
-  // ];
+  const sourceUrl = getCompSourceUrl("Avatar");
+  const reportIssueUrl = getReportIssueUrl("Avatar");
 
   /**
    * Render
@@ -34,16 +21,36 @@ const AvatarDoc = () => {
   return (
     <>
       <SpecOverview
-        compName="Avatar"
-        compDescription="An image element with a fallback for representing the user."
-        viewSourceUrl="https://github.com/usy-ui/themes/tree/main/src/components/Avatar"
-        reportAnIssueUrl="https://github.com/usy-ui/themes/issues/new?title=[Avatar]%20Issue"
+        name="Avatar"
+        description="An image element with a fallback for representing the user."
+        viewSourceUrl={sourceUrl}
+        reportAnIssueUrl={reportIssueUrl}
         importCommand={`import { Avatar } from "usy-ui"`}
       />
       <SpecApiReference
         description="This component inherits props from the Avatar primitive."
         dataRows={propsDataRows}
       />
+      <SpecExamples>
+        <Example
+          type="size"
+          description="Use the radius prop to assign a specific radius value."
+          uiPreview={<Size />}
+          code={`<Avatar url={avatarUrl} imgAlt="avatar" radius="none" />`}
+        />
+        <Example
+          type="radius"
+          description="Use the radius prop to assign a specific radius value."
+          uiPreview={<Radius />}
+          code={`<Avatar url={avatarUrl} imgAlt="avatar" radius="none" />`}
+        />
+        <Example
+          type="fallback"
+          description="Use the radius prop to assign a specific radius value."
+          uiPreview={<Fallback />}
+          code={`<Avatar url={avatarUrl} imgAlt="avatar" radius="none" />`}
+        />
+      </SpecExamples>
     </>
   );
 };

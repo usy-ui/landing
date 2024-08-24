@@ -1,4 +1,3 @@
-"use client";
 import styled, { css } from "styled-components";
 import { usyColor, usyFontSize, usyFontWeight, usySpacing } from "usy-ui";
 
@@ -19,6 +18,7 @@ export const SpecLayoutTableOfContent = styled.aside`
   max-width: 300px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: ${usySpacing.px20};
   padding-left: ${usySpacing.px40};
 `;
@@ -30,14 +30,17 @@ export const QuickNavHeading = styled.h3`
   margin: 0 0 ${usySpacing.px24} 0;
 `;
 
-export const ToCItem = styled.a<{ $isClickable: boolean }>`
+export const ToCItem = styled.button<{ $isHover: boolean }>`
   font-size: ${usyFontSize.small};
   color: ${usyColor.dark1};
+  background-color: transparent;
+  border: none;
+  outline: none;
   margin: ${usySpacing.px8} 0;
   user-select: none;
 
-  ${({ $isClickable }) =>
-    $isClickable &&
+  ${({ $isHover }) =>
+    $isHover &&
     css`
       &:hover {
         text-decoration: underline;

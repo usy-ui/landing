@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 
 import { ArrowRightIcon, Copyable, Flex, PanelTitle, usySpacing } from "usy-ui";
@@ -5,16 +6,16 @@ import { ArrowRightIcon, Copyable, Flex, PanelTitle, usySpacing } from "usy-ui";
 import { Link } from "./spec-overview.styled";
 
 type SpecOverviewProps = {
-  compName: string;
-  compDescription: string;
+  name: string;
+  description: string;
   viewSourceUrl: string;
   reportAnIssueUrl: string;
   importCommand: string;
 };
 
 export const SpecOverview: FC<SpecOverviewProps> = ({
-  compName,
-  compDescription,
+  name,
+  description,
   viewSourceUrl,
   reportAnIssueUrl,
   importCommand,
@@ -22,8 +23,8 @@ export const SpecOverview: FC<SpecOverviewProps> = ({
   return (
     <>
       <PanelTitle
-        title={compName}
-        description={compDescription}
+        title={name}
+        description={description}
         size="gigant-1"
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
