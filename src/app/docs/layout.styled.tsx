@@ -33,20 +33,20 @@ export const MenuHierarchyContainer = styled.aside`
 
 export const MenuHeading = styled.h3`
   color: ${usyColor.dark4};
-  font-size: ${usyFontSize.small};
+  font-size: ${usyFontSize.medium};
   font-weight: ${usyFontWeight.semibold};
   padding: ${usySpacing.px4} ${usySpacing.px12};
   margin: ${usySpacing.px20} 0 0;
 `;
 
-export const MenuItem = styled(Link)<{
+export const MenuItemLink = styled(Link)<{
   $isActivated: boolean;
 }>`
   width: 160px;
   padding: ${usySpacing.px4} ${usySpacing.px12};
   margin: ${usySpacing.px4} 0;
   font-weight: ${usyFontWeight.light};
-  font-size: ${usyFontSize.small};
+  font-size: ${usyFontSize.medium};
   color: ${usyColor.dark1};
   border-top-left-radius: ${usySpacing.px2};
   border-bottom-left-radius: ${usySpacing.px2};

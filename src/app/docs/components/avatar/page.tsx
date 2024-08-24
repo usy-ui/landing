@@ -2,12 +2,12 @@ import {
   getCompSourceUrl,
   getReportIssueUrl,
 } from "@/components/docs/docs.utils";
-import { SpecApiReference } from "@/components/docs/spec-api-reference";
+import { SpecApi } from "@/components/docs/spec-api";
 import { SpecExamples } from "@/components/docs/spec-examples";
 import { Example } from "@/components/docs/spec-examples/examples";
 import { SpecOverview } from "@/components/docs/spec-overview";
 
-import { propsDataRows } from "./avatar.constants";
+import { specApiDataRows } from "./avatar.constants";
 import { Fallback, Radius, Size } from "./examples";
 
 const AvatarDoc = () => {
@@ -27,9 +27,9 @@ const AvatarDoc = () => {
         reportAnIssueUrl={reportIssueUrl}
         importCommand={`import { Avatar } from "usy-ui"`}
       />
-      <SpecApiReference
+      <SpecApi
         description="This component inherits props from the Avatar primitive."
-        dataRows={propsDataRows}
+        dataRows={specApiDataRows}
       />
       <SpecExamples>
         <Example

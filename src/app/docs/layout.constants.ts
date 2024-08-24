@@ -6,7 +6,7 @@ export type MenuItemType = {
 };
 
 const OverviewMenu: MenuItemType = {
-  id: "overview",
+  id: "overview-menu",
   label: "Overview",
   items: [
     { id: "introduction", label: "Introduction" },
@@ -18,7 +18,7 @@ const OverviewMenu: MenuItemType = {
 };
 
 const LayoutMenu: MenuItemType = {
-  id: "layout",
+  id: "layout-menu",
   label: "Layout",
   items: [
     { id: "box", label: "Box" },
@@ -29,7 +29,7 @@ const LayoutMenu: MenuItemType = {
 };
 
 const ComponentMenu: MenuItemType = {
-  id: "components",
+  id: "components-menu",
   label: "Components",
   items: [
     { id: "accordion", label: "Accordion" },
@@ -55,13 +55,13 @@ const VariablesMenu: MenuItemType = {
   id: "variables",
   label: "Variables",
   items: [
-    { id: "color", label: "Color" },
-    { id: "element", label: "Element" },
-    { id: "font-size", label: "Font size" },
-    { id: "font-weight", label: "Font weight" },
-    { id: "layout", label: "Layout" },
-    { id: "spacing", label: "Spacing" },
-    { id: "z-index", label: "Z-index" },
+    { id: "var-color", label: "Color" },
+    { id: "var-element", label: "Element" },
+    { id: "var-font-size", label: "Font size" },
+    { id: "var-font-weight", label: "Font weight" },
+    { id: "var-layout", label: "Layout" },
+    { id: "var-spacing", label: "Spacing" },
+    { id: "var-z-index", label: "Z-index" },
   ],
 };
 
@@ -69,13 +69,12 @@ const UtilitiesMenu: MenuItemType = {
   id: "utilities",
   label: "Utilities",
   items: [
-    { id: "typescript", label: "Typescript" },
     { id: "formatting", label: "Formatting" },
     { id: "helpers", label: "Helpers" },
   ],
 };
 
-export const MenuHierarchy = [
+export const MenuHierarchyConst = [
   OverviewMenu,
   LayoutMenu,
   ComponentMenu,

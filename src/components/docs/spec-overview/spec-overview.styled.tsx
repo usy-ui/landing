@@ -5,7 +5,7 @@ export const Link = styled.a`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: ${usyFontSize.small};
+  font-size: ${usyFontSize.medium};
   background-color: ${usyColor.light0};
   padding: ${usySpacing.px2} ${usySpacing.px10};
   border-radius: ${usySpacing.px4};

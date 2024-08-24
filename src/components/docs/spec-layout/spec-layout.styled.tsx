@@ -24,14 +24,14 @@ export const SpecLayoutTableOfContent = styled.aside`
 `;
 
 export const QuickNavHeading = styled.h3`
-  font-size: ${usyFontSize.small};
+  font-size: ${usyFontSize.medium};
   font-weight: ${usyFontWeight.semibold};
   color: ${usyColor.dark5};
   margin: 0 0 ${usySpacing.px24} 0;
 `;
 
 export const ToCItem = styled.button<{ $isHover: boolean }>`
-  font-size: ${usyFontSize.small};
+  font-size: ${usyFontSize.medium};
   color: ${usyColor.dark1};
   background-color: transparent;
   border: none;

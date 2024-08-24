@@ -12,7 +12,7 @@ type SpecExamplesProps = {
 export const SpecExamples: FC<SpecExamplesProps> = ({ children }) => {
   return (
     <SpecExamplesContainer>
-      <PanelTitle title="Examples" size="extra-large" />
+      <PanelTitle title="Examples" size="huge" />
       {children}
     </SpecExamplesContainer>
   );

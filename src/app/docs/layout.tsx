@@ -4,12 +4,12 @@ import { FC, ReactNode, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { Flex } from "usy-ui";
 
-import { MenuHierarchy, MenuItemType } from "./docs.constants";
+import { MenuHierarchyConst, MenuItemType } from "./layout.constants";
 import {
   DocsContainer,
   MenuHeading,
   MenuHierarchyContainer,
-  MenuItem,
+  MenuItemLink,
   MenuScrollableContainer,
 } from "./layout.styled";
 
@@ -21,7 +21,7 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
   const pathname = usePathname();
 
   const flattenItems = useMemo(() => {
-    return MenuHierarchy.reduce((acc, item) => {
+    return MenuHierarchyConst.reduce((acc, item) => {
       const subItems = (item.items || []).map((subItem) => ({
         ...subItem,
         url: `/docs/${item.id}/${subItem.id}`,
@@ -40,13 +40,13 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
       }
 
       return (
-        <MenuItem
+        <MenuItemLink
           key={item.id}
           href={item.url || ""}
           $isActivated={pathname.endsWith(item.id)}
         >
           {item.label}
-        </MenuItem>
+        </MenuItemLink>
       );
     });
 

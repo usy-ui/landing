@@ -50,7 +50,7 @@ export const Navigation = styled.nav`
 
 export const NavItem = styled(Link)<{ $isActive: boolean }>`
   margin: 0 ${usySpacing.px16};
-  font-size: ${usyFontSize.small};
+  font-size: ${usyFontSize.medium};
 
   cursor: pointer;
 

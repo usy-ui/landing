@@ -1,6 +1,7 @@
 "use client";
 import { FC, ReactNode, useMemo } from "react";
 
+import { JetBrains_Mono } from "next/font/google";
 import { CodeBlock, dracula } from "react-code-blocks";
 import {
   Flex,
@@ -14,6 +15,11 @@ import {
 import { SubToCItem, SubToCItemType } from "../../docs.constants";
 
 import { ExampleContainer } from "./example.styled";
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 type ExampleProps = {
   type: SubToCItemType;
@@ -54,7 +60,10 @@ export const Example: FC<ExampleProps> = ({
             theme={dracula}
             language="typescript"
             text={code}
-            customStyle={{ fontSize: usyFontSize.small }}
+            customStyle={{
+              fontSize: usyFontSize.medium,
+              fontFamily: jetBrainsMono.style.fontFamily,
+            }}
           />
         ),
       },

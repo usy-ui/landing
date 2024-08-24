@@ -1,9 +1,7 @@
-import { SupportedComponentType } from "./../../@types/comp.type";
-
-export const getCompSourceUrl = (compName: SupportedComponentType) => {
+export const getCompSourceUrl = (compName: string) => {
   return `${process.env.GITHUB_URL}/tree/main/src/components/${compName}`;
 };
 
-export const getReportIssueUrl = (compName: SupportedComponentType) => {
+export const getReportIssueUrl = (compName: string) => {
   return `${process.env.GITHUB_URL}/issues/new?title=[${compName}]%20Issue`;
 };

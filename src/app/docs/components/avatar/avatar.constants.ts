@@ -1,44 +1,48 @@
-import { PropsRowType } from "@/components/docs/spec-api-reference";
+import { SpecApiPropsRowType } from "@/components/docs/spec-api";
+import { getCommonSpecApiRows } from "@/components/docs/spec-api/spec-api.constants";
 
-export const propsDataRows: PropsRowType[] = [
-  {
-    propName: "name",
-    type: "string",
-    default: "avatar",
-  },
+export const specApiDataRows: SpecApiPropsRowType[] = [
   {
     propName: "url",
+    required: true,
     type: "string",
-    default: "-",
+    defVault: "",
   },
   {
     propName: "size",
+    required: false,
     type: "BaseSize | BaseExtraSize",
-    default: "medium",
+    defVault: "medium",
   },
   {
     propName: "color",
+    required: false,
     type: `BaseColor | random`,
-    default: "black",
+    defVault: "black",
   },
   {
     propName: "radius",
+    required: false,
     type: "BaseRadius",
-    default: "small",
+    defVault: "small",
   },
   {
     propName: "fallback",
+    required: false,
     type: "ReactNode",
-    default: "A",
+    defVault: "A",
   },
   {
     propName: "imgAlt",
+    required: false,
     type: "string",
-    default: "-",
+    defVault: "avatar",
   },
   {
     propName: "onClick",
+    required: false,
     type: "() => void",
-    default: "-",
+    defVault: "",
   },
+  ...getCommonSpecApiRows("avatar"),
 ];
