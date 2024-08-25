@@ -1973,7 +1973,7 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
   usy-ui@file:../themes/usy-ui-1.0.2.tgz:
-    resolution: {integrity: sha512-S58ubh0Uiy2gpDk3/LEMlEFglkI4PaDOww9Bq/YXAtLMcQyPQtuUifXKCAjYidvM/A7mEiSm/zwmtSA0oIypPQ==, tarball: file:../themes/usy-ui-1.0.2.tgz}
+    resolution: {integrity: sha512-UN7jmM4dPWTnQ/95dS/v3HwzKMz11NZEzI/N21nmvO8Xn2gBma4HNqk+ToAkyCrOJhysZ1+bJ8W45cATCZ/zLg==, tarball: file:../themes/usy-ui-1.0.2.tgz}
     version: 1.0.2
     peerDependencies:
       '@types/react': '*'

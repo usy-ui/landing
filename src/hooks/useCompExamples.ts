@@ -5,15 +5,15 @@ import { useMemo } from "react";
 
 import { DocsQuickNavExampleItemUnion } from "@/components/docs/docs.types";
 
-type UseSpecExampleProps = {
+type UseCompExampleProps = {
   component: string;
   types: DocsQuickNavExampleItemUnion[];
 };
 
-export const useSpecExamples = ({
+export const useCompExamples = ({
   component,
   types = [],
-}: UseSpecExampleProps) => {
+}: UseCompExampleProps) => {
   const examplesCode = useMemo<Record<DocsQuickNavExampleItemUnion, string>>(
     () =>
       types.reduce(

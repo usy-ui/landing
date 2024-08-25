@@ -1,8 +1,8 @@
 "use client";
-import { SpecApiPropsRowType } from "@/components/docs/spec-api";
-import { getCommonSpecApiRows } from "@/components/docs/spec-api/spec-api.constants";
+import { CompApiPropsRowType } from "@/components/docs/comp-api";
+import { getCommonCompApiRows } from "@/components/docs/comp-api/comp-api.constants";
 
-export const specApiDataRows: SpecApiPropsRowType[] = [
+export const specApiDataRows: CompApiPropsRowType[] = [
   {
     propName: "url",
     required: true,
@@ -45,5 +45,5 @@ export const specApiDataRows: SpecApiPropsRowType[] = [
     type: "() => void",
     defVault: "",
   },
-  ...getCommonSpecApiRows("avatar"),
+  ...getCommonCompApiRows("avatar"),
 ];

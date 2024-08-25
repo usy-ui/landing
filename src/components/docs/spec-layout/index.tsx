@@ -6,7 +6,7 @@ import { QuickNavItemType } from "@/@types/quick-nav";
 import {
   SpecLayoutDoc,
   SpecLayoutContainer,
-  SpecLayoutTableOfContent,
+  SpecLayoutQuickNav,
   QuickNavHeading,
   QuickNavMainItemStyled,
   QuickNavSubItemStyled,
@@ -27,7 +27,7 @@ export const SpecLayout: FC<SpecLayoutProps> = ({
     }
 
     return (
-      <SpecLayoutTableOfContent>
+      <SpecLayoutQuickNav>
         <QuickNavHeading>Quick nav</QuickNavHeading>
         {quickNavItems.map((item) => {
           const RenderQuickNavItemStyled = item.hasIndent
@@ -54,7 +54,7 @@ export const SpecLayout: FC<SpecLayoutProps> = ({
             </RenderQuickNavItemStyled>
           );
         })}
-      </SpecLayoutTableOfContent>
+      </SpecLayoutQuickNav>
     );
   };
 

@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import { usyColor, usyFontSize, usyFontWeight, usySpacing } from "usy-ui";
 
+import { HEADER_HEIGHT, MAIN_PADDING_TOP } from "@/constants/layout.constants";
+
 export const SpecLayoutContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -11,9 +13,10 @@ export const SpecLayoutDoc = styled.article`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding-bottom: ${usySpacing.px56};
 `;
 
-export const SpecLayoutTableOfContent = styled.aside`
+export const SpecLayoutQuickNav = styled.aside`
   width: 100%;
   max-width: 300px;
   display: flex;
@@ -21,6 +24,8 @@ export const SpecLayoutTableOfContent = styled.aside`
   align-items: flex-start;
   padding: ${usySpacing.px20};
   padding-left: ${usySpacing.px40};
+  position: sticky;
+  top: calc(${HEADER_HEIGHT} + ${MAIN_PADDING_TOP});
 `;
 
 export const QuickNavHeading = styled.h3`

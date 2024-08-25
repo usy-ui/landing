@@ -24,6 +24,9 @@ export const MenuScrollableContainer = styled(Scrollable)`
   width: 100%;
   max-width: 260px;
   max-height: calc(100vh - ${HEADER_HEIGHT} - ${MAIN_PADDING_TOP} - 40px);
+  padding-bottom: ${usySpacing.px56};
+  position: sticky;
+  top: calc(${HEADER_HEIGHT} + ${MAIN_PADDING_TOP});
 `;
 
 export const MenuHierarchyContainer = styled.aside`
@@ -35,7 +38,7 @@ export const MenuHeading = styled.h3`
   color: ${usyColor.dark4};
   font-size: ${usyFontSize.medium};
   font-weight: ${usyFontWeight.semibold};
-  padding: ${usySpacing.px4} ${usySpacing.px12};
+  padding: 0 ${usySpacing.px12} ${usySpacing.px8} ${usySpacing.px12};
   margin: ${usySpacing.px20} 0 0;
 `;
 

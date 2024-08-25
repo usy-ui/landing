@@ -1,3 +1,11 @@
+/* eslint-disable no-unused-vars */
+export enum DocsRoute {
+  OVERVIEW = "/overview",
+  LAYOUT = "/layout",
+  COMPONENTS = "/components",
+  UTILITIES = "/utilities",
+}
+
 export type MenuItemType = {
   id: string;
   label: string;
@@ -5,7 +13,7 @@ export type MenuItemType = {
   items?: MenuItemType[];
 };
 
-const OverviewMenu: MenuItemType = {
+const OverviewMenuConst: MenuItemType = {
   id: "overview-menu",
   label: "Overview",
   url: "overview",
@@ -23,14 +31,14 @@ const OverviewMenu: MenuItemType = {
     { id: "ov-typescript", url: "typescript", label: "Typescript" },
     { id: "ov-theming", url: "theming", label: "Theming" },
     {
-      id: "ov-change-logs",
-      url: "change-logs",
-      label: "Change logs",
+      id: "ov-releases",
+      url: "releases",
+      label: "Releases",
     },
   ],
 };
 
-const LayoutMenu: MenuItemType = {
+const LayoutMenuConst: MenuItemType = {
   id: "layout-menu",
   label: "Layout",
   url: "layout",
@@ -42,7 +50,7 @@ const LayoutMenu: MenuItemType = {
   ],
 };
 
-const ComponentMenu: MenuItemType = {
+const ComponentMenuConst: MenuItemType = {
   id: "components-menu",
   label: "Components",
   url: "components",
@@ -78,7 +86,7 @@ const ComponentMenu: MenuItemType = {
   ],
 };
 
-const VariablesMenu: MenuItemType = {
+const VariablesMenuConst: MenuItemType = {
   id: "variables-menu",
   label: "Variables",
   url: "variables",
@@ -93,19 +101,20 @@ const VariablesMenu: MenuItemType = {
   ],
 };
 
-const UtilitiesMenu: MenuItemType = {
-  id: "utilities",
+const UtilitiesMenuConst: MenuItemType = {
+  id: "utilities-menu",
+  url: "utilities",
   label: "Utilities",
   items: [
-    { id: "formatting", label: "Formatting" },
-    { id: "helpers", label: "Helpers" },
+    { id: "utls-formatting", url: "formatting", label: "Formatting" },
+    { id: "utls-helpers", url: "helpers", label: "Helpers" },
   ],
 };
 
 export const MenuHierarchyConst = [
-  OverviewMenu,
-  LayoutMenu,
-  ComponentMenu,
-  VariablesMenu,
-  UtilitiesMenu,
+  OverviewMenuConst,
+  LayoutMenuConst,
+  ComponentMenuConst,
+  VariablesMenuConst,
+  UtilitiesMenuConst,
 ];

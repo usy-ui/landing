@@ -1,24 +1,25 @@
 "use client";
 import { FC, useMemo } from "react";
 
-import { PanelTitle, Table, usySpacing } from "usy-ui";
+import { Box, PanelTitle, Table, usySpacing } from "usy-ui";
 
-import { propsColumns } from "./spec-api.constants";
-import { SpecApiContainer } from "./spec-api.styled";
+import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
-export type SpecApiPropsRowType = {
+import { propsColumns } from "./comp-api.constants";
+
+export type CompApiPropsRowType = {
   propName: string;
   required: boolean;
   type: string;
   defVault: string;
 };
 
-type SpecApiProps = {
+type CompApiProps = {
   description?: string;
-  dataRows: SpecApiPropsRowType[];
+  dataRows: CompApiPropsRowType[];
 };
 
-export const SpecApi: FC<SpecApiProps> = ({ description, dataRows }) => {
+export const CompApi: FC<CompApiProps> = ({ description, dataRows }) => {
   const flattenDataRows = useMemo(
     () =>
       dataRows.map(({ defVault, ...restProps }) => ({
@@ -29,7 +30,7 @@ export const SpecApi: FC<SpecApiProps> = ({ description, dataRows }) => {
   );
 
   return (
-    <SpecApiContainer>
+    <Box marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}>
       <PanelTitle
         title="API Reference"
         description={description}
@@ -41,6 +42,6 @@ export const SpecApi: FC<SpecApiProps> = ({ description, dataRows }) => {
         columns={propsColumns}
         dataRows={flattenDataRows}
       />
-    </SpecApiContainer>
+    </Box>
   );
 };

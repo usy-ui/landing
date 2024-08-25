@@ -2,9 +2,9 @@ import { FC, ReactNode, useMemo } from "react";
 
 import { QuickNavItemType } from "@/@types/quick-nav";
 import {
-  DocsQuickNavMainItemConst,
-  DocsQuickNavExampleItemConst,
-} from "@/components/docs/docs.constants";
+  QuickNavCompMainItemConst,
+  QuickNavCompExampleItemConst,
+} from "@/components/docs/_constants/comp.constants";
 import { SpecLayout } from "@/components/docs/spec-layout";
 
 type AvatarLayoutProps = {
@@ -15,12 +15,12 @@ const AvatarLayout: FC<AvatarLayoutProps> = ({ children }) => {
   const docsQuickNavItemsMemo = useMemo(
     () =>
       [
-        DocsQuickNavMainItemConst.overview,
-        DocsQuickNavMainItemConst.apiReference,
-        DocsQuickNavMainItemConst.examples,
-        DocsQuickNavExampleItemConst.size,
-        DocsQuickNavExampleItemConst.radius,
-        DocsQuickNavExampleItemConst.fallback,
+        QuickNavCompMainItemConst.overview,
+        QuickNavCompMainItemConst.apiReference,
+        QuickNavCompMainItemConst.examples,
+        QuickNavCompExampleItemConst.size,
+        QuickNavCompExampleItemConst.radius,
+        QuickNavCompExampleItemConst.fallback,
       ] as QuickNavItemType[],
     []
   );

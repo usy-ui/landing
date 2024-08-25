@@ -1,12 +1,12 @@
+import { CompApi } from "@/components/docs/comp-api";
+import { CompExamples } from "@/components/docs/comp-examples";
+import { Example } from "@/components/docs/comp-examples/examples";
+import { CompOverview } from "@/components/docs/comp-overview";
 import {
   getCompSourceUrl,
   getReportIssueUrl,
 } from "@/components/docs/docs.utils";
-import { SpecApi } from "@/components/docs/spec-api";
-import { SpecExamples } from "@/components/docs/spec-examples";
-import { Example } from "@/components/docs/spec-examples/examples";
-import { SpecOverview } from "@/components/docs/spec-overview";
-import { useSpecExamples } from "@/hooks/useSpecExamples";
+import { useCompExamples } from "@/hooks/useCompExamples";
 
 import { specApiDataRows } from "./avatar.constants";
 import { Fallback, Radius, Size } from "./examples";
@@ -18,7 +18,7 @@ const AvatarDoc = () => {
     size: sizeExampleCode,
     radius: radiusExampleCode,
     fallback: fallbackExampleCode,
-  } = useSpecExamples({
+  } = useCompExamples({
     component: "avatar",
     types: ["size", "radius", "fallback"],
   });
@@ -29,18 +29,18 @@ const AvatarDoc = () => {
 
   return (
     <>
-      <SpecOverview
+      <CompOverview
         name="Avatar"
         description="An image element with a fallback for representing the user."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
         importCommand={`import { Avatar } from "usy-ui"`}
       />
-      <SpecApi
+      <CompApi
         description="This component inherits props from the Avatar primitive."
         dataRows={specApiDataRows}
       />
-      <SpecExamples>
+      <CompExamples>
         <Example
           type="size"
           description="Use the radius prop to assign a specific radius value."
@@ -59,7 +59,7 @@ const AvatarDoc = () => {
           uiPreview={<Fallback />}
           code={fallbackExampleCode}
         />
-      </SpecExamples>
+      </CompExamples>
     </>
   );
 };

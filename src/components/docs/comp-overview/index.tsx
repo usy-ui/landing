@@ -3,9 +3,9 @@ import { FC } from "react";
 
 import { ArrowRightIcon, Copyable, Flex, PanelTitle, usySpacing } from "usy-ui";
 
-import { Link } from "./spec-overview.styled";
+import { Link } from "./comp-overview.styled";
 
-type SpecOverviewProps = {
+type CompOverviewProps = {
   name: string;
   description: string;
   viewSourceUrl: string;
@@ -13,7 +13,7 @@ type SpecOverviewProps = {
   importCommand: string;
 };
 
-export const SpecOverview: FC<SpecOverviewProps> = ({
+export const CompOverview: FC<CompOverviewProps> = ({
   name,
   description,
   viewSourceUrl,

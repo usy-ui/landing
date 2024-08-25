@@ -4,6 +4,7 @@ import { FC, ReactNode, useMemo } from "react";
 import { JetBrains_Mono } from "next/font/google";
 import { CodeBlock, dracula } from "react-code-blocks";
 import {
+  Box,
   Flex,
   PanelTitle,
   TabItemType,
@@ -12,10 +13,10 @@ import {
   usySpacing,
 } from "usy-ui";
 
-import { DocsQuickNavExampleItemConst } from "../../docs.constants";
-import { DocsQuickNavExampleItemUnion } from "../../docs.types";
+import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";
 
-import { ExampleContainer } from "./example.styled";
+import { QuickNavCompExampleItemConst } from "../../_constants/comp.constants";
+import { DocsQuickNavExampleItemUnion } from "../../docs.types";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export const Example: FC<ExampleProps> = ({
   uiPreview,
   code,
 }) => {
-  const { name, sectionId } = DocsQuickNavExampleItemConst[type];
+  const { name, sectionId } = QuickNavCompExampleItemConst[type];
   const tabs: TabItemType[] = useMemo(
     () => [
       {
@@ -73,9 +74,12 @@ export const Example: FC<ExampleProps> = ({
   );
 
   return (
-    <ExampleContainer id={sectionId}>
-      <PanelTitle title={name} description={description} size="medium" />
+    <Box
+      id={sectionId}
+      marginProps={{ marginTop: QUICK_NAV_MAIN_TO_SUB_SPACING }}
+    >
+      <PanelTitle title={name} description={description} size="large" />
       <Tabs tabs={tabs} />
-    </ExampleContainer>
+    </Box>
   );
 };

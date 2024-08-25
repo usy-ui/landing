@@ -11,7 +11,7 @@ import {
 export const MainContainer = styled.main`
   width: 100%;
   max-width: ${MAX_WIDTH};
-  min-height: 100vh;
-  padding: ${MAIN_PADDING_TOP} ${usySpacing.px20};
-  margin: ${HEADER_HEIGHT} auto;
+  min-height: calc(100vh - ${HEADER_HEIGHT});
+  padding: ${MAIN_PADDING_TOP} ${usySpacing.px20} 0;
+  margin: ${HEADER_HEIGHT} auto 0;
 `;

@@ -3,9 +3,9 @@ import { QuickNavItemType } from "@/@types/quick-nav";
 import {
   DocsQuickNavMainItemUnion,
   DocsQuickNavExampleItemUnion,
-} from "./docs.types";
+} from "../docs.types";
 
-export const DocsQuickNavMainItemConst: Record<
+export const QuickNavCompMainItemConst: Record<
   DocsQuickNavMainItemUnion,
   QuickNavItemType
 > = {
@@ -22,10 +22,15 @@ export const DocsQuickNavMainItemConst: Record<
   },
 };
 
-export const DocsQuickNavExampleItemConst: Record<
+export const QuickNavCompExampleItemConst: Record<
   DocsQuickNavExampleItemUnion,
   QuickNavItemType
 > = {
+  default: {
+    name: "Default",
+    sectionId: "default",
+    hasIndent: true,
+  },
   variant: {
     name: "Variant",
     sectionId: "variant",

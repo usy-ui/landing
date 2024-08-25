@@ -3,6 +3,7 @@ export type DocsQuickNavMainItemUnion =
   | "apiReference"
   | "examples";
 export type DocsQuickNavExampleItemUnion =
+  | "default"
   | "variant"
   | "size"
   | "color"
