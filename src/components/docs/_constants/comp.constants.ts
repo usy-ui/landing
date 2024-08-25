@@ -11,11 +11,11 @@ export const QuickNavCompMainItemConst: Record<
 > = {
   overview: {
     name: "Overview",
-    sectionId: "#overview",
+    sectionId: "overview",
   },
   apiReference: {
     name: "API Reference",
-    sectionId: "#api-reference",
+    sectionId: "api-reference",
   },
   examples: {
     name: "Examples",

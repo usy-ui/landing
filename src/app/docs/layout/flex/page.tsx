@@ -1,5 +1,5 @@
-const Box = () => {
-  return <div>Box</div>;
+const Flex = () => {
+  return <div>Flex</div>;
 };
 
-export default Box;
+export default Flex;

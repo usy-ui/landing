@@ -3,6 +3,8 @@ import { FC } from "react";
 
 import { ArrowRightIcon, Copyable, Flex, PanelTitle, usySpacing } from "usy-ui";
 
+import { QuickNavCompMainItemConst } from "../_constants/comp.constants";
+
 import { Link } from "./comp-overview.styled";
 
 type CompOverviewProps = {
@@ -29,6 +31,7 @@ export const CompOverview: FC<CompOverviewProps> = ({
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
       <Flex
+        id={QuickNavCompMainItemConst.overview.sectionId}
         gap={usySpacing.px32}
         marginProps={{ marginBottom: usySpacing.px20 }}
       >

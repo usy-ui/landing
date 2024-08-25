@@ -68,7 +68,7 @@ export const Header = () => {
     return (
       <SearchDocsAndLinksContainer>
         <SearchDocsInput>Search documents...</SearchDocsInput>
-        <Link href="https://github.com/usy-ui/themes" target="_blank">
+        <Link href={process.env.GITHUB_URL || ""} target="_blank">
           <BrandGithubIcon width="24px" height="24px" />
         </Link>
         <SunIcon width="24px" height="24px" />

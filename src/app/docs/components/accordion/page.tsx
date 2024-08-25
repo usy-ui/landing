@@ -34,7 +34,7 @@ const Accordion = () => {
       />
       <CompExamples>
         <Example
-          type="size"
+          type="default"
           description="Use the radius prop to assign a specific radius value."
           uiPreview={<Default />}
           code={defaultExampleCode}
