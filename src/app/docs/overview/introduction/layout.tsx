@@ -19,7 +19,11 @@ const AvatarLayout: FC<IntroLayoutProps> = ({ children }) => {
         QuickNavIntroMainItemConst.introduction,
         QuickNavIntroMainItemConst.vision,
         QuickNavIntroMainItemConst.keyFeatures,
-        QuickNavIntroSubItemConst.customStyles,
+        QuickNavIntroSubItemConst.fastDevelopment,
+        QuickNavIntroSubItemConst.easeOfUse,
+        QuickNavIntroSubItemConst.customizationOptions,
+        QuickNavIntroSubItemConst.responsiveAccessible,
+        QuickNavIntroSubItemConst.modularDesign,
       ] as QuickNavItemType[],
     []
   );

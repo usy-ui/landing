@@ -6,7 +6,7 @@ import { CodeBlock, dracula } from "react-code-blocks";
 import {
   Box,
   Flex,
-  PanelTitle,
+  ParagraphHeading,
   TabItemType,
   Tabs,
   usyFontSize,
@@ -78,7 +78,7 @@ export const Example: FC<ExampleProps> = ({
       id={sectionId}
       marginProps={{ marginTop: QUICK_NAV_MAIN_TO_SUB_SPACING }}
     >
-      <PanelTitle title={name} description={description} size="large" />
+      <ParagraphHeading title={name} description={description} size="large" />
       <Tabs tabs={tabs} />
     </Box>
   );

@@ -2,7 +2,7 @@
 
 import { FC, ReactNode } from "react";
 
-import { Box, PanelTitle } from "usy-ui";
+import { Box, ParagraphHeading } from "usy-ui";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
@@ -13,7 +13,7 @@ type CompExamplesProps = {
 export const CompExamples: FC<CompExamplesProps> = ({ children }) => {
   return (
     <Box marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}>
-      <PanelTitle title="Examples" size="huge" />
+      <ParagraphHeading title="Examples" size="huge" />
       {children}
     </Box>
   );

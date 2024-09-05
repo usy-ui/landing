@@ -1,7 +1,7 @@
 "use client";
 import { FC, useMemo } from "react";
 
-import { Box, PanelTitle, Table, usySpacing } from "usy-ui";
+import { Box, ParagraphHeading, Table, usySpacing } from "usy-ui";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
@@ -36,7 +36,7 @@ export const CompApi: FC<CompApiProps> = ({ description, dataRows }) => {
       id={QuickNavCompMainItemConst.apiReference.sectionId}
       marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}
     >
-      <PanelTitle
+      <ParagraphHeading
         title="API Reference"
         description={description}
         size="huge"

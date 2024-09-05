@@ -37,6 +37,7 @@ export const QuickNavHeading = styled.h3`
 
 export const QuickNavMainItemStyled = styled.button<{ $isHover: boolean }>`
   font-size: ${usyFontSize.medium};
+  font-weight: ${usyFontWeight.semibold};
   color: ${usyColor.dark1};
   background-color: transparent;
   border: none;
@@ -55,5 +56,6 @@ export const QuickNavMainItemStyled = styled.button<{ $isHover: boolean }>`
 `;
 
 export const QuickNavSubItemStyled = styled(QuickNavMainItemStyled)`
+  font-weight: unset;
   margin-left: ${usySpacing.px16};
 `;

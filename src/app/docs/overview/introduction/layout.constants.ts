@@ -6,11 +6,11 @@ export const QuickNavIntroMainItemConst: Record<
 > = {
   introduction: {
     name: "Introduction",
-    sectionId: "#introduction",
+    sectionId: "introduction",
   },
   vision: {
     name: "Vision",
-    sectionId: "#vision",
+    sectionId: "vision",
   },
   keyFeatures: {
     name: "Key Features",
@@ -18,12 +18,36 @@ export const QuickNavIntroMainItemConst: Record<
 };
 
 export const QuickNavIntroSubItemConst: Record<
-  "customStyles",
+  | "fastDevelopment"
+  | "easeOfUse"
+  | "customizationOptions"
+  | "responsiveAccessible"
+  | "modularDesign",
   QuickNavItemType
 > = {
-  customStyles: {
-    name: "Custom Styles",
-    sectionId: "#custom-styles",
+  fastDevelopment: {
+    name: "Fast Development",
+    sectionId: "fast-development",
+    hasIndent: true,
+  },
+  easeOfUse: {
+    name: "Ease of Use",
+    sectionId: "easy-of-use",
+    hasIndent: true,
+  },
+  customizationOptions: {
+    name: "Customization Options",
+    sectionId: "customization-options",
+    hasIndent: true,
+  },
+  responsiveAccessible: {
+    name: "Responsive & Accessible",
+    sectionId: "responsive-accessible",
+    hasIndent: true,
+  },
+  modularDesign: {
+    name: "Modular Design",
+    sectionId: "modular-design",
     hasIndent: true,
   },
 };

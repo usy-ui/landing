@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BrandGithubIcon, SunIcon } from "usy-ui";
+import { BrandDiscordIcon, BrandGithubIcon, SunIcon } from "usy-ui";
 
 import {
   HeaderContainer,
@@ -71,6 +71,7 @@ export const Header = () => {
         <Link href={process.env.GITHUB_URL || ""} target="_blank">
           <BrandGithubIcon width="24px" height="24px" />
         </Link>
+        <BrandDiscordIcon width="24px" height="24px" />
         <SunIcon width="24px" height="24px" />
       </SearchDocsAndLinksContainer>
     );

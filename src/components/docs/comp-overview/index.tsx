@@ -1,7 +1,13 @@
 "use client";
 import { FC } from "react";
 
-import { ArrowRightIcon, Copyable, Flex, PanelTitle, usySpacing } from "usy-ui";
+import {
+  ArrowRightIcon,
+  Copyable,
+  Flex,
+  ParagraphHeading,
+  usySpacing,
+} from "usy-ui";
 
 import { QuickNavCompMainItemConst } from "../_constants/comp.constants";
 
@@ -24,7 +30,7 @@ export const CompOverview: FC<CompOverviewProps> = ({
 }) => {
   return (
     <>
-      <PanelTitle
+      <ParagraphHeading
         title={name}
         description={description}
         size="gigant-1"
