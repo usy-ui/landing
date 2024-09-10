@@ -12,7 +12,7 @@ type IntroLayoutProps = {
   children: ReactNode;
 };
 
-const AvatarLayout: FC<IntroLayoutProps> = ({ children }) => {
+const IntroLayout: FC<IntroLayoutProps> = ({ children }) => {
   const docsQuickNavItemsMemo = useMemo(
     () =>
       [
@@ -33,4 +33,4 @@ const AvatarLayout: FC<IntroLayoutProps> = ({ children }) => {
   );
 };
 
-export default AvatarLayout;
+export default IntroLayout;

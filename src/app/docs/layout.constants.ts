@@ -28,7 +28,6 @@ const OverviewMenuConst: MenuItemType = {
       url: "getting-started",
       label: "Getting started",
     },
-    { id: "ov-typescript", url: "typescript", label: "Typescript" },
     { id: "ov-theming", url: "theming", label: "Theming" },
     {
       id: "ov-releases",

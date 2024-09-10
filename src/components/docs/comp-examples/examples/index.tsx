@@ -1,27 +1,20 @@
 "use client";
 import { FC, ReactNode, useMemo } from "react";
 
-import { JetBrains_Mono } from "next/font/google";
-import { CodeBlock, dracula } from "react-code-blocks";
 import {
   Box,
   Flex,
   ParagraphHeading,
   TabItemType,
   Tabs,
-  usyFontSize,
   usySpacing,
 } from "usy-ui";
 
+import { CodeBlock } from "@/components/common/codeblock";
 import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";
 
 import { QuickNavCompExampleItemConst } from "../../_constants/comp.constants";
 import { DocsQuickNavExampleItemUnion } from "../../docs.types";
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-});
 
 type ExampleProps = {
   type: DocsQuickNavExampleItemUnion;
@@ -57,17 +50,7 @@ export const Example: FC<ExampleProps> = ({
       {
         id: "code",
         label: "Code",
-        content: (
-          <CodeBlock
-            theme={dracula}
-            language="typescript"
-            text={code}
-            customStyle={{
-              fontSize: usyFontSize.medium,
-              fontFamily: jetBrainsMono.style.fontFamily,
-            }}
-          />
-        ),
+        content: <CodeBlock code={code} />,
       },
     ],
     [uiPreview, code]

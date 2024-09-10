@@ -33,6 +33,10 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
     }, [] as MenuItemType[]);
   }, []);
 
+  /**
+   * Render
+   */
+
   const renderMenuHierarchy = () => {
     const itemComponents = flattenItems.map((item) => {
       if ((item.items || []).length > 0) {

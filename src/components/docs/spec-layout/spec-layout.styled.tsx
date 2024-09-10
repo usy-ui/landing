@@ -13,7 +13,7 @@ export const SpecLayoutDoc = styled.article`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-bottom: ${usySpacing.px56};
+  padding-bottom: 200px;
 `;
 
 export const SpecLayoutQuickNav = styled.aside`
