@@ -1,12 +1,9 @@
-import { QuickNavItemType } from "@/@types/quick-nav";
+import { QuickNavItemType } from "../content-and-quick-nav/types";
 
-import {
-  DocsQuickNavMainItemUnion,
-  DocsQuickNavExampleItemUnion,
-} from "../docs.types";
+import { CompQuickNavSubItemUnion, CompQuickNavMainItemUnion } from "./types";
 
-export const QuickNavCompMainItemConst: Record<
-  DocsQuickNavMainItemUnion,
+export const CompQuickNavMainItemConst: Record<
+  CompQuickNavMainItemUnion,
   QuickNavItemType
 > = {
   overview: {
@@ -22,8 +19,8 @@ export const QuickNavCompMainItemConst: Record<
   },
 };
 
-export const QuickNavCompExampleItemConst: Record<
-  DocsQuickNavExampleItemUnion,
+export const CompQuickNavSubItemConst: Record<
+  CompQuickNavSubItemUnion,
   QuickNavItemType
 > = {
   default: {

@@ -3,20 +3,20 @@ import { usyColor, usyFontSize, usyFontWeight, usySpacing } from "usy-ui";
 
 import { HEADER_HEIGHT, MAIN_PADDING_TOP } from "@/constants/layout.constants";
 
-export const SpecLayoutContainer = styled.div`
+export const ContentAndQuickContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 `;
 
-export const SpecLayoutDoc = styled.article`
+export const ContentContainer = styled.article`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   padding-bottom: 200px;
 `;
 
-export const SpecLayoutQuickNav = styled.aside`
+export const QuickNavContainer = styled.aside`
   width: 100%;
   max-width: 300px;
   display: flex;
@@ -37,7 +37,7 @@ export const QuickNavHeading = styled.h3`
 
 export const QuickNavMainItemStyled = styled.button<{ $isHover: boolean }>`
   font-size: ${usyFontSize.medium};
-  font-weight: ${usyFontWeight.semibold};
+  font-weight: ${usyFontWeight.medium};
   color: ${usyColor.dark1};
   background-color: transparent;
   border: none;

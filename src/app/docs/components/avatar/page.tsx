@@ -1,11 +1,13 @@
-import { CompApi } from "@/components/docs/comp-api";
-import { CompExamples } from "@/components/docs/comp-examples";
-import { Example } from "@/components/docs/comp-examples/examples";
-import { CompOverview } from "@/components/docs/comp-overview";
+import { CompApisSection } from "@/components/docs/component/comp-apis-section";
+import {
+  CompExample,
+  CompExamplesSection,
+} from "@/components/docs/component/comp-examples-section";
+import { CompOverviewSection } from "@/components/docs/component/comp-overview-section";
 import {
   getCompSourceUrl,
   getReportIssueUrl,
-} from "@/components/docs/docs.utils";
+} from "@/components/docs/component/utils";
 import { useCompExamples } from "@/hooks/useCompExamples";
 
 import { specApiDataRows } from "./avatar.constants";
@@ -29,37 +31,37 @@ const AvatarDoc = () => {
 
   return (
     <>
-      <CompOverview
+      <CompOverviewSection
         name="Avatar"
         description="An image element with a fallback for representing the user."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
         importCommand={`import { Avatar } from "usy-ui"`}
       />
-      <CompApi
+      <CompApisSection
         description="This component inherits props from the Avatar primitive."
         dataRows={specApiDataRows}
       />
-      <CompExamples>
-        <Example
+      <CompExamplesSection>
+        <CompExample
           type="size"
           description="Use the radius prop to assign a specific radius value."
           uiPreview={<Size />}
           code={sizeExampleCode}
         />
-        <Example
+        <CompExample
           type="radius"
           description="Use the radius prop to assign a specific radius value."
           uiPreview={<Radius />}
           code={radiusExampleCode}
         />
-        <Example
+        <CompExample
           type="fallback"
           description="Use the radius prop to assign a specific radius value."
           uiPreview={<Fallback />}
           code={fallbackExampleCode}
         />
-      </CompExamples>
+      </CompExamplesSection>
     </>
   );
 };

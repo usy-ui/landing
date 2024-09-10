@@ -1,7 +1,7 @@
 import { FC, ReactNode, useMemo } from "react";
 
-import { QuickNavItemType } from "@/@types/quick-nav";
-import { SpecLayout } from "@/components/docs/spec-layout";
+import { ContentAndQuickNav } from "@/components/docs/content-and-quick-nav";
+import { QuickNavItemType } from "@/components/docs/content-and-quick-nav/types";
 
 import {
   QuickNavIntroMainItemConst,
@@ -29,7 +29,9 @@ const IntroLayout: FC<IntroLayoutProps> = ({ children }) => {
   );
 
   return (
-    <SpecLayout quickNavItems={docsQuickNavItemsMemo}>{children}</SpecLayout>
+    <ContentAndQuickNav quickNavItems={docsQuickNavItemsMemo}>
+      {children}
+    </ContentAndQuickNav>
   );
 };
 

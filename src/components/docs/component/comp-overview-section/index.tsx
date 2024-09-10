@@ -9,11 +9,11 @@ import {
   usySpacing,
 } from "usy-ui";
 
-import { QuickNavCompMainItemConst } from "../_constants/comp.constants";
+import { CompQuickNavMainItemConst } from "../constants";
 
-import { Link } from "./comp-overview.styled";
+import { Link } from "./styled";
 
-type CompOverviewProps = {
+type CompOverviewSectionProps = {
   name: string;
   description: string;
   viewSourceUrl: string;
@@ -21,7 +21,7 @@ type CompOverviewProps = {
   importCommand: string;
 };
 
-export const CompOverview: FC<CompOverviewProps> = ({
+export const CompOverviewSection: FC<CompOverviewSectionProps> = ({
   name,
   description,
   viewSourceUrl,
@@ -37,7 +37,7 @@ export const CompOverview: FC<CompOverviewProps> = ({
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
       <Flex
-        id={QuickNavCompMainItemConst.overview.sectionId}
+        id={CompQuickNavMainItemConst.overview.sectionId}
         gap={usySpacing.px32}
         marginProps={{ marginBottom: usySpacing.px20 }}
       >

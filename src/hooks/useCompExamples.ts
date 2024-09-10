@@ -3,18 +3,18 @@ import path from "path";
 
 import { useMemo } from "react";
 
-import { DocsQuickNavExampleItemUnion } from "@/components/docs/docs.types";
+import { CompQuickNavSubItemUnion } from "@/components/docs/component/types";
 
 type UseCompExampleProps = {
   component: string;
-  types: DocsQuickNavExampleItemUnion[];
+  types: CompQuickNavSubItemUnion[];
 };
 
 export const useCompExamples = ({
   component,
   types = [],
 }: UseCompExampleProps) => {
-  const examplesCode = useMemo<Record<DocsQuickNavExampleItemUnion, string>>(
+  const examplesCode = useMemo<Record<CompQuickNavSubItemUnion, string>>(
     () =>
       types.reduce(
         (acc, type) => {
@@ -28,7 +28,7 @@ export const useCompExamples = ({
           acc[type] = exampleCode;
           return acc;
         },
-        {} as Record<DocsQuickNavExampleItemUnion, string>
+        {} as Record<CompQuickNavSubItemUnion, string>
       ),
     [component, types]
   );

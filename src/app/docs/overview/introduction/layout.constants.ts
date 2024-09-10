@@ -1,4 +1,4 @@
-import { QuickNavItemType } from "@/@types/quick-nav";
+import { QuickNavItemType } from "@/components/docs/content-and-quick-nav/types";
 
 export const QuickNavIntroMainItemConst: Record<
   "introduction" | "vision" | "keyFeatures",

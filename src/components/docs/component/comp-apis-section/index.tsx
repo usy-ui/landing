@@ -5,23 +5,26 @@ import { Box, ParagraphHeading, Table, usySpacing } from "usy-ui";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
-import { QuickNavCompMainItemConst } from "../_constants/comp.constants";
+import { CompQuickNavMainItemConst } from "../constants";
 
-import { propsColumns } from "./comp-api.constants";
+import { propsColumns } from "./constants";
 
-export type CompApiPropsRowType = {
+export type CompApisRowType = {
   propName: string;
   required: boolean;
   type: string;
   defVault: string;
 };
 
-type CompApiProps = {
+type CompApisSectionProps = {
   description?: string;
-  dataRows: CompApiPropsRowType[];
+  dataRows: CompApisRowType[];
 };
 
-export const CompApi: FC<CompApiProps> = ({ description, dataRows }) => {
+export const CompApisSection: FC<CompApisSectionProps> = ({
+  description,
+  dataRows,
+}) => {
   const flattenDataRows = useMemo(
     () =>
       dataRows.map(({ defVault, ...restProps }) => ({
@@ -33,7 +36,7 @@ export const CompApi: FC<CompApiProps> = ({ description, dataRows }) => {
 
   return (
     <Box
-      id={QuickNavCompMainItemConst.apiReference.sectionId}
+      id={CompQuickNavMainItemConst.apiReference.sectionId}
       marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}
     >
       <ParagraphHeading

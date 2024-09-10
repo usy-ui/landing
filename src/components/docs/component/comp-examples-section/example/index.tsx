@@ -13,23 +13,23 @@ import {
 import { CodeBlock } from "@/components/common/codeblock";
 import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";
 
-import { QuickNavCompExampleItemConst } from "../../_constants/comp.constants";
-import { DocsQuickNavExampleItemUnion } from "../../docs.types";
+import { CompQuickNavSubItemConst } from "../../constants";
+import { CompQuickNavSubItemUnion } from "../../types";
 
 type ExampleProps = {
-  type: DocsQuickNavExampleItemUnion;
+  type: CompQuickNavSubItemUnion;
   description: string;
   uiPreview: ReactNode;
   code: string;
 };
 
-export const Example: FC<ExampleProps> = ({
+export const CompExample: FC<ExampleProps> = ({
   type,
   description,
   uiPreview,
   code,
 }) => {
-  const { name, sectionId } = QuickNavCompExampleItemConst[type];
+  const { name, sectionId } = CompQuickNavSubItemConst[type];
   const tabs: TabItemType[] = useMemo(
     () => [
       {

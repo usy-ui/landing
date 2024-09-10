@@ -1,11 +1,11 @@
 "use client";
 import { TableColumnType, Typography } from "usy-ui";
 
-import { BadgePropName, RequiredIcon } from "./comp-api.styled";
+import { BadgePropName, RequiredIcon } from "./styled";
 
-import { CompApiPropsRowType } from ".";
+import { CompApisRowType } from ".";
 
-export const propsColumns: TableColumnType<CompApiPropsRowType>[] = [
+export const propsColumns: TableColumnType<CompApisRowType>[] = [
   {
     key: "propName",
     title: "Prop",
@@ -33,9 +33,7 @@ export const propsColumns: TableColumnType<CompApiPropsRowType>[] = [
   },
 ];
 
-export const getCommonCompApiRows = (
-  compName: string
-): CompApiPropsRowType[] => [
+export const getCommonCompApiRows = (compName: string): CompApisRowType[] => [
   {
     propName: "className",
     required: false,

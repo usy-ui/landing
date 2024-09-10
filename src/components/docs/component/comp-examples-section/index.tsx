@@ -6,11 +6,14 @@ import { Box, ParagraphHeading } from "usy-ui";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
-type CompExamplesProps = {
+type CompExamplesSectionProps = {
   children: ReactNode;
 };
 
-export const CompExamples: FC<CompExamplesProps> = ({ children }) => {
+export { CompExample } from "./example";
+export const CompExamplesSection: FC<CompExamplesSectionProps> = ({
+  children,
+}) => {
   return (
     <Box marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}>
       <ParagraphHeading title="Examples" size="huge" />

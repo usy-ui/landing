@@ -15,7 +15,7 @@ import {
 import {
   QuickNavGetStartMainItemConst,
   QuickNavGetStartSubItemConst,
-} from "./getting-started.constants";
+} from "./constants";
 
 const GettingStarted = () => {
   const renderGettingStarted = () => {

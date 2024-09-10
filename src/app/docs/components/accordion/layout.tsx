@@ -1,11 +1,11 @@
 import { FC, ReactNode, useMemo } from "react";
 
-import { QuickNavItemType } from "@/@types/quick-nav";
 import {
-  QuickNavCompMainItemConst,
-  QuickNavCompExampleItemConst,
-} from "@/components/docs/_constants/comp.constants";
-import { SpecLayout } from "@/components/docs/spec-layout";
+  CompQuickNavMainItemConst,
+  CompQuickNavSubItemConst,
+} from "@/components/docs/component/constants";
+import { ContentAndQuickNav } from "@/components/docs/content-and-quick-nav";
+import { QuickNavItemType } from "@/components/docs/content-and-quick-nav/types";
 
 type AccordionLayoutProps = {
   children: ReactNode;
@@ -15,16 +15,18 @@ const AvatarLayout: FC<AccordionLayoutProps> = ({ children }) => {
   const docsQuickNavItemsMemo = useMemo(
     () =>
       [
-        QuickNavCompMainItemConst.overview,
-        QuickNavCompMainItemConst.apiReference,
-        QuickNavCompMainItemConst.examples,
-        QuickNavCompExampleItemConst.default,
+        CompQuickNavMainItemConst.overview,
+        CompQuickNavMainItemConst.apiReference,
+        CompQuickNavMainItemConst.examples,
+        CompQuickNavSubItemConst.default,
       ] as QuickNavItemType[],
     []
   );
 
   return (
-    <SpecLayout quickNavItems={docsQuickNavItemsMemo}>{children}</SpecLayout>
+    <ContentAndQuickNav quickNavItems={docsQuickNavItemsMemo}>
+      {children}
+    </ContentAndQuickNav>
   );
 };
 

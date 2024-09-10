@@ -1,8 +1,9 @@
 "use client";
-import { CompApiPropsRowType } from "@/components/docs/comp-api";
-import { getCommonCompApiRows } from "@/components/docs/comp-api/comp-api.constants";
 
-export const specApiDataRows: CompApiPropsRowType[] = [
+import { CompApisRowType } from "@/components/docs/component/comp-apis-section";
+import { getCommonCompApiRows } from "@/components/docs/component/comp-apis-section/constants";
+
+export const specApiDataRows: CompApisRowType[] = [
   {
     propName: "items",
     required: true,
