@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BrandDiscordIcon, BrandGithubIcon, SunIcon } from "usy-ui";
+import { BrandDiscordIcon, BrandGithubIcon, SunIcon, Tooltip } from "usy-ui";
 
 import {
   HeaderContainer,
@@ -23,11 +23,6 @@ export const Header = () => {
         url: "/docs",
         label: "Docs",
         isActive: pathname.startsWith("/docs"),
-      },
-      {
-        url: "/playground",
-        label: "Playground",
-        isActive: pathname.startsWith("/playground"),
       },
       {
         url: "/use-cases",
@@ -69,10 +64,18 @@ export const Header = () => {
       <SearchDocsAndLinksContainer>
         <SearchDocsInput>Search documents...</SearchDocsInput>
         <Link href={process.env.GITHUB_URL || ""} target="_blank">
-          <BrandGithubIcon width="24px" height="24px" />
+          <Tooltip content="View Github" position="bottom">
+            <BrandGithubIcon width="24px" height="24px" />
+          </Tooltip>
         </Link>
-        <BrandDiscordIcon width="24px" height="24px" />
-        <SunIcon width="24px" height="24px" />
+        <Link href={process.env.DISCORD_URL || ""} target="_blank">
+          <Tooltip content="Join Discord" position="bottom">
+            <BrandDiscordIcon width="24px" height="24px" />
+          </Tooltip>
+        </Link>
+        <Tooltip content="Change Theme" position="bottom">
+          <SunIcon width="24px" height="24px" onClick={() => {}} />
+        </Tooltip>
       </SearchDocsAndLinksContainer>
     );
   };

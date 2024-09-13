@@ -37,6 +37,11 @@ export const SearchDocsAndLinksContainer = styled.div`
   align-items: center;
   gap: ${usySpacing.px14};
 
+  a,
+  a:visited {
+    color: ${usyColor.dark8};
+  }
+
   & > * {
     cursor: pointer;
   }

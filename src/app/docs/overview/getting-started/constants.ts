@@ -10,7 +10,6 @@ export const QuickNavGetStartMainItemConst: Record<
   },
   installation: {
     name: "Installation",
-    sectionId: "installation",
   },
 };
 
