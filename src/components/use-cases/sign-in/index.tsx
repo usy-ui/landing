@@ -13,7 +13,7 @@ import {
   usySpacing,
 } from "usy-ui";
 
-import { COUNTRIES, ValidateRules } from "./constants";
+import { Countries, ValidateRules } from "./constants";
 
 type FormFieldsProps = {
   email: string;
@@ -31,7 +31,7 @@ export const SignIn = () => {
     handleSubmit,
   } = useForm<FormFieldsProps>({
     defaultValues: {
-      country: COUNTRIES[0],
+      country: Countries[0],
     },
   });
 
@@ -109,7 +109,7 @@ export const SignIn = () => {
             name="country"
             control={control}
             render={({ field }) => (
-              <Select label="Country" items={COUNTRIES} {...field} />
+              <Select label="Country" items={Countries} {...field} />
             )}
           />
           <Controller
@@ -127,6 +127,7 @@ export const SignIn = () => {
             type="submit"
             variant="primary"
             disabled={!watch("isAgreeTermAndCondition")}
+            width="100%"
           >
             Create
           </Button>

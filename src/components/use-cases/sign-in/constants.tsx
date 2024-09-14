@@ -23,7 +23,7 @@ export const ValidateRules = {
   },
 };
 
-export const COUNTRIES: SelectItemType[] = [
+export const Countries: SelectItemType[] = [
   {
     id: "united-state",
     label: "United State",

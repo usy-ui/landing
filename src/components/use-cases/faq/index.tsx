@@ -9,7 +9,6 @@ export const FAQ = () => {
         <ParagraphHeading
           title="FAQ"
           description="A list of tech stacks for a new frontend developer"
-          titleSize="huge"
         />
       }
     >
