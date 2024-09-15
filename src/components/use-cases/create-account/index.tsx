@@ -8,22 +8,25 @@ import {
   Panel,
   ParagraphHeading,
   Password,
+  RadioGroup,
+  RadioType,
   Select,
   SelectItemType,
   usySpacing,
 } from "usy-ui";
 
-import { Countries, ValidateRules } from "./constants";
+import { Countries, Genders, ValidateRules } from "./constants";
 
 type FormFieldsProps = {
   email: string;
   password: string;
   phoneNumber: string;
+  gender: RadioType;
   country: SelectItemType;
   isAgreeTermAndCondition: boolean;
 };
 
-export const SignIn = () => {
+export const CreateAccount = () => {
   const {
     formState: { errors },
     control,
@@ -31,6 +34,7 @@ export const SignIn = () => {
     handleSubmit,
   } = useForm<FormFieldsProps>({
     defaultValues: {
+      gender: Genders[0],
       country: Countries[0],
     },
   });
@@ -101,6 +105,18 @@ export const SignIn = () => {
                 formatOnChange={(value) =>
                   value.replace(/^[a-zA-Z\s.,'?!-]+$/, "")
                 }
+                {...field}
+              />
+            )}
+          />
+          <Controller
+            name="gender"
+            control={control}
+            render={({ field }) => (
+              <RadioGroup
+                direction="horizontal"
+                label="Gender"
+                items={Genders}
                 {...field}
               />
             )}

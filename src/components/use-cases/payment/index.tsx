@@ -19,6 +19,7 @@ import {
   toastIns,
   Typography,
   UserIcon,
+  usyColor,
   usySpacing,
 } from "usy-ui";
 
@@ -171,7 +172,7 @@ export const Payment = () => {
                   </Box>
                 }
               >
-                <InfoCircleIcon />
+                <InfoCircleIcon color={usyColor.dark4} />
               </Popover>
             </Flex>
           ),

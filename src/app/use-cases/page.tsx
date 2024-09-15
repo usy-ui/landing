@@ -1,9 +1,10 @@
 import { Box, Flex, usySpacing } from "usy-ui";
 
+import { Blog } from "@/components/use-cases/blog";
+import { ContactForm } from "@/components/use-cases/contact-form";
+import { CreateAccount } from "@/components/use-cases/create-account";
 import { Crypto } from "@/components/use-cases/crypto";
-import { FAQ } from "@/components/use-cases/faq";
 import { Payment } from "@/components/use-cases/payment";
-import { SignIn } from "@/components/use-cases/sign-in";
 import { TeamMembers } from "@/components/use-cases/team-members";
 
 const UseCases = () => {
@@ -19,21 +20,22 @@ const UseCases = () => {
             gap={usySpacing.px32}
             marginProps={{ marginTop: usySpacing.px32 }}
           >
-            <Flex widthProps={{ width: "50%" }}>
-              <SignIn />
+            <Flex widthProps={{ width: "50%", minWidth: "300px" }}>
+              <CreateAccount />
             </Flex>
-            <Flex widthProps={{ width: "50%" }}>
-              <FAQ />
+            <Flex widthProps={{ width: "50%", minWidth: "300px" }}>
+              <Blog />
             </Flex>
           </Flex>
         </Flex>
         <Flex
           direction="column"
           gap={usySpacing.px32}
-          widthProps={{ width: "33.33%" }}
+          widthProps={{ width: "33.33%", minWidth: "400px" }}
         >
           <TeamMembers />
           <Payment />
+          <ContactForm />
         </Flex>
       </Flex>
     </Box>

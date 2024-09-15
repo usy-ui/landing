@@ -1982,7 +1982,7 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
   usy-ui@file:../themes/usy-ui-1.0.2.tgz:
-    resolution: {integrity: sha512-2tdeDy/h9Hlun92mG7dJSClUkMcpjrbWJgKtbaKGgiwOrvm2rZOts0ey14UPP2J1zqUT3MkJFFsXJ0CrGlSJ/g==, tarball: file:../themes/usy-ui-1.0.2.tgz}
+    resolution: {integrity: sha512-OoD7yEZ1ObRaap/hseroa15vY9U+OuEwtcXxBKDjLAzky3watDBqrqDcHDaiA4Lx0AcgLVD2no2ay56M0m9FZQ==, tarball: file:../themes/usy-ui-1.0.2.tgz}
     version: 1.0.2
     peerDependencies:
       '@types/react': '*'

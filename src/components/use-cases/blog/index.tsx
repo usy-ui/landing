@@ -2,12 +2,12 @@ import { Accordion, Panel, ParagraphHeading } from "usy-ui";
 
 import { QUESTIONS } from "./constants";
 
-export const FAQ = () => {
+export const Blog = () => {
   return (
     <Panel
       title={
         <ParagraphHeading
-          title="FAQ"
+          title="Blog"
           description="A list of tech stacks for a new frontend developer"
         />
       }

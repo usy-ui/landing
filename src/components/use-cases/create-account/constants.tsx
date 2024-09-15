@@ -23,6 +23,24 @@ export const ValidateRules = {
   },
 };
 
+export const Genders = [
+  {
+    id: "male",
+    label: "Male",
+    value: "male",
+  },
+  {
+    id: "female",
+    label: "Female",
+    value: "female",
+  },
+  {
+    id: "non-disclosure",
+    label: "Non disclosure",
+    value: "non-disclosure",
+  },
+];
+
 export const Countries: SelectItemType[] = [
   {
     id: "united-state",
