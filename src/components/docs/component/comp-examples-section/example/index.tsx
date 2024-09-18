@@ -61,7 +61,11 @@ export const CompExample: FC<ExampleProps> = ({
       id={sectionId}
       marginProps={{ marginTop: QUICK_NAV_MAIN_TO_SUB_SPACING }}
     >
-      <ParagraphHeading title={name} description={description} size="large" />
+      <ParagraphHeading
+        title={name}
+        description={description}
+        titleSize="large"
+      />
       <Tabs tabs={tabs} />
     </Box>
   );

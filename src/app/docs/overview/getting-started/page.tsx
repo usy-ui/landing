@@ -24,7 +24,7 @@ const GettingStarted = () => {
         <ParagraphHeading
           title="Getting Started"
           description="Install Usy UI and start your first component"
-          size="gigant-1"
+          titleSize="gigant-1"
           marginProps={{ marginBottom: usySpacing.px20 }}
         />
         <Typography>
@@ -43,7 +43,7 @@ const GettingStarted = () => {
       >
         <ParagraphHeading
           title="Installation"
-          size="huge"
+          titleSize="huge"
           marginProps={{ marginBottom: usySpacing.px16 }}
         />
         <Typography>Getting up and running is quick and easy.</Typography>
@@ -57,7 +57,7 @@ const GettingStarted = () => {
         id={QuickNavGetStartSubItemConst.installLibrary.sectionId}
         marginProps={{ marginTop: QUICK_NAV_MAIN_TO_SUB_SPACING }}
       >
-        <ParagraphHeading title="Step 1: Install Library" size="large" />
+        <ParagraphHeading title="Step 1: Install Library" titleSize="large" />
         <Typography>
           To get started, install Usy-UI via npm, yarn or pnpm:
         </Typography>
@@ -88,7 +88,7 @@ const GettingStarted = () => {
         id={QuickNavGetStartSubItemConst.importCssFile.sectionId}
         marginProps={{ marginTop: QUICK_NAV_MAIN_TO_SUB_SPACING }}
       >
-        <ParagraphHeading title="Step 2: Import CSS File" size="large" />
+        <ParagraphHeading title="Step 2: Import CSS File" titleSize="large" />
         <Typography>
           Import the global CSS file at the root of your application.
         </Typography>

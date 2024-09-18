@@ -42,13 +42,14 @@ export const CompApisSection: FC<CompApisSectionProps> = ({
       <ParagraphHeading
         title="API Reference"
         description={description}
-        size="huge"
+        titleSize="huge"
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
       <Table
         rowKey="propName"
         columns={propsColumns}
         dataRows={flattenDataRows}
+        styles={{}}
       />
     </Box>
   );

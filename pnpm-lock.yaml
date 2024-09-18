@@ -24,8 +24,8 @@ importers:
         specifier: ^7.53.0
         version: 7.53.0(react@18.3.1)
       usy-ui:
-        specifier: ../themes/usy-ui-1.0.2.tgz
-        version: file:../themes/usy-ui-1.0.2.tgz(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.0.4
+        version: 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.4.0
@@ -1981,9 +1981,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  usy-ui@file:../themes/usy-ui-1.0.2.tgz:
-    resolution: {integrity: sha512-OoD7yEZ1ObRaap/hseroa15vY9U+OuEwtcXxBKDjLAzky3watDBqrqDcHDaiA4Lx0AcgLVD2no2ay56M0m9FZQ==, tarball: file:../themes/usy-ui-1.0.2.tgz}
-    version: 1.0.2
+  usy-ui@1.0.4:
+    resolution: {integrity: sha512-SZsPTdmXB/SNyZeeDVkmQYPWkidxlVpjY1khijF2ORzVgT4Ab4MtvkbVujx/CuKFAl+47QbRA1HQeTbUt2JsmA==}
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
@@ -4278,7 +4277,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  usy-ui@file:../themes/usy-ui-1.0.2.tgz(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  usy-ui@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0

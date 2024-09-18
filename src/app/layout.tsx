@@ -1,18 +1,13 @@
 import { FC } from "react";
 
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 
+import { fontPoppins } from "@/constants/fonts.constants";
 import StyledComponentsRegistry from "@/lib/styled.registry";
 
 import "usy-ui/dist/styles.css";
 import { Header } from "./_layout/header";
 import { Main } from "./_layout/main";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "usy-ui",
@@ -29,7 +24,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
-      <body className={poppins.className}>
+      <body className={fontPoppins.className}>
         <StyledComponentsRegistry>
           <Header />
           <Main>{children}</Main>

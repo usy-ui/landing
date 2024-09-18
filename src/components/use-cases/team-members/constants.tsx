@@ -43,7 +43,7 @@ export const TableColumns: TableColumnType<MemberRowType>[] = [
     title: "Role",
   },
   {
-    key: "action",
+    key: "action-1",
     align: "right",
     widthProps: {
       width: "60px",

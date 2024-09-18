@@ -16,7 +16,7 @@ export const CompExamplesSection: FC<CompExamplesSectionProps> = ({
 }) => {
   return (
     <Box marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}>
-      <ParagraphHeading title="Examples" size="huge" />
+      <ParagraphHeading title="Examples" titleSize="huge" />
       {children}
     </Box>
   );

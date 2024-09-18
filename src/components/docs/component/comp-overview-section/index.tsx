@@ -33,7 +33,7 @@ export const CompOverviewSection: FC<CompOverviewSectionProps> = ({
       <ParagraphHeading
         title={name}
         description={description}
-        size="gigant-1"
+        titleSize="gigant-1"
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
       <Flex
