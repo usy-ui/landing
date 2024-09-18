@@ -7,7 +7,9 @@ on:
 
 jobs:
   deploy-prod:
+    name: Deploy Prod
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
 
     steps:
       - name: Checkout code
@@ -32,7 +34,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ secrets.AWS_APP_REGION }}
 
       - name: Amplify CLI Login
         run: amplify pull --appId ${{ secrets.AWS_AMPLIFY_APP_ID }} --envName prod --yes
