@@ -13,6 +13,7 @@ jobs:
   deploy-prod:
     name: Deploy Prod
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: Checkout code
@@ -31,6 +32,11 @@ jobs:
 
       - name: Install AWS Amplify CLI
         run: npm install -g @aws-amplify/cli
+
+      - name: Debug AWS Credentials
+        run: |
+          echo "AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}"
+          echo "AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}"
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
