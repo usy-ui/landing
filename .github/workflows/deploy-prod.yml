@@ -40,13 +40,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Check for Amplify Hosting
-        run: amplify hosting status || amplify add hosting --yes --plugin amplify-console
-
       - name: Amplify CLI Login
         run: amplify pull --appId ${{ secrets.AWS_AMPLIFY_APP_ID }} --envName staging --debug --yes
         env:
           AMPLIFY_HEADLESS: "true"
+
+      - name: Check for Amplify Hosting
+        run: amplify hosting status || amplify add hosting --yes --plugin amplify-console
 
       - name: Deploy to AWS Amplify
         run: amplify publish --yes
