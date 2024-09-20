@@ -45,9 +45,6 @@ jobs:
         env:
           AMPLIFY_HEADLESS: "true"
 
-      - name: Check for Amplify Hosting
-        run: amplify add hosting --plugin amplify-console
-
       - name: Deploy to AWS Amplify
         run: amplify publish --yes
         env:
