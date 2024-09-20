@@ -9,9 +9,9 @@
     "framework": "react",
     "config": {
       "SourceDir": "src",
-      "DistributionDir": "build",
-      "BuildCommand": "pnpm build",
-      "StartCommand": "pnpm start"
+      "DistributionDir": ".next",
+      "BuildCommand": "npm run build",
+      "StartCommand": "npm start"
     }
   }
 }
