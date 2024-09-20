@@ -41,7 +41,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Amplify CLI Login
-        run: amplify pull --appId ${{ secrets.AWS_AMPLIFY_APP_ID }} --envName staging --debug
+        run: amplify pull --appId ${{ secrets.AWS_AMPLIFY_APP_ID }} --envName staging --debug --yes
 
       - name: Deploy to AWS Amplify
         run: amplify publish --yes
