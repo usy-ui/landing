@@ -1,7 +1,6 @@
 "use client";
 import { ReactNode, useEffect, useState } from "react";
 
-import Image from "next/image";
 import {
   BarsFromLeftIcon,
   Box,
@@ -21,7 +20,8 @@ import {
   UserIcon,
   usyColor,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
+import Image from "next/image";
 
 export const formatAmount = (num: number, prefix?: string): string =>
   `${prefix || ""}${num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;

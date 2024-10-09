@@ -5,7 +5,7 @@ import {
   Flex,
   Typography,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 import { Blog } from "@/components/use-cases/blog";
 import { ContactForm } from "@/components/use-cases/contact-form";

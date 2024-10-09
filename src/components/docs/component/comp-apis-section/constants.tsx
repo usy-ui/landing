@@ -1,7 +1,7 @@
 "use client";
-import { TableColumnType, Typography } from "usy-ui";
+import { Badge, TableColumnType, Typography } from "@usy-ui/base";
 
-import { BadgePropName, RequiredIcon } from "./styled";
+import { RequiredIcon } from "./styled";
 
 import { CompApisRowType } from ".";
 
@@ -9,7 +9,11 @@ export const propsColumns: TableColumnType<CompApisRowType>[] = [
   {
     key: "propName",
     title: "Prop",
-    renderRow: ({ propName }) => <BadgePropName>{propName}</BadgePropName>,
+    renderRow: ({ propName }) => (
+      <Badge variant="filled" radius="medium">
+        {propName}
+      </Badge>
+    ),
   },
   {
     key: "required",

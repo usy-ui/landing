@@ -1,4 +1,4 @@
-import { SelectItemType } from "usy-ui";
+import { SelectItemType } from "@usy-ui/base";
 
 import {
   AustraliaFlag,

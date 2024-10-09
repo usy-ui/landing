@@ -1,5 +1,4 @@
 "use client";
-import { Controller, useForm } from "react-hook-form";
 import {
   Button,
   Flex,
@@ -9,7 +8,8 @@ import {
   Tags,
   TextArea,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
+import { Controller, useForm } from "react-hook-form";
 
 import { ValidateRules } from "../create-account/constants";
 

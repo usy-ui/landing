@@ -28,7 +28,7 @@ const Accordion = () => {
         description="Default component"
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
-        importCommand={`import { Accordion } from "usy-ui"`}
+        importCommand={`import { Accordion } from "@usy-ui/base"`}
       />
       <CompApisSection
         description="This component inherits props from the Avatar primitive."

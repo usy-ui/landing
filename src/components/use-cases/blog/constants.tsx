@@ -7,7 +7,7 @@ import {
   ParagraphHeading,
   Typography,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 export const QUESTIONS: AccordionItemType[] = [
   {

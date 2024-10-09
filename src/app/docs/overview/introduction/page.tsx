@@ -1,5 +1,5 @@
 "use client";
-import { Box, ParagraphHeading, Typography, usySpacing } from "usy-ui";
+import { Box, ParagraphHeading, Typography, usySpacing } from "@usy-ui/base";
 
 import {
   QUICK_NAV_MAIN_TO_MAIN_SPACING,

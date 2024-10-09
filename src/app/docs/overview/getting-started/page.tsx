@@ -5,7 +5,7 @@ import {
   ParagraphHeading,
   Typography,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 import {
   QUICK_NAV_MAIN_TO_MAIN_SPACING,
@@ -64,17 +64,17 @@ const GettingStarted = () => {
         <Flex direction="column">
           <Copyable
             text={`npm install usy-ui`}
-            widthProps={{ maxWidth: "300px" }}
+            widthProps={{ width: "300px" }}
             marginProps={{ margin: `${usySpacing.px10} 0` }}
           />
           <Copyable
             text={`yarn add usy-ui`}
-            widthProps={{ maxWidth: "300px" }}
+            widthProps={{ width: "300px" }}
             marginProps={{ margin: `${usySpacing.px10} 0` }}
           />
           <Copyable
             text={`pnpm add usy-ui`}
-            widthProps={{ maxWidth: "300px" }}
+            widthProps={{ width: "300px" }}
             marginProps={{ margin: `${usySpacing.px10} 0` }}
           />
         </Flex>

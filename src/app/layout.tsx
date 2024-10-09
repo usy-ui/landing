@@ -4,13 +4,13 @@ import type { Metadata } from "next";
 
 import { fontPoppins } from "@/constants/fonts.constants";
 import StyledComponentsRegistry from "@/lib/styled.registry";
+import "@usy-ui/base/dist/styles.css";
 
-import "usy-ui/dist/styles.css";
 import { Header } from "./_layout/header";
 import { Main } from "./_layout/main";
 
 export const metadata: Metadata = {
-  title: "usy-ui",
+  title: "@usy-ui/base",
   description: "A lightweight UI components for ReactJS and NextJS",
 };
 

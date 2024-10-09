@@ -10,7 +10,7 @@ import {
   ParagraphHeading,
   Table,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 import { TableColumns, TableData } from "./constants";
 

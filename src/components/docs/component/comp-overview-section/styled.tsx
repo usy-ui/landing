@@ -1,5 +1,5 @@
+import { usyColor, usyFontSize, usySpacing } from "@usy-ui/base";
 import styled from "styled-components";
-import { usyColor, usyFontSize, usySpacing } from "usy-ui";
 
 export const Link = styled.a`
   display: flex;

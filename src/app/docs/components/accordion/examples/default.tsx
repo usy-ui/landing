@@ -1,4 +1,4 @@
-import { Accordion } from "usy-ui";
+import { Accordion } from "@usy-ui/base";
 
 export const Default = () => {
   return (

@@ -8,7 +8,7 @@ import {
   TabItemType,
   Tabs,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 import { CodeBlock } from "@/components/common/codeblock";
 import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";

@@ -5,7 +5,7 @@ import {
   TogglePanel,
   Typography,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 export const FAQ = () => {
   return (

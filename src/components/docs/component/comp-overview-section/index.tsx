@@ -7,7 +7,7 @@ import {
   Flex,
   ParagraphHeading,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 import { CompQuickNavMainItemConst } from "../constants";
 

@@ -1,13 +1,13 @@
 "use client";
-import Link from "next/link";
-import styled, { css } from "styled-components";
 import {
   usyColor,
   usyElement,
   usyFontSize,
   usyFontWeight,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
+import Link from "next/link";
+import styled, { css } from "styled-components";
 
 import { MAX_WIDTH, HEADER_HEIGHT } from "@/constants/layout.constants";
 

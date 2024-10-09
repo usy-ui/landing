@@ -1,9 +1,10 @@
+import { usyColor, usyFontSize, usyFontWeight, usySpacing } from "@usy-ui/base";
 import styled, { css } from "styled-components";
-import { usyColor, usyFontSize, usyFontWeight, usySpacing } from "usy-ui";
 
 import { HEADER_HEIGHT, MAIN_PADDING_TOP } from "@/constants/layout.constants";
 
 export const ContentAndQuickContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

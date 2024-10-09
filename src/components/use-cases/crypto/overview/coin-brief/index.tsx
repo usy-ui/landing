@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import Image from "next/image";
 import {
   BarSkeleton,
   Box,
@@ -12,7 +11,8 @@ import {
   Panel,
   Typography,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
+import Image from "next/image";
 
 type RenderCoinBriefProps = {
   icon: string;

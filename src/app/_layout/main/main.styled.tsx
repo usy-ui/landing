@@ -1,6 +1,6 @@
 "use client";
+import { usySpacing } from "@usy-ui/base";
 import styled from "styled-components";
-import { usySpacing } from "usy-ui";
 
 import {
   MAIN_PADDING_TOP,

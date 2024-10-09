@@ -36,7 +36,7 @@ const AvatarDoc = () => {
         description="An image element with a fallback for representing the user."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
-        importCommand={`import { Avatar } from "usy-ui"`}
+        importCommand={`import { Avatar } from "@usy-ui/base"`}
       />
       <CompApisSection
         description="This component inherits props from the Avatar primitive."

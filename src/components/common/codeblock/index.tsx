@@ -1,9 +1,9 @@
 "use client";
 import { FC } from "react";
 
+import { usyFontSize } from "@usy-ui/base";
 import { CodeBlock as BaseCodeBlock, dracula } from "react-code-blocks";
 import { SupportedLanguages } from "react-code-blocks/dist/types";
-import { usyFontSize } from "usy-ui";
 
 import { fontJetBrainsMono } from "@/constants/fonts.constants";
 

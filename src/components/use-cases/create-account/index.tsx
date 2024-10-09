@@ -1,5 +1,4 @@
 "use client";
-import { Controller, useForm } from "react-hook-form";
 import {
   Button,
   Checkbox,
@@ -13,7 +12,8 @@ import {
   Select,
   SelectItemType,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
+import { Controller, useForm } from "react-hook-form";
 
 import { Countries, Genders, ValidateRules } from "./constants";
 

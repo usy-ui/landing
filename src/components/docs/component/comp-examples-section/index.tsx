@@ -2,7 +2,7 @@
 
 import { FC, ReactNode } from "react";
 
-import { Box, ParagraphHeading } from "usy-ui";
+import { Box, ParagraphHeading } from "@usy-ui/base";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 

@@ -1,4 +1,4 @@
-import { Accordion, Panel, ParagraphHeading } from "usy-ui";
+import { Accordion, Panel, ParagraphHeading } from "@usy-ui/base";
 
 import { QUESTIONS } from "./constants";
 

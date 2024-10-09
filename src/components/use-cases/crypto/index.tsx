@@ -11,7 +11,7 @@ import {
   Tooltip,
   Typography,
   usySpacing,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 import { Overview } from "./overview";
 

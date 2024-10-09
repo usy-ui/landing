@@ -1,10 +1,15 @@
 "use client";
 import { useMemo } from "react";
 
+import {
+  BrandDiscordIcon,
+  BrandGithubIcon,
+  SunIcon,
+  Tooltip,
+} from "@usy-ui/base";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BrandDiscordIcon, BrandGithubIcon, SunIcon, Tooltip } from "usy-ui";
 
 import {
   HeaderContainer,
@@ -46,7 +51,7 @@ export const Header = () => {
     return (
       <LogoAndNavContainer>
         <Link href="/">
-          <Image width={40} height={40} src="/favicon.svg" alt="usy-ui" />
+          <Image width={40} height={40} src="/favicon.svg" alt="@usy-ui/base" />
         </Link>
         <Navigation>
           {routing.map(({ url, label, isActive }) => (

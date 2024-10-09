@@ -1,7 +1,7 @@
 "use client";
 import { FC, useMemo } from "react";
 
-import { Box, ParagraphHeading, Table, usySpacing } from "usy-ui";
+import { Box, ParagraphHeading, Table, usySpacing } from "@usy-ui/base";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 

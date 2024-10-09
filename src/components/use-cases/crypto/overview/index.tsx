@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Flex, usySpacing } from "usy-ui";
+import { Flex, usySpacing } from "@usy-ui/base";
 
 import { formatAmount } from "../../payment";
 

@@ -1,8 +1,8 @@
 "use client";
 import { FC, ReactNode, useMemo } from "react";
 
+import { Flex } from "@usy-ui/base";
 import { usePathname } from "next/navigation";
-import { Flex } from "usy-ui";
 
 import { MenuHierarchyConst, MenuItemType } from "./layout.constants";
 import {

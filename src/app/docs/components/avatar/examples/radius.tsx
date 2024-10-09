@@ -1,4 +1,4 @@
-import { Avatar } from "usy-ui";
+import { Avatar } from "@usy-ui/base";
 
 import { avatarUrl } from "@/constants/mock.constants";
 

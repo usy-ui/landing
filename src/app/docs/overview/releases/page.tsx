@@ -1,5 +1,5 @@
 const Releases = () => {
-  return <div>Releases</div>;
+  return <div>Content will be updated soon!</div>;
 };
 
 export default Releases;

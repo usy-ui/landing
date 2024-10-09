@@ -11,12 +11,12 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@usy-ui/base": "^1.0.1",
     "next": "14.2.5",
     "react": "^18",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^18",
-    "react-hook-form": "^7.53.0",
-    "usy-ui": "^1.0.4"
+    "react-hook-form": "^7.53.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",

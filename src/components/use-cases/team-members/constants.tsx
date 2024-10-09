@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
   TableColumnType,
   Typography,
-} from "usy-ui";
+} from "@usy-ui/base";
 
 export type MemberRowType = {
   id: string;

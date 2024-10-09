@@ -1,13 +1,5 @@
+import { CheckCircleIcon, usyColor, usySpacing } from "@usy-ui/base";
 import styled from "styled-components";
-import { CheckCircleIcon, usyColor, usyFontSize, usySpacing } from "usy-ui";
-
-export const BadgePropName = styled.span`
-  color: ${usyColor.white};
-  font-size: ${usyFontSize.small};
-  background-color: ${usyColor.primary};
-  padding: 0 ${usySpacing.px4};
-  border-radius: ${usySpacing.px4};
-`;
 
 export const RequiredIcon = styled(CheckCircleIcon)`
   width: ${usySpacing.px16};

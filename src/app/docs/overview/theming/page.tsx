@@ -1,5 +1,5 @@
 const Theming = () => {
-  return <div>Theming</div>;
+  return <div>Content will be updated soon!</div>;
 };
 
 export default Theming;
