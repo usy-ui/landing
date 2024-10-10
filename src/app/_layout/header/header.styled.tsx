@@ -5,6 +5,7 @@ import {
   usyFontSize,
   usyFontWeight,
   usySpacing,
+  usyZIndex,
 } from "@usy-ui/base";
 import Link from "next/link";
 import styled, { css } from "styled-components";
@@ -20,6 +21,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: ${usyZIndex[500]};
   top: 0;
   left: 50%;
   transform: translateX(-50%);
