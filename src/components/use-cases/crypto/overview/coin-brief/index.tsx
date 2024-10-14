@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 
 type RenderCoinBriefProps = {
-  icon: string;
+  iconUrl: string;
   coinCode: string;
   coinName: string;
   bidPrice: string;
@@ -24,7 +24,7 @@ type RenderCoinBriefProps = {
 };
 
 export const CoinBrief = ({
-  icon,
+  iconUrl,
   coinCode,
   coinName,
   bidPrice,
@@ -55,7 +55,7 @@ export const CoinBrief = ({
           alignItems="center"
           marginProps={{ marginBottom: usySpacing.px4 }}
         >
-          <Image src={`/icons/${icon}`} width={20} height={20} alt="XRP" />
+          <Image src={iconUrl} width={20} height={20} alt="XRP" />
           &nbsp;&nbsp;
           <Typography weight="semibold">{`${coinName}(${coinCode})`}</Typography>
         </Flex>

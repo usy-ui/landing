@@ -196,7 +196,7 @@ export const Payment = () => {
       <Panel>
         <Flex justifyContent="center" alignItems="center" direction="column">
           <Image
-            src="/illustration.png"
+            src="https://raw.githubusercontent.com/usy-ui/landing/refs/heads/main/public/illustration.png"
             alt="Payment"
             width={150}
             height={150}

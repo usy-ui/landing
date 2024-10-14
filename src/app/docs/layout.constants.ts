@@ -49,6 +49,22 @@ const LayoutMenuConst: MenuItemType = {
   ],
 };
 
+const FormFieldsMenuConst: MenuItemType = {
+  id: "form-fields-menu",
+  label: "Form Fields",
+  url: "form-fields",
+  items: [
+    { id: "cpn-checkbox", url: "checkbox", label: "Checkbox" },
+    { id: "cpn-input", url: "input", label: "Input" },
+    { id: "cpn-password", url: "password", label: "Password" },
+    { id: "cpn-radio-group", url: "group", label: "Radio Group" },
+    { id: "cpn-select", url: "select", label: "Select" },
+    { id: "cpn-switch", url: "switch", label: "Switch" },
+    { id: "cpn-tags", url: "tags", label: "Tags" },
+    { id: "cpn-textarea", url: "textarea", label: "Textarea" },
+  ],
+};
+
 const ComponentMenuConst: MenuItemType = {
   id: "components-menu",
   label: "Components",
@@ -57,7 +73,8 @@ const ComponentMenuConst: MenuItemType = {
     { id: "cpn-accordion", url: "accordion", label: "Accordion" },
     { id: "cpn-avatar", url: "avatar", label: "Avatar" },
     { id: "cpn-badge", url: "badge", label: "Badge" },
-    { id: "cpn-checkbox", url: "checkbox", label: "Checkbox" },
+    { id: "cpn-button", url: "button", label: "Button" },
+    { id: "cpn-copyable", url: "copyable", label: "Copyable" },
     { id: "cpn-drawer", url: "drawer", label: "Drawer" },
     {
       id: "cpn-dropdown-menu",
@@ -69,18 +86,23 @@ const ComponentMenuConst: MenuItemType = {
       url: "image-gallery",
       label: "Image Gallery",
     },
-    { id: "cpn-input", url: "input", label: "Input" },
-    { id: "cpn-password", url: "password", label: "Password" },
     { id: "cpn-modal", url: "modal", label: "Modal" },
-    { id: "cpn-select", url: "select", label: "Select" },
-    { id: "cpn-tags", url: "tags", label: "Tags" },
-    { id: "cpn-textarea", url: "textarea", label: "Textarea" },
+    {
+      id: "cpn-paragraph-heading",
+      url: "paragraph-heading",
+      label: "Paragraph Heading",
+    },
+    { id: "cpn-popover", url: "popover", label: "Popover" },
+    { id: "cpn-skeleton", url: "skeleton", label: "Skeleton" },
+    { id: "cpn-table", url: "table", label: "Table" },
+    { id: "cpn-tabs", url: "tabs", label: "Tabs" },
     { id: "cpn-toast", url: "toast", label: "Toast" },
     {
-      id: "cpn-toggle-section",
-      url: "toggle-section",
-      label: "Toggle Section",
+      id: "cpn-toggle-panel",
+      url: "toggle-panel",
+      label: "Toggle Panel",
     },
+    { id: "cpn-tooltip", url: "tooltip", label: "Tooltip" },
     { id: "cpn-typography", url: "typography", label: "Typography" },
   ],
 };
@@ -113,6 +135,7 @@ const UtilitiesMenuConst: MenuItemType = {
 export const MenuHierarchyConst = [
   OverviewMenuConst,
   LayoutMenuConst,
+  FormFieldsMenuConst,
   ComponentMenuConst,
   VariablesMenuConst,
   UtilitiesMenuConst,

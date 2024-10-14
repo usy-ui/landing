@@ -45,7 +45,7 @@ export const MenuHeading = styled.h3`
 export const MenuItemLink = styled(Link)<{
   $isActivated: boolean;
 }>`
-  width: 160px;
+  width: 170px;
   padding: ${usySpacing.px4} ${usySpacing.px12};
   margin: ${usySpacing.px4} 0;
   font-weight: ${usyFontWeight.light};

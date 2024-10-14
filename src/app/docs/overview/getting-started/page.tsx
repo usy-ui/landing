@@ -63,17 +63,17 @@ const GettingStarted = () => {
         </Typography>
         <Flex direction="column">
           <Copyable
-            text={`npm install usy-ui`}
+            text={`npm install @usy-ui/base`}
             widthProps={{ width: "300px" }}
             marginProps={{ margin: `${usySpacing.px10} 0` }}
           />
           <Copyable
-            text={`yarn add usy-ui`}
+            text={`yarn add @usy-ui/base`}
             widthProps={{ width: "300px" }}
             marginProps={{ margin: `${usySpacing.px10} 0` }}
           />
           <Copyable
-            text={`pnpm add usy-ui`}
+            text={`pnpm add @usy-ui/base`}
             widthProps={{ width: "300px" }}
             marginProps={{ margin: `${usySpacing.px10} 0` }}
           />
@@ -93,7 +93,7 @@ const GettingStarted = () => {
           Import the global CSS file at the root of your application.
         </Typography>
         <Copyable
-          text={`import "usy-ui/dist/styles.css";`}
+          text={`import "@usy-ui/base/dist/styles.css";`}
           widthProps={{ minWidth: "350px" }}
           marginProps={{ margin: `${usySpacing.px10} 0` }}
         />

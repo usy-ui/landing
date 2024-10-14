@@ -20,7 +20,7 @@ export const Overview: FC<OverviewProps> = ({ isFetching }) => {
         marginProps={{ marginTop: usySpacing.px32 }}
       >
         <CoinBrief
-          icon="btc.svg"
+          iconUrl="https://raw.githubusercontent.com/usy-ui/landing/6468696af27f5733577d5bc752468a3925e58c02/public/icons/btc.svg"
           coinCode="BTC"
           coinName="Bitcoin"
           bidPrice={formatAmount(59949.81, "$")}
@@ -28,7 +28,7 @@ export const Overview: FC<OverviewProps> = ({ isFetching }) => {
           isLoading={isFetching}
         />
         <CoinBrief
-          icon="eth.svg"
+          iconUrl="https://raw.githubusercontent.com/usy-ui/landing/6468696af27f5733577d5bc752468a3925e58c02/public/icons/eth.svg"
           coinCode="ETH"
           coinName="Ethereum"
           bidPrice={formatAmount(2419.4, "$")}
@@ -36,7 +36,7 @@ export const Overview: FC<OverviewProps> = ({ isFetching }) => {
           isLoading={isFetching}
         />
         <CoinBrief
-          icon="usdt.svg"
+          iconUrl="https://raw.githubusercontent.com/usy-ui/landing/6468696af27f5733577d5bc752468a3925e58c02/public/icons/usdt.svg"
           coinCode="USDT"
           coinName="Tether"
           bidPrice={formatAmount(1.0, "$")}
@@ -44,7 +44,7 @@ export const Overview: FC<OverviewProps> = ({ isFetching }) => {
           isLoading={isFetching}
         />
         <CoinBrief
-          icon="bnb.svg"
+          iconUrl="https://raw.githubusercontent.com/usy-ui/landing/6468696af27f5733577d5bc752468a3925e58c02/public/icons/bnb.svg"
           coinCode="BNB"
           coinName="BNB"
           bidPrice={formatAmount(551.24, "$")}
@@ -52,7 +52,7 @@ export const Overview: FC<OverviewProps> = ({ isFetching }) => {
           isLoading={isFetching}
         />
         <CoinBrief
-          icon="sol.svg"
+          iconUrl="https://raw.githubusercontent.com/usy-ui/landing/6468696af27f5733577d5bc752468a3925e58c02/public/icons/sol.svg"
           coinCode="SOL"
           coinName="Solana"
           bidPrice={formatAmount(137.41, "$")}
@@ -60,7 +60,7 @@ export const Overview: FC<OverviewProps> = ({ isFetching }) => {
           isLoading={isFetching}
         />
         <CoinBrief
-          icon="xrp.svg"
+          iconUrl="https://raw.githubusercontent.com/usy-ui/landing/6468696af27f5733577d5bc752468a3925e58c02/public/icons/xrp.svg"
           coinCode="XRP"
           coinName="XRP"
           bidPrice={formatAmount(0.5864, "$")}

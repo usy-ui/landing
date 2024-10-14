@@ -51,7 +51,12 @@ export const Header = () => {
     return (
       <LogoAndNavContainer>
         <Link href="/">
-          <Image width={40} height={40} src="/favicon.svg" alt="@usy-ui/base" />
+          <Image
+            width={40}
+            height={40}
+            src="https://raw.githubusercontent.com/usy-ui/landing/refs/heads/main/public/favicon.png"
+            alt="@usy-ui/base"
+          />
         </Link>
         <Navigation>
           {routing.map(({ url, label, isActive }) => (

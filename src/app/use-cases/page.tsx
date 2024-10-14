@@ -6,6 +6,7 @@ import {
   Typography,
   usySpacing,
 } from "@usy-ui/base";
+import Link from "next/link";
 
 import { Blog } from "@/components/use-cases/blog";
 import { ContactForm } from "@/components/use-cases/contact-form";
@@ -41,13 +42,17 @@ const UseCases = () => {
           gap={usySpacing.px20}
           marginProps={{ marginTop: usySpacing.px32 }}
         >
-          <Button variant="primary" size="small">
-            <ArrowRightIcon />
-            &nbsp; Get Started
-          </Button>
-          <Button variant="outline" size="small">
-            View Github
-          </Button>
+          <Link href="/docs">
+            <Button variant="primary" size="small">
+              <ArrowRightIcon />
+              &nbsp; Get Started
+            </Button>
+          </Link>
+          <Link href="https://github.com/usy-ui/base">
+            <Button variant="outline" size="small">
+              View Github
+            </Button>
+          </Link>
         </Flex>
       </Flex>
       <Flex
