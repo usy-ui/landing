@@ -21,7 +21,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: ${usyZIndex[500]};
+  z-index: ${usyZIndex[100]};
   top: 0;
   left: 50%;
   transform: translateX(-50%);
