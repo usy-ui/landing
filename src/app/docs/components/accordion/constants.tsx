@@ -1,40 +1,33 @@
-"use client";
+import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section";
+import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/helpers/get-common-comp-props-rows";
+import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
 
-import { Tooltip, Typography } from "@usy-ui/base";
-
-import { CompApisRowType } from "@/components/docs/docs-content/apis-section";
-import { getCommonCompApiRows } from "@/components/docs/docs-content/apis-section/constants";
-
-export const specApiDataRows: CompApisRowType[] = [
+export const AccordionPropsRowsConst: APIsSectionRowType[] = [
   {
     propName: "items",
     required: true,
-    type: "AccordionItemType[]",
+    type: (
+      <TypesPreview type="AccordionItemType">AccordionItemType[]</TypesPreview>
+    ),
     defVault: "",
   },
   {
     propName: "widthProps",
     required: false,
-    type: (
-      <Tooltip content="aaa">
-        <Typography size="small" color="blue">
-          WidthCSS
-        </Typography>
-      </Tooltip>
-    ),
+    type: <TypesPreview type="WidthCSSType">WidthCSSType</TypesPreview>,
     defVault: "",
   },
   {
     propName: "marginProps",
     required: false,
-    type: "MarginCSS",
+    type: <TypesPreview type="MarginCSSType">MarginCSSType</TypesPreview>,
     defVault: "",
   },
   {
     propName: "paddingProps",
     required: false,
-    type: "PaddingCSS",
+    type: <TypesPreview type="PaddingCSSType">PaddingCSSType</TypesPreview>,
     defVault: "",
   },
-  ...getCommonCompApiRows("accordion"),
+  ...getCommonCompPropsRows("accordion"),
 ];

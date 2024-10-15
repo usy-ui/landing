@@ -1,6 +1,6 @@
 import { ApisSection } from "@/components/docs/docs-content/apis-section";
 import {
-  CompExample,
+  ExamplePreview,
   ExamplesSection,
 } from "@/components/docs/docs-content/examples-section";
 import { OverviewSection } from "@/components/docs/docs-content/overview-section";
@@ -8,9 +8,9 @@ import {
   getCompSourceUrl,
   getReportIssueUrl,
 } from "@/components/docs/docs-content/utils";
-import { useCompExamples } from "@/hooks/useCompExamples";
+import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 
-import { specApiDataRows } from "./avatar.constants";
+import { AvatarPropsRowsConst } from "./constants";
 import { Fallback, Radius, Size } from "./examples";
 
 const AvatarDoc = () => {
@@ -20,7 +20,7 @@ const AvatarDoc = () => {
     size: sizeExampleCode,
     radius: radiusExampleCode,
     fallback: fallbackExampleCode,
-  } = useCompExamples({
+  } = useExamplesPreviews({
     component: "avatar",
     types: ["size", "radius", "fallback"],
   });
@@ -40,22 +40,22 @@ const AvatarDoc = () => {
       />
       <ApisSection
         description="This component inherits props from the Avatar primitive."
-        dataRows={specApiDataRows}
+        dataRows={AvatarPropsRowsConst}
       />
       <ExamplesSection>
-        <CompExample
+        <ExamplePreview
           type="size"
           description="Use the radius prop to assign a specific radius value."
           uiPreview={<Size />}
           code={sizeExampleCode}
         />
-        <CompExample
+        <ExamplePreview
           type="radius"
           description="Use the radius prop to assign a specific radius value."
           uiPreview={<Radius />}
           code={radiusExampleCode}
         />
-        <CompExample
+        <ExamplePreview
           type="fallback"
           description="Use the radius prop to assign a specific radius value."
           uiPreview={<Fallback />}

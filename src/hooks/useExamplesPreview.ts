@@ -3,15 +3,15 @@ import { useMemo } from "react";
 import { CompQuickNavSubItemUnion } from "@/components/docs/docs-content/types";
 import { readFile } from "@/utils";
 
-type UseCompExampleProps = {
+type UseExamplePreviewProps = {
   component: string;
   types: CompQuickNavSubItemUnion[];
 };
 
-export const useCompExamples = ({
+export const useExamplesPreviews = ({
   component,
   types = [],
-}: UseCompExampleProps) => {
+}: UseExamplePreviewProps) => {
   const examplesCode = useMemo<Record<CompQuickNavSubItemUnion, string>>(
     () =>
       types.reduce(

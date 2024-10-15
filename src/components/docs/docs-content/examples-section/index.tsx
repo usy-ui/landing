@@ -10,7 +10,6 @@ type ExamplesSectionProps = {
   children: ReactNode;
 };
 
-export { CompExample } from "./example";
 export const ExamplesSection: FC<ExamplesSectionProps> = ({ children }) => {
   return (
     <Box marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}>
@@ -19,3 +18,5 @@ export const ExamplesSection: FC<ExamplesSectionProps> = ({ children }) => {
     </Box>
   );
 };
+
+export { ExamplePreview } from "./example-preview";

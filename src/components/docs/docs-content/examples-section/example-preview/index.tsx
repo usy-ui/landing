@@ -16,14 +16,14 @@ import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";
 import { CompQuickNavSubItemConst } from "../../constants";
 import { CompQuickNavSubItemUnion } from "../../types";
 
-type ExampleProps = {
+type ExamplePreviewProps = {
   type: CompQuickNavSubItemUnion;
   description: string;
   uiPreview: ReactNode;
   code: string;
 };
 
-export const CompExample: FC<ExampleProps> = ({
+export const ExamplePreview: FC<ExamplePreviewProps> = ({
   type,
   description,
   uiPreview,

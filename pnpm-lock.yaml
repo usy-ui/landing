@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@usy-ui/base':
-        specifier: ^1.0.1
-        version: 1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: file:C:\Users\anhth\OneDrive\Desktop\usy-ui\base\usy-ui-base-1.0.1.tgz
+        version: file:../base/usy-ui-base-1.0.1.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -398,8 +398,9 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@usy-ui/base@1.0.1':
-    resolution: {integrity: sha512-CqNLR44u7j32PLqUFZsWK2taC8b25lRw/YrucIkYM4GZclWn/CU2TmIJUkwnMlO3nsZSK6tEDs+qB68DIdJvOg==}
+  '@usy-ui/base@file:../base/usy-ui-base-1.0.1.tgz':
+    resolution: {integrity: sha512-TelYM6xQdaOmnpyyVaOW8jjHlr5TNpYyYI8d7qluyW6Euymt+F833NcgXRbd4k1IYkBifG6UwEDt7I9ODCfKbA==, tarball: file:../base/usy-ui-base-1.0.1.tgz}
+    version: 1.0.1
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -2430,7 +2431,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@usy-ui/base@1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@usy-ui/base@file:../base/usy-ui-base-1.0.1.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)

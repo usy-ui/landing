@@ -6,6 +6,7 @@
     "next/core-web-vitals"
   ],
   "plugins": ["prettier"],
+  "ignorePatterns": ["src/components/types/*"],
   "rules": {
     "no-unused-vars": "error",
     "import/no-named-as-default": "off",

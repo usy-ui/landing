@@ -7,9 +7,9 @@ import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
 import { CompQuickNavMainItemConst } from "../constants";
 
-import { propsColumns } from "./constants";
+import { getApisSectionColumnProps } from "./helpers/get-apis-section-column-props";
 
-export type CompApisRowType = {
+export type APIsSectionRowType = {
   propName: string;
   required: boolean;
   type: string | ReactNode;
@@ -18,7 +18,7 @@ export type CompApisRowType = {
 
 type ApisSectionProps = {
   description?: string;
-  dataRows: CompApisRowType[];
+  dataRows: APIsSectionRowType[];
 };
 
 export const ApisSection: FC<ApisSectionProps> = ({
@@ -47,7 +47,7 @@ export const ApisSection: FC<ApisSectionProps> = ({
       />
       <Table
         rowKey="propName"
-        columns={propsColumns}
+        columns={getApisSectionColumnProps()}
         dataRows={flattenDataRows}
         styles={{}}
       />

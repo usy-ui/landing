@@ -1,22 +1,22 @@
 import { ApisSection } from "@/components/docs/docs-content/apis-section";
 import {
   ExamplesSection,
-  CompExample,
+  ExamplePreview,
 } from "@/components/docs/docs-content/examples-section";
 import { OverviewSection } from "@/components/docs/docs-content/overview-section";
 import {
   getCompSourceUrl,
   getReportIssueUrl,
 } from "@/components/docs/docs-content/utils";
-import { useCompExamples } from "@/hooks/useCompExamples";
+import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 
-import { specApiDataRows } from "./constants";
+import { AccordionPropsRowsConst } from "./constants";
 import { Default } from "./examples";
 
 const Accordion = () => {
   const sourceUrl = getCompSourceUrl("Accordion");
   const reportIssueUrl = getReportIssueUrl("Accordion");
-  const { default: defaultExampleCode } = useCompExamples({
+  const { default: defaultExampleCode } = useExamplesPreviews({
     component: "accordion",
     types: ["default"],
   });
@@ -32,10 +32,10 @@ const Accordion = () => {
       />
       <ApisSection
         description="Contain all supported props"
-        dataRows={specApiDataRows}
+        dataRows={AccordionPropsRowsConst}
       />
       <ExamplesSection>
-        <CompExample
+        <ExamplePreview
           type="default"
           description="The pure component with default props"
           uiPreview={<Default />}

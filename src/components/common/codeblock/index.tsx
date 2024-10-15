@@ -7,21 +7,32 @@ import { SupportedLanguages } from "react-code-blocks/dist/types";
 
 import { fontJetBrainsMono } from "@/constants/fonts.constants";
 
+import { CodeBlockContainer } from "./styled";
+
 type CodeBlockProps = {
   code: string;
   language?: SupportedLanguages;
+  showLineNumbers?: boolean;
 };
 
-export const CodeBlock: FC<CodeBlockProps> = ({ code, language = "tsx" }) => {
+export const CodeBlock: FC<CodeBlockProps> = ({
+  code,
+  language = "tsx",
+  showLineNumbers = true,
+}) => {
   return (
-    <BaseCodeBlock
-      theme={dracula}
-      language={language}
-      text={code}
-      customStyle={{
-        fontSize: usyFontSize.medium,
-        fontFamily: fontJetBrainsMono.style.fontFamily,
-      }}
-    />
+    <CodeBlockContainer>
+      <BaseCodeBlock
+        theme={dracula}
+        language={language}
+        text={code}
+        showLineNumbers={showLineNumbers}
+        customStyle={{
+          fontSize: usyFontSize.medium,
+          fontFamily: fontJetBrainsMono.style.fontFamily,
+          backgroundColor: "transparent",
+        }}
+      />
+    </CodeBlockContainer>
   );
 };

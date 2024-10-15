@@ -1,9 +1,9 @@
 "use client";
 
-import { CompApisRowType } from "@/components/docs/docs-content/apis-section";
-import { getCommonCompApiRows } from "@/components/docs/docs-content/apis-section/constants";
+import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section";
+import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/helpers/get-common-comp-props-rows";
 
-export const specApiDataRows: CompApisRowType[] = [
+export const AvatarPropsRowsConst: APIsSectionRowType[] = [
   {
     propName: "url",
     required: true,
@@ -46,5 +46,5 @@ export const specApiDataRows: CompApisRowType[] = [
     type: "() => void",
     defVault: "",
   },
-  ...getCommonCompApiRows("avatar"),
+  ...getCommonCompPropsRows("avatar"),
 ];
