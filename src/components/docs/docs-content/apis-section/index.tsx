@@ -16,12 +16,12 @@ export type CompApisRowType = {
   defVault: string;
 };
 
-type CompApisSectionProps = {
+type ApisSectionProps = {
   description?: string;
   dataRows: CompApisRowType[];
 };
 
-export const CompApisSection: FC<CompApisSectionProps> = ({
+export const ApisSection: FC<ApisSectionProps> = ({
   description,
   dataRows,
 }) => {

@@ -13,7 +13,7 @@ import { CompQuickNavMainItemConst } from "../constants";
 
 import { Link } from "./styled";
 
-type CompOverviewSectionProps = {
+type OverviewSectionProps = {
   name: string;
   description: string;
   viewSourceUrl: string;
@@ -21,7 +21,7 @@ type CompOverviewSectionProps = {
   importCommand: string;
 };
 
-export const CompOverviewSection: FC<CompOverviewSectionProps> = ({
+export const OverviewSection: FC<OverviewSectionProps> = ({
   name,
   description,
   viewSourceUrl,

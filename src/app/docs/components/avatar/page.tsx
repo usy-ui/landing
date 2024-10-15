@@ -1,9 +1,9 @@
-import { CompApisSection } from "@/components/docs/docs-content/comp-apis-section";
+import { ApisSection } from "@/components/docs/docs-content/apis-section";
 import {
   CompExample,
-  CompExamplesSection,
-} from "@/components/docs/docs-content/comp-examples-section";
-import { CompOverviewSection } from "@/components/docs/docs-content/comp-overview-section";
+  ExamplesSection,
+} from "@/components/docs/docs-content/examples-section";
+import { OverviewSection } from "@/components/docs/docs-content/overview-section";
 import {
   getCompSourceUrl,
   getReportIssueUrl,
@@ -31,18 +31,18 @@ const AvatarDoc = () => {
 
   return (
     <>
-      <CompOverviewSection
+      <OverviewSection
         name="Avatar"
         description="An image element with a fallback for representing the user."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
         importCommand={`import { Avatar } from "@usy-ui/base"`}
       />
-      <CompApisSection
+      <ApisSection
         description="This component inherits props from the Avatar primitive."
         dataRows={specApiDataRows}
       />
-      <CompExamplesSection>
+      <ExamplesSection>
         <CompExample
           type="size"
           description="Use the radius prop to assign a specific radius value."
@@ -61,7 +61,7 @@ const AvatarDoc = () => {
           uiPreview={<Fallback />}
           code={fallbackExampleCode}
         />
-      </CompExamplesSection>
+      </ExamplesSection>
     </>
   );
 };

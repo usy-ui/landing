@@ -1,9 +1,9 @@
-import { CompApisSection } from "@/components/docs/docs-content/comp-apis-section";
+import { ApisSection } from "@/components/docs/docs-content/apis-section";
 import {
-  CompExamplesSection,
+  ExamplesSection,
   CompExample,
-} from "@/components/docs/docs-content/comp-examples-section";
-import { CompOverviewSection } from "@/components/docs/docs-content/comp-overview-section";
+} from "@/components/docs/docs-content/examples-section";
+import { OverviewSection } from "@/components/docs/docs-content/overview-section";
 import {
   getCompSourceUrl,
   getReportIssueUrl,
@@ -23,25 +23,25 @@ const Accordion = () => {
 
   return (
     <>
-      <CompOverviewSection
+      <OverviewSection
         name="Accordion"
         description="A vertically stacked set of interactive headings that each reveal a section of content."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
         importCommand={`import { Accordion } from "@usy-ui/base"`}
       />
-      <CompApisSection
+      <ApisSection
         description="Contain all supported props"
         dataRows={specApiDataRows}
       />
-      <CompExamplesSection>
+      <ExamplesSection>
         <CompExample
           type="default"
           description="The pure component with default props"
           uiPreview={<Default />}
           code={defaultExampleCode}
         />
-      </CompExamplesSection>
+      </ExamplesSection>
     </>
   );
 };

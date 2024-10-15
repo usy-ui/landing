@@ -2,8 +2,8 @@
 
 import { Tooltip, Typography } from "@usy-ui/base";
 
-import { CompApisRowType } from "@/components/docs/docs-content/comp-apis-section";
-import { getCommonCompApiRows } from "@/components/docs/docs-content/comp-apis-section/constants";
+import { CompApisRowType } from "@/components/docs/docs-content/apis-section";
+import { getCommonCompApiRows } from "@/components/docs/docs-content/apis-section/constants";
 
 export const specApiDataRows: CompApisRowType[] = [
   {
