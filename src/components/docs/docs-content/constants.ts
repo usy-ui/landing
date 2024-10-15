@@ -1,4 +1,4 @@
-import { QuickNavItemType } from "../content-and-quick-nav/types";
+import { QuickNavItemType } from "../docs-layout/types";
 
 import { CompQuickNavSubItemUnion, CompQuickNavMainItemUnion } from "./types";
 

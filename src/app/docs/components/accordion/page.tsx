@@ -1,16 +1,16 @@
-import { CompApisSection } from "@/components/docs/component/comp-apis-section";
+import { CompApisSection } from "@/components/docs/docs-content/comp-apis-section";
 import {
   CompExamplesSection,
   CompExample,
-} from "@/components/docs/component/comp-examples-section";
-import { CompOverviewSection } from "@/components/docs/component/comp-overview-section";
+} from "@/components/docs/docs-content/comp-examples-section";
+import { CompOverviewSection } from "@/components/docs/docs-content/comp-overview-section";
 import {
   getCompSourceUrl,
   getReportIssueUrl,
-} from "@/components/docs/component/utils";
+} from "@/components/docs/docs-content/utils";
 import { useCompExamples } from "@/hooks/useCompExamples";
 
-import { specApiDataRows } from "./accordion.constants";
+import { specApiDataRows } from "./constants";
 import { Default } from "./examples";
 
 const Accordion = () => {
@@ -25,19 +25,19 @@ const Accordion = () => {
     <>
       <CompOverviewSection
         name="Accordion"
-        description="Default component"
+        description="A vertically stacked set of interactive headings that each reveal a section of content."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
         importCommand={`import { Accordion } from "@usy-ui/base"`}
       />
       <CompApisSection
-        description="This component inherits props from the Avatar primitive."
+        description="Contain all supported props"
         dataRows={specApiDataRows}
       />
       <CompExamplesSection>
         <CompExample
           type="default"
-          description="Use the radius prop to assign a specific radius value."
+          description="The pure component with default props"
           uiPreview={<Default />}
           code={defaultExampleCode}
         />

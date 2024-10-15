@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy to Pages
 
 on:
   push:
@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -49,6 +50,7 @@ jobs:
           path: ./out
 
   deploy:
+    name: Deploy
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

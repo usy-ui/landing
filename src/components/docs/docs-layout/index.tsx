@@ -11,12 +11,12 @@ import {
 } from "./styled";
 import { QuickNavItemType } from "./types";
 
-type ContentAndQuickNavProps = {
+type DocsLayoutProps = {
   children: ReactNode;
   quickNavItems?: QuickNavItemType[];
 };
 
-export const ContentAndQuickNav: FC<ContentAndQuickNavProps> = ({
+export const DocsLayout: FC<DocsLayoutProps> = ({
   children,
   quickNavItems,
 }) => {

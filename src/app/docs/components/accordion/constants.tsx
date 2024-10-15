@@ -1,7 +1,9 @@
 "use client";
 
-import { CompApisRowType } from "@/components/docs/component/comp-apis-section";
-import { getCommonCompApiRows } from "@/components/docs/component/comp-apis-section/constants";
+import { Tooltip, Typography } from "@usy-ui/base";
+
+import { CompApisRowType } from "@/components/docs/docs-content/comp-apis-section";
+import { getCommonCompApiRows } from "@/components/docs/docs-content/comp-apis-section/constants";
 
 export const specApiDataRows: CompApisRowType[] = [
   {
@@ -13,7 +15,13 @@ export const specApiDataRows: CompApisRowType[] = [
   {
     propName: "widthProps",
     required: false,
-    type: "WidthCSS",
+    type: (
+      <Tooltip content="aaa">
+        <Typography size="small" color="blue">
+          WidthCSS
+        </Typography>
+      </Tooltip>
+    ),
     defVault: "",
   },
   {

@@ -23,7 +23,12 @@ export const propsColumns: TableColumnType<CompApisRowType>[] = [
   {
     key: "type",
     title: "Type",
-    renderRow: ({ type }) => <Typography size="small">{type}</Typography>,
+    renderRow: ({ type }) =>
+      typeof type === "string" ? (
+        <Typography size="small">{type}</Typography>
+      ) : (
+        type
+      ),
   },
   {
     key: "defVault",

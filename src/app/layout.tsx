@@ -23,6 +23,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
+        <title>Usy-UI</title>
       </head>
       <body className={fontPoppins.className}>
         <StyledComponentsRegistry>

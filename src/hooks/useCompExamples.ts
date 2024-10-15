@@ -1,9 +1,7 @@
-import { readFileSync } from "fs";
-import path from "path";
-
 import { useMemo } from "react";
 
-import { CompQuickNavSubItemUnion } from "@/components/docs/component/types";
+import { CompQuickNavSubItemUnion } from "@/components/docs/docs-content/types";
+import { readFile } from "@/utils";
 
 type UseCompExampleProps = {
   component: string;
@@ -18,14 +16,9 @@ export const useCompExamples = ({
     () =>
       types.reduce(
         (acc, type) => {
-          const exampleCode = readFileSync(
-            path.resolve(
-              `./src/app/docs/components/${component}/examples/${type}.tsx`
-            ),
-            "utf-8"
+          acc[type] = readFile(
+            `./src/app/docs/components/${component}/examples/${type}.tsx`
           );
-
-          acc[type] = exampleCode;
           return acc;
         },
         {} as Record<CompQuickNavSubItemUnion, string>

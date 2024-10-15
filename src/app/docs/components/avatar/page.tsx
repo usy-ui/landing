@@ -1,13 +1,13 @@
-import { CompApisSection } from "@/components/docs/component/comp-apis-section";
+import { CompApisSection } from "@/components/docs/docs-content/comp-apis-section";
 import {
   CompExample,
   CompExamplesSection,
-} from "@/components/docs/component/comp-examples-section";
-import { CompOverviewSection } from "@/components/docs/component/comp-overview-section";
+} from "@/components/docs/docs-content/comp-examples-section";
+import { CompOverviewSection } from "@/components/docs/docs-content/comp-overview-section";
 import {
   getCompSourceUrl,
   getReportIssueUrl,
-} from "@/components/docs/component/utils";
+} from "@/components/docs/docs-content/utils";
 import { useCompExamples } from "@/hooks/useCompExamples";
 
 import { specApiDataRows } from "./avatar.constants";

@@ -1,5 +1,5 @@
 "use client";
-import { FC, useMemo } from "react";
+import { FC, ReactNode, useMemo } from "react";
 
 import { Box, ParagraphHeading, Table, usySpacing } from "@usy-ui/base";
 
@@ -12,7 +12,7 @@ import { propsColumns } from "./constants";
 export type CompApisRowType = {
   propName: string;
   required: boolean;
-  type: string;
+  type: string | ReactNode;
   defVault: string;
 };
 
