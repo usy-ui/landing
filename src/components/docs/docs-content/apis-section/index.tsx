@@ -1,5 +1,5 @@
 "use client";
-import { FC, ReactNode, useMemo } from "react";
+import { FC, useMemo } from "react";
 
 import { Box, ParagraphHeading, Table, usySpacing } from "@usy-ui/base";
 
@@ -8,13 +8,7 @@ import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 import { CompQuickNavMainItemConst } from "../constants";
 
 import { getApisSectionColumnProps } from "./helpers/get-apis-section-column-props";
-
-export type APIsSectionRowType = {
-  propName: string;
-  required: boolean;
-  type: string | ReactNode;
-  defVault: string;
-};
+import { APIsSectionRowType } from "./types";
 
 type ApisSectionProps = {
   description?: string;

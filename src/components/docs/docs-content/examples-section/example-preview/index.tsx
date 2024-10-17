@@ -13,12 +13,12 @@ import {
 import { CodeBlock } from "@/components/common/codeblock";
 import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";
 
-import { CompQuickNavSubItemConst } from "../../constants";
+import { DocsQuickNavSubItemConst } from "../../constants";
 import { CompQuickNavSubItemUnion } from "../../types";
 
 type ExamplePreviewProps = {
   type: CompQuickNavSubItemUnion;
-  description: string;
+  description?: string;
   uiPreview: ReactNode;
   code: string;
 };
@@ -29,7 +29,11 @@ export const ExamplePreview: FC<ExamplePreviewProps> = ({
   uiPreview,
   code,
 }) => {
-  const { name, sectionId } = CompQuickNavSubItemConst[type];
+  const {
+    name,
+    description: fallbackDesc,
+    sectionId,
+  } = DocsQuickNavSubItemConst[type];
   const tabs: TabItemType[] = useMemo(
     () => [
       {
@@ -63,7 +67,7 @@ export const ExamplePreview: FC<ExamplePreviewProps> = ({
     >
       <ParagraphHeading
         title={name}
-        description={description}
+        description={description || fallbackDesc}
         titleSize="large"
       />
       <Tabs tabs={tabs} />

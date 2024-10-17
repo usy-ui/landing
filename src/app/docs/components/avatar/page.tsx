@@ -45,19 +45,16 @@ const AvatarDoc = () => {
       <ExamplesSection>
         <ExamplePreview
           type="size"
-          description="Use the radius prop to assign a specific radius value."
           uiPreview={<Size />}
           code={sizeExampleCode}
         />
         <ExamplePreview
           type="radius"
-          description="Use the radius prop to assign a specific radius value."
           uiPreview={<Radius />}
           code={radiusExampleCode}
         />
         <ExamplePreview
           type="fallback"
-          description="Use the radius prop to assign a specific radius value."
           uiPreview={<Fallback />}
           code={fallbackExampleCode}
         />

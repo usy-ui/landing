@@ -1,11 +1,4 @@
-import {
-  ArrowRightIcon,
-  Box,
-  Button,
-  Flex,
-  Typography,
-  usySpacing,
-} from "@usy-ui/base";
+import { Box, Button, Flex, Typography, usySpacing } from "@usy-ui/base";
 import Link from "next/link";
 
 import { Blog } from "@/components/use-cases/blog";
@@ -44,8 +37,7 @@ const UseCases = () => {
         >
           <Link href="/docs">
             <Button variant="primary" size="small">
-              <ArrowRightIcon />
-              &nbsp; Get Started
+              Get Started
             </Button>
           </Link>
           <Link href="https://github.com/usy-ui/base">

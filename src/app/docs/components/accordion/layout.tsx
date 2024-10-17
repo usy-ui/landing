@@ -2,7 +2,7 @@ import { FC, ReactNode, useMemo } from "react";
 
 import {
   CompQuickNavMainItemConst,
-  CompQuickNavSubItemConst,
+  DocsQuickNavSubItemConst,
 } from "@/components/docs/docs-content/constants";
 import { DocsLayout } from "@/components/docs/docs-layout";
 import { QuickNavItemType } from "@/components/docs/docs-layout/types";
@@ -18,7 +18,7 @@ const AvatarLayout: FC<AccordionLayoutProps> = ({ children }) => {
         CompQuickNavMainItemConst.overview,
         CompQuickNavMainItemConst.apiReference,
         CompQuickNavMainItemConst.examples,
-        CompQuickNavSubItemConst.default,
+        DocsQuickNavSubItemConst.default,
       ] as QuickNavItemType[],
     []
   );

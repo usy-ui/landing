@@ -1,4 +1,4 @@
-import { APIsSectionRowType } from "..";
+import { APIsSectionRowType } from "../types";
 
 export const getCommonCompPropsRows = (
   compName: string

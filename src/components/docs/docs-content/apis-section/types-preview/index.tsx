@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 
-import { Tooltip, Typography } from "@usy-ui/base";
+import { Scrollable, Tooltip, Typography } from "@usy-ui/base";
 
 import { CodeBlock } from "@/components/common/codeblock";
 import { useTypePreview } from "@/hooks/useTypePreview";
@@ -16,9 +16,9 @@ export const TypesPreview: FC<TypesPreviewProps> = ({ type, children }) => {
   return (
     <Tooltip
       content={
-        (
+        <Scrollable heightProps={{ maxHeight: "300px" }}>
           <CodeBlock code={exampleCode} showLineNumbers={false} />
-        ) as any as string
+        </Scrollable>
       }
     >
       <Typography size="small">{children}</Typography>

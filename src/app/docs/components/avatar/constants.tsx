@@ -1,7 +1,9 @@
-"use client";
+import { Typography } from "@usy-ui/base";
 
-import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section";
 import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/helpers/get-common-comp-props-rows";
+import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/types";
+import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
+import { PropsTypesConst } from "@/components/props-types/constants";
 
 export const AvatarPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -13,13 +15,31 @@ export const AvatarPropsRowsConst: APIsSectionRowType[] = [
   {
     propName: "size",
     required: false,
-    type: "BaseSize | BaseExtraSize",
+    type: (
+      <>
+        <TypesPreview type={PropsTypesConst.BaseSizeUnion}>
+          {PropsTypesConst.BaseSizeUnion}
+        </TypesPreview>
+        {" | "}
+        <TypesPreview type={PropsTypesConst.BaseSizeExtraUnion}>
+          {PropsTypesConst.BaseSizeExtraUnion}
+        </TypesPreview>
+      </>
+    ),
     defVault: "medium",
   },
   {
     propName: "color",
     required: false,
-    type: `BaseColor | random`,
+    type: (
+      <>
+        <TypesPreview type={PropsTypesConst.BaseColorUnion}>
+          {PropsTypesConst.BaseColorUnion}
+        </TypesPreview>
+        {" | "}
+        <Typography size="small">random</Typography>
+      </>
+    ),
     defVault: "black",
   },
   {
