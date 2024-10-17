@@ -1,8 +1,9 @@
 import { FC, ReactNode, useMemo } from "react";
 
 import {
-  CompQuickNavMainItemConst,
+  DocsQuickNavMainItemConst,
   DocsQuickNavSubItemConst,
+  getSortedItemByOrder,
 } from "@/components/docs/docs-content/constants";
 import { DocsLayout } from "@/components/docs/docs-layout";
 import { QuickNavItemType } from "@/components/docs/docs-layout/types";
@@ -12,18 +13,20 @@ type AvatarLayoutProps = {
 };
 
 const AvatarLayout: FC<AvatarLayoutProps> = ({ children }) => {
-  const docsQuickNavItemsMemo = useMemo(
-    () =>
-      [
-        CompQuickNavMainItemConst.overview,
-        CompQuickNavMainItemConst.apiReference,
-        CompQuickNavMainItemConst.examples,
+  const docsQuickNavItemsMemo = useMemo(() => {
+    return [
+      ...getSortedItemByOrder([
+        DocsQuickNavMainItemConst.overview,
+        DocsQuickNavMainItemConst.apiReference,
+        DocsQuickNavMainItemConst.examples,
+      ]),
+      ...getSortedItemByOrder([
         DocsQuickNavSubItemConst.size,
         DocsQuickNavSubItemConst.radius,
         DocsQuickNavSubItemConst.fallback,
-      ] as QuickNavItemType[],
-    []
-  );
+      ]),
+    ] as QuickNavItemType[];
+  }, []);
 
   return (
     <DocsLayout quickNavItems={docsQuickNavItemsMemo}>{children}</DocsLayout>

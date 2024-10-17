@@ -5,7 +5,7 @@ import { Box, ParagraphHeading, Table, usySpacing } from "@usy-ui/base";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
-import { CompQuickNavMainItemConst } from "../constants";
+import { DocsQuickNavMainItemConst } from "../constants";
 
 import { getApisSectionColumnProps } from "./helpers/get-apis-section-column-props";
 import { APIsSectionRowType } from "./types";
@@ -30,7 +30,7 @@ export const ApisSection: FC<ApisSectionProps> = ({
 
   return (
     <Box
-      id={CompQuickNavMainItemConst.apiReference.sectionId}
+      id={DocsQuickNavMainItemConst.apiReference.sectionId}
       marginProps={{ marginTop: QUICK_NAV_MAIN_TO_MAIN_SPACING }}
     >
       <ParagraphHeading

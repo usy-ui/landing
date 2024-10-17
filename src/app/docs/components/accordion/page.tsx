@@ -6,6 +6,7 @@ import {
 import { OverviewSection } from "@/components/docs/docs-content/overview-section";
 import {
   getCompSourceUrl,
+  getImportCommand,
   getReportIssueUrl,
 } from "@/components/docs/docs-content/utils";
 import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
@@ -28,7 +29,7 @@ const Accordion = () => {
         description="A vertically stacked set of interactive headings that each reveal a section of content."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
-        importCommand={`import { Accordion } from "@usy-ui/base"`}
+        importCommand={getImportCommand("Accordion")}
       />
       <ApisSection
         description="Contain all supported props"

@@ -8,11 +8,11 @@ import {
 import { DocsLayout } from "@/components/docs/docs-layout";
 import { QuickNavItemType } from "@/components/docs/docs-layout/types";
 
-type AccordionLayoutProps = {
+type BadgeLayoutProps = {
   children: ReactNode;
 };
 
-const AvatarLayout: FC<AccordionLayoutProps> = ({ children }) => {
+const BadgeLayout: FC<BadgeLayoutProps> = ({ children }) => {
   const docsQuickNavItemsMemo = useMemo(
     () =>
       [
@@ -21,7 +21,12 @@ const AvatarLayout: FC<AccordionLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        DocsQuickNavSubItemConst.default,
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst.variant,
+          DocsQuickNavSubItemConst.size,
+          DocsQuickNavSubItemConst.color,
+          DocsQuickNavSubItemConst.radius,
+        ]),
       ] as QuickNavItemType[],
     []
   );
@@ -31,4 +36,4 @@ const AvatarLayout: FC<AccordionLayoutProps> = ({ children }) => {
   );
 };
 
-export default AvatarLayout;
+export default BadgeLayout;

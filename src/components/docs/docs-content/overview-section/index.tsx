@@ -9,7 +9,7 @@ import {
   usySpacing,
 } from "@usy-ui/base";
 
-import { CompQuickNavMainItemConst } from "../constants";
+import { DocsQuickNavMainItemConst } from "../constants";
 
 import { Link } from "./styled";
 
@@ -37,7 +37,7 @@ export const OverviewSection: FC<OverviewSectionProps> = ({
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
       <Flex
-        id={CompQuickNavMainItemConst.overview.sectionId}
+        id={DocsQuickNavMainItemConst.overview.sectionId}
         gap={usySpacing.px32}
         marginProps={{ marginBottom: usySpacing.px20 }}
       >

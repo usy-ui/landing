@@ -6,6 +6,7 @@ import {
 import { OverviewSection } from "@/components/docs/docs-content/overview-section";
 import {
   getCompSourceUrl,
+  getImportCommand,
   getReportIssueUrl,
 } from "@/components/docs/docs-content/utils";
 import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
@@ -36,7 +37,7 @@ const AvatarDoc = () => {
         description="An image element with a fallback for representing the user."
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
-        importCommand={`import { Avatar } from "@usy-ui/base"`}
+        importCommand={getImportCommand("Avatar")}
       />
       <ApisSection
         description="This component inherits props from the Avatar primitive."

@@ -1,0 +1,1 @@
+type BaseVariantUnion = "filled" | "outline";

@@ -3,4 +3,5 @@ export type QuickNavItemType = {
   description?: string;
   sectionId?: string;
   hasIndent?: boolean;
+  order: number;
 };
