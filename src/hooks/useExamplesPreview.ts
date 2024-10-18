@@ -1,29 +1,31 @@
 import { useMemo } from "react";
 
-import { CompQuickNavSubItemUnion } from "@/components/docs/docs-content/types";
+import { DocsQuickNavSubItemUnion } from "@/components/docs/docs-content/types";
 import { readFile } from "@/utils";
 
 type UseExamplePreviewProps = {
-  component: string;
-  types: CompQuickNavSubItemUnion[];
+  root: "components" | "form-fields";
+  compName: string;
+  examplesTypes: DocsQuickNavSubItemUnion[];
 };
 
 export const useExamplesPreviews = ({
-  component,
-  types = [],
+  root,
+  compName,
+  examplesTypes = [],
 }: UseExamplePreviewProps) => {
-  const examplesCode = useMemo<Record<CompQuickNavSubItemUnion, string>>(
+  const examplesCode = useMemo<Record<DocsQuickNavSubItemUnion, string>>(
     () =>
-      types.reduce(
+      examplesTypes.reduce(
         (acc, type) => {
           acc[type] = readFile(
-            `./src/app/docs/components/${component}/examples/${type}.tsx`
+            `./src/app/docs/${root}/${compName}/examples/${type}.tsx`
           );
           return acc;
         },
-        {} as Record<CompQuickNavSubItemUnion, string>
+        {} as Record<DocsQuickNavSubItemUnion, string>
       ),
-    [component, types]
+    [root, compName, examplesTypes]
   );
 
   return examplesCode;

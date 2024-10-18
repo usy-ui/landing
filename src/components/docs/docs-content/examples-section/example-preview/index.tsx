@@ -14,10 +14,10 @@ import { CodeBlock } from "@/components/common/codeblock";
 import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";
 
 import { DocsQuickNavSubItemConst } from "../../constants";
-import { CompQuickNavSubItemUnion } from "../../types";
+import { DocsQuickNavSubItemUnion } from "../../types";
 
 type ExamplePreviewProps = {
-  type: CompQuickNavSubItemUnion;
+  type: DocsQuickNavSubItemUnion;
   description?: string;
   uiPreview: ReactNode;
   code: string;

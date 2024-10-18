@@ -1,9 +1,9 @@
-export type CompQuickNavMainItemUnion =
+export type DocsQuickNavMainItemUnion =
   | "overview"
   | "apiReference"
   | "examples";
 
-export type CompQuickNavSubItemUnion =
+export type DocsQuickNavSubItemUnion =
   | "default"
   | "variant"
   | "size"

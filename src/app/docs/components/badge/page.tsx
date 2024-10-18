@@ -18,8 +18,8 @@ import { Size } from "./examples/size";
 import { Variant } from "./examples/variant";
 
 const Badge = () => {
-  const sourceUrl = getCompSourceUrl("Avatar");
-  const reportIssueUrl = getReportIssueUrl("Avatar");
+  const sourceUrl = getCompSourceUrl("Badge");
+  const reportIssueUrl = getReportIssueUrl("Badge");
   const {
     variant: variantExampleCode,
     size: sizeExampleCode,
@@ -43,10 +43,7 @@ const Badge = () => {
         reportAnIssueUrl={reportIssueUrl}
         importCommand={getImportCommand("Badge")}
       />
-      <ApisSection
-        description="This component inherits props from the Avatar primitive."
-        dataRows={BadgePropsRowsConst}
-      />
+      <ApisSection dataRows={BadgePropsRowsConst} />
       <ExamplesSection>
         <ExamplePreview
           type="variant"

@@ -16,7 +16,7 @@ type ApisSectionProps = {
 };
 
 export const ApisSection: FC<ApisSectionProps> = ({
-  description,
+  description = "Comprehensive documentation of available properties, methods and APIs",
   dataRows,
 }) => {
   const flattenDataRows = useMemo(

@@ -18,7 +18,7 @@ export const getApisSectionColumnProps =
     {
       key: "required",
       title: "Required",
-      renderRow: ({ required }) => required && <RequiredIcon />,
+      renderRow: ({ required }) => (required ? <RequiredIcon /> : "-"),
     },
     {
       key: "type",

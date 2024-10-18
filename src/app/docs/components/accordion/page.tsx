@@ -12,14 +12,15 @@ import {
 import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 
 import { AccordionPropsRowsConst } from "./constants";
-import { Default } from "./examples";
+import { Default } from "./examples/default";
 
 const Accordion = () => {
   const sourceUrl = getCompSourceUrl("Accordion");
   const reportIssueUrl = getReportIssueUrl("Accordion");
   const { default: defaultExampleCode } = useExamplesPreviews({
-    component: "accordion",
-    types: ["default"],
+    root: "components",
+    compName: "accordion",
+    examplesTypes: ["default"],
   });
 
   return (
@@ -31,10 +32,7 @@ const Accordion = () => {
         reportAnIssueUrl={reportIssueUrl}
         importCommand={getImportCommand("Accordion")}
       />
-      <ApisSection
-        description="Contain all supported props"
-        dataRows={AccordionPropsRowsConst}
-      />
+      <ApisSection dataRows={AccordionPropsRowsConst} />
       <ExamplesSection>
         <ExamplePreview
           type="default"

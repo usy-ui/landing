@@ -22,8 +22,9 @@ const AvatarDoc = () => {
     radius: radiusExampleCode,
     fallback: fallbackExampleCode,
   } = useExamplesPreviews({
-    component: "avatar",
-    types: ["size", "radius", "fallback"],
+    root: "components",
+    compName: "avatar",
+    examplesTypes: ["size", "radius", "fallback"],
   });
 
   /**
@@ -39,10 +40,7 @@ const AvatarDoc = () => {
         reportAnIssueUrl={reportIssueUrl}
         importCommand={getImportCommand("Avatar")}
       />
-      <ApisSection
-        description="This component inherits props from the Avatar primitive."
-        dataRows={AvatarPropsRowsConst}
-      />
+      <ApisSection dataRows={AvatarPropsRowsConst} />
       <ExamplesSection>
         <ExamplePreview
           type="size"

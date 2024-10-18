@@ -1,14 +1,14 @@
 import { QuickNavItemType } from "../docs-layout/types";
 
-import { CompQuickNavSubItemUnion, CompQuickNavMainItemUnion } from "./types";
+import { DocsQuickNavSubItemUnion, DocsQuickNavMainItemUnion } from "./types";
 
 type DocsQuickNavMainItemType = Record<
-  CompQuickNavMainItemUnion,
+  DocsQuickNavMainItemUnion,
   QuickNavItemType
 >;
 
 type DocsQuickNavSubItemType = Record<
-  CompQuickNavSubItemUnion,
+  DocsQuickNavSubItemUnion,
   QuickNavItemType
 >;
 
