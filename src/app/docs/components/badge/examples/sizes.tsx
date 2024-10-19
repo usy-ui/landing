@@ -1,6 +1,6 @@
 import { Badge, Flex, usySpacing } from "@usy-ui/base";
 
-export const Size = () => {
+export const Sizes = () => {
   return (
     <Flex justifyContent="center" alignItems="center" gap={usySpacing.px20}>
       <Badge size="small">small</Badge>

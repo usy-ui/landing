@@ -57,7 +57,7 @@ const FormFieldsMenuConst: MenuItemType = {
     { id: "cpn-checkbox", url: "checkbox", label: "Checkbox" },
     { id: "cpn-input", url: "input", label: "Input" },
     { id: "cpn-password", url: "password", label: "Password" },
-    { id: "cpn-radio-group", url: "group", label: "Radio Group" },
+    { id: "cpn-radio-group", url: "radio-group", label: "Radio Group" },
     { id: "cpn-select", url: "select", label: "Select" },
     { id: "cpn-switch", url: "switch", label: "Switch" },
     { id: "cpn-tags", url: "tags", label: "Tags" },

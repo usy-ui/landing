@@ -11,4 +11,5 @@ export enum PropsTypesConst {
   PaddingCSSType = "PaddingCSSType",
 
   AccordionItemType = "AccordionItemType",
+  RadioType = "RadioType",
 }

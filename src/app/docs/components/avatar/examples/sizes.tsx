@@ -2,7 +2,7 @@ import { Avatar } from "@usy-ui/base";
 
 import { avatarUrl } from "@/constants/mock.constants";
 
-export const Size = () => {
+export const Sizes = () => {
   return (
     <>
       <Avatar url={avatarUrl} imgAlt="avatar" size="tiny" />

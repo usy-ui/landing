@@ -5,11 +5,12 @@ export type DocsQuickNavMainItemUnion =
 
 export type DocsQuickNavSubItemUnion =
   | "default"
-  | "variant"
-  | "type"
-  | "size"
-  | "color"
+  | "variants"
+  | "types"
+  | "directions"
+  | "sizes"
+  | "colors"
   | "radius"
-  | "icon"
+  | "icons"
   | "fallback"
   | "form";

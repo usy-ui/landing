@@ -12,22 +12,23 @@ import {
 import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 
 import { BadgePropsRowsConst } from "./constants";
-import { Color } from "./examples/color";
+import { Colors } from "./examples/colors";
 import { Radius } from "./examples/radius";
-import { Size } from "./examples/size";
-import { Variant } from "./examples/variant";
+import { Sizes } from "./examples/sizes";
+import { Variants } from "./examples/variants";
 
 const Badge = () => {
   const sourceUrl = getCompSourceUrl("Badge");
   const reportIssueUrl = getReportIssueUrl("Badge");
   const {
-    variant: variantExampleCode,
-    size: sizeExampleCode,
-    color: colorExampleCode,
+    variants: variantsExampleCode,
+    sizes: sizesExampleCode,
+    colors: colorsExampleCode,
     radius: radiusExampleCode,
   } = useExamplesPreviews({
-    component: "badge",
-    types: ["variant", "size", "color", "radius"],
+    root: "components",
+    compName: "badge",
+    examplesTypes: ["variants", "sizes", "colors", "radius"],
   });
 
   /**
@@ -46,19 +47,19 @@ const Badge = () => {
       <ApisSection dataRows={BadgePropsRowsConst} />
       <ExamplesSection>
         <ExamplePreview
-          type="variant"
-          uiPreview={<Variant />}
-          code={variantExampleCode}
+          type="variants"
+          uiPreview={<Variants />}
+          code={variantsExampleCode}
         />
         <ExamplePreview
-          type="size"
-          uiPreview={<Size />}
-          code={sizeExampleCode}
+          type="sizes"
+          uiPreview={<Sizes />}
+          code={sizesExampleCode}
         />
         <ExamplePreview
-          type="color"
-          uiPreview={<Color />}
-          code={colorExampleCode}
+          type="colors"
+          uiPreview={<Colors />}
+          code={colorsExampleCode}
         />
         <ExamplePreview
           type="radius"

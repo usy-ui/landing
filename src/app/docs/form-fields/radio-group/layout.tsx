@@ -8,11 +8,11 @@ import { getSortedItemByOrder } from "@/components/docs/docs-content/utils";
 import { DocsLayout } from "@/components/docs/docs-layout";
 import { QuickNavItemType } from "@/components/docs/docs-layout/types";
 
-type PasswordLayoutProps = {
+type RadioGroupLayoutProps = {
   children: ReactNode;
 };
 
-const PasswordLayout: FC<PasswordLayoutProps> = ({ children }) => {
+const RadioGroupLayout: FC<RadioGroupLayoutProps> = ({ children }) => {
   const docsQuickNavItemsMemo = useMemo(
     () =>
       [
@@ -23,8 +23,7 @@ const PasswordLayout: FC<PasswordLayoutProps> = ({ children }) => {
         ]),
         ...getSortedItemByOrder([
           DocsQuickNavSubItemConst.default,
-          DocsQuickNavSubItemConst.sizes,
-          DocsQuickNavSubItemConst.icons,
+          DocsQuickNavSubItemConst.directions,
           DocsQuickNavSubItemConst.form,
         ]),
       ] as QuickNavItemType[],
@@ -36,4 +35,4 @@ const PasswordLayout: FC<PasswordLayoutProps> = ({ children }) => {
   );
 };
 
-export default PasswordLayout;
+export default RadioGroupLayout;

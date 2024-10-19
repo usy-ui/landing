@@ -3,8 +3,8 @@ import { FC, ReactNode, useMemo } from "react";
 import {
   DocsQuickNavMainItemConst,
   DocsQuickNavSubItemConst,
-  getSortedItemByOrder,
 } from "@/components/docs/docs-content/constants";
+import { getSortedItemByOrder } from "@/components/docs/docs-content/utils";
 import { DocsLayout } from "@/components/docs/docs-layout";
 import { QuickNavItemType } from "@/components/docs/docs-layout/types";
 
@@ -22,9 +22,9 @@ const BadgeLayout: FC<BadgeLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.examples,
         ]),
         ...getSortedItemByOrder([
-          DocsQuickNavSubItemConst.variant,
-          DocsQuickNavSubItemConst.size,
-          DocsQuickNavSubItemConst.color,
+          DocsQuickNavSubItemConst.variants,
+          DocsQuickNavSubItemConst.sizes,
+          DocsQuickNavSubItemConst.colors,
           DocsQuickNavSubItemConst.radius,
         ]),
       ] as QuickNavItemType[],

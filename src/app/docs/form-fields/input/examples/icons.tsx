@@ -1,6 +1,6 @@
 import { CloseIcon, EnvelopeIcon, Flex, Input, usySpacing } from "@usy-ui/base";
 
-export const Icon = () => {
+export const Icons = () => {
   return (
     <Flex
       direction="column"

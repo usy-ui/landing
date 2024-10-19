@@ -1,21 +1,37 @@
 "use client";
-import { Button, Checkbox, Flex, rootToast, usySpacing } from "@usy-ui/base";
+import { useMemo } from "react";
+
+import {
+  Button,
+  Flex,
+  RadioGroup,
+  RadioType,
+  rootToast,
+  usySpacing,
+} from "@usy-ui/base";
 import { useForm, Controller } from "react-hook-form";
 
 import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
 
 import { ToastJsonStylesConst } from "../../constants";
 
-type FormFields = { isAgree: boolean };
+type FormFields = { option: RadioType };
 
 export const Form = () => {
-  const { control, watch, handleSubmit } = useForm<FormFields>({
+  const items = useMemo(
+    () => [
+      { id: "item-1", label: "Item 1", value: "item-1" },
+      { id: "item-2", label: "Item 2", value: "item-2" },
+      { id: "item-3", label: "Item 3", value: "item-3" },
+    ],
+    []
+  );
+
+  const { control, handleSubmit } = useForm<FormFields>({
     defaultValues: {
-      isAgree: false,
+      option: items[0],
     },
   });
-
-  const isAgree = watch("isAgree");
 
   const onSubmit = (values: FormFields) => {
     rootToast.basic({
@@ -27,10 +43,10 @@ export const Form = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Controller
-        name="isAgree"
+        name="option"
         control={control}
         render={({ field }) => (
-          <Checkbox {...field} label="I agree with the terms and conditions" />
+          <RadioGroup {...field} label="Select option" items={items} />
         )}
       />
       <Flex
@@ -38,12 +54,7 @@ export const Form = () => {
         alignItems="center"
         marginProps={{ marginTop: usySpacing.px20 }}
       >
-        <Button
-          type="submit"
-          variant="primary"
-          size="small"
-          disabled={!isAgree}
-        >
+        <Button type="submit" variant="primary" size="small">
           Submit
         </Button>
       </Flex>

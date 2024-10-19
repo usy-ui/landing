@@ -16,6 +16,21 @@ type CodeBlockProps = {
   fontSize?: string;
 };
 
+/**
+ * Utilities
+ */
+
+export const getJsonPreset = (code: object): CodeBlockProps => ({
+  language: "json",
+  code: JSON.stringify(code, null, 2),
+  showLineNumbers: false,
+  fontSize: usyFontSize.small,
+});
+
+/**
+ * Component
+ */
+
 export const CodeBlock: FC<CodeBlockProps> = ({
   code,
   language = "tsx",

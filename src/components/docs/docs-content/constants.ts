@@ -12,9 +12,6 @@ type DocsQuickNavSubItemType = Record<
   QuickNavItemType
 >;
 
-export const getSortedItemByOrder = (items: QuickNavItemType[]) =>
-  items.sort((a, b) => a.order - b.order);
-
 export const DocsQuickNavMainItemConst: DocsQuickNavMainItemType = {
   overview: {
     name: "Overview",
@@ -40,62 +37,70 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
     hasIndent: true,
     order: 1,
   },
-  variant: {
-    name: "Variant",
+  variants: {
+    name: "Variants",
     description: "Easily switch between styles and layouts",
     sectionId: "variant",
     hasIndent: true,
     order: 2,
   },
-  type: {
-    name: "Type",
+  types: {
+    name: "Types",
     description: "Define action behaviors based on requirements",
     sectionId: "type",
     hasIndent: true,
     order: 3,
   },
-  size: {
-    name: "Size",
-    description: "Easily adjust component sizes to fit any design",
-    sectionId: "size",
+  directions: {
+    name: "Directions",
+    description:
+      "Control layout direction for both horizontal and vertical orientations",
+    sectionId: "direction",
     hasIndent: true,
     order: 4,
   },
-  color: {
-    name: "Color",
+  sizes: {
+    name: "Sizes",
+    description: "Easily adjust component sizes to fit any design",
+    sectionId: "size",
+    hasIndent: true,
+    order: 5,
+  },
+  colors: {
+    name: "Colors",
     description: "Apply color schemes to identity and enhance visual appeal.",
     sectionId: "color",
     hasIndent: true,
-    order: 5,
+    order: 6,
   },
   radius: {
     name: "Radius",
     description: "Customize border radius effortlessly to achieve either sharp",
     sectionId: "radius",
     hasIndent: true,
-    order: 6,
+    order: 7,
   },
-  icon: {
-    name: "Icon",
+  icons: {
+    name: "Icons",
     description:
       "Utilize a wide range of customizable icons to enhance clarity",
-    sectionId: "icon",
+    sectionId: "icons",
     hasIndent: true,
-    order: 7,
+    order: 8,
   },
   fallback: {
     name: "Fallback",
     description: "Maintain the styles even when primary resources fail",
     sectionId: "fallback",
     hasIndent: true,
-    order: 8,
+    order: 9,
   },
   form: {
     name: "Form",
     description:
-      "Build responsive and accessible forms with ease, using a flexible and intuitive set of input components.",
+      "Create dynamic, accessible forms with a full range of components",
     sectionId: "form",
     hasIndent: true,
-    order: 9,
+    order: 10,
   },
 };

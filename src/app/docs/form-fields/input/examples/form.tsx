@@ -1,16 +1,10 @@
 "use client";
-import {
-  Button,
-  Flex,
-  Input,
-  rootToast,
-  usyColor,
-  usyFontSize,
-  usySpacing,
-} from "@usy-ui/base";
+import { Button, Flex, Input, rootToast, usySpacing } from "@usy-ui/base";
 import { useForm, Controller } from "react-hook-form";
 
-import { CodeBlock } from "@/components/common/codeblock";
+import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
+
+import { ToastJsonStylesConst } from "../../constants";
 
 type FormFields = { name: string; email: string };
 
@@ -28,20 +22,8 @@ export const Form = () => {
 
   const onSubmit = (values: FormFields) => {
     rootToast.basic({
-      content: (
-        <CodeBlock
-          language="json"
-          code={JSON.stringify(values, null, 2)}
-          showLineNumbers={false}
-          fontSize={usyFontSize.small}
-        />
-      ),
-      styles: {
-        backgroundColor: usyColor.black,
-        color: usyColor.white,
-        border: "none",
-        padding: `${usySpacing.px6} ${usySpacing.px14}`,
-      },
+      content: <CodeBlock {...getJsonPreset(values)} />,
+      styles: ToastJsonStylesConst,
     });
   };
 

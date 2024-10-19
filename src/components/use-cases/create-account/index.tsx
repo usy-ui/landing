@@ -102,7 +102,7 @@ export const CreateAccount = () => {
               <Input
                 label="Phone number"
                 placeholder="Phone number"
-                formatOnChange={(value) =>
+                transformOnChange={(value) =>
                   value.replace(/^[a-zA-Z\s.,'?!-]+$/, "")
                 }
                 {...field}

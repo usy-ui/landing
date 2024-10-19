@@ -14,23 +14,23 @@ import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 import { InputPropsRowsConst } from "./constants";
 import { Default } from "./examples/default";
 import { Form } from "./examples/form";
-import { Icon } from "./examples/icon";
-import { Size } from "./examples/size";
-import { Type } from "./examples/type";
+import { Icons } from "./examples/icons";
+import { Sizes } from "./examples/sizes";
+import { Types } from "./examples/types";
 
 const Input = () => {
   const sourceUrl = getCompSourceUrl("Input");
   const reportIssueUrl = getReportIssueUrl("Input");
   const {
     default: defaultExampleCode,
-    type: typeExampleCode,
-    size: sizeExampleCode,
-    icon: iconExampleCode,
+    types: typesExampleCode,
+    sizes: sizesExampleCode,
+    icons: iconsExampleCode,
     form: formExampleCode,
   } = useExamplesPreviews({
     root: "form-fields",
     compName: "input",
-    examplesTypes: ["default", "type", "size", "icon", "form"],
+    examplesTypes: ["default", "types", "sizes", "icons", "form"],
   });
 
   /**
@@ -54,19 +54,19 @@ const Input = () => {
           code={defaultExampleCode}
         />
         <ExamplePreview
-          type="type"
-          uiPreview={<Type />}
-          code={typeExampleCode}
+          type="types"
+          uiPreview={<Types />}
+          code={typesExampleCode}
         />
         <ExamplePreview
-          type="size"
-          uiPreview={<Size />}
-          code={sizeExampleCode}
+          type="sizes"
+          uiPreview={<Sizes />}
+          code={sizesExampleCode}
         />
         <ExamplePreview
-          type="icon"
-          uiPreview={<Icon />}
-          code={iconExampleCode}
+          type="icons"
+          uiPreview={<Icons />}
+          code={iconsExampleCode}
         />
         <ExamplePreview
           type="form"

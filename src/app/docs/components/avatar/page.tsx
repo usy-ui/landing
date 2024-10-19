@@ -12,19 +12,19 @@ import {
 import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 
 import { AvatarPropsRowsConst } from "./constants";
-import { Fallback, Radius, Size } from "./examples";
+import { Fallback, Radius, Sizes } from "./examples";
 
 const AvatarDoc = () => {
   const sourceUrl = getCompSourceUrl("Avatar");
   const reportIssueUrl = getReportIssueUrl("Avatar");
   const {
-    size: sizeExampleCode,
+    sizes: sizesExampleCode,
     radius: radiusExampleCode,
     fallback: fallbackExampleCode,
   } = useExamplesPreviews({
     root: "components",
     compName: "avatar",
-    examplesTypes: ["size", "radius", "fallback"],
+    examplesTypes: ["sizes", "radius", "fallback"],
   });
 
   /**
@@ -43,9 +43,9 @@ const AvatarDoc = () => {
       <ApisSection dataRows={AvatarPropsRowsConst} />
       <ExamplesSection>
         <ExamplePreview
-          type="size"
-          uiPreview={<Size />}
-          code={sizeExampleCode}
+          type="sizes"
+          uiPreview={<Sizes />}
+          code={sizesExampleCode}
         />
         <ExamplePreview
           type="radius"

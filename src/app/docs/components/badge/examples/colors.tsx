@@ -1,6 +1,6 @@
 import { Badge, Flex, usySpacing } from "@usy-ui/base";
 
-export const Color = () => {
+export const Colors = () => {
   return (
     <Flex justifyContent="center" alignItems="center" gap={usySpacing.px20}>
       <Badge color="primary">primary</Badge>

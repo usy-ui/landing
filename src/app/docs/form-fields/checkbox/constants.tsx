@@ -23,7 +23,7 @@ export const CheckboxPropsRowsConst: APIsSectionRowType[] = [
   {
     propName: "onChange",
     required: false,
-    type: "(value: boolean) => void;",
+    type: "(value: boolean) => void",
     defVault: "",
   },
   ...getCommonCompPropsRows("checkbox"),

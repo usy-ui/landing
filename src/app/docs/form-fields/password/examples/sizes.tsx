@@ -1,6 +1,6 @@
 import { Flex, Password, usySpacing } from "@usy-ui/base";
 
-export const Size = () => {
+export const Sizes = () => {
   return (
     <Flex
       direction="column"

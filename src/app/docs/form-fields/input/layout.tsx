@@ -3,8 +3,8 @@ import { FC, ReactNode, useMemo } from "react";
 import {
   DocsQuickNavMainItemConst,
   DocsQuickNavSubItemConst,
-  getSortedItemByOrder,
 } from "@/components/docs/docs-content/constants";
+import { getSortedItemByOrder } from "@/components/docs/docs-content/utils";
 import { DocsLayout } from "@/components/docs/docs-layout";
 import { QuickNavItemType } from "@/components/docs/docs-layout/types";
 
@@ -23,9 +23,9 @@ const InputLayout: FC<InputLayoutProps> = ({ children }) => {
         ]),
         ...getSortedItemByOrder([
           DocsQuickNavSubItemConst.default,
-          DocsQuickNavSubItemConst.type,
-          DocsQuickNavSubItemConst.size,
-          DocsQuickNavSubItemConst.icon,
+          DocsQuickNavSubItemConst.types,
+          DocsQuickNavSubItemConst.sizes,
+          DocsQuickNavSubItemConst.icons,
           DocsQuickNavSubItemConst.form,
         ]),
       ] as QuickNavItemType[],

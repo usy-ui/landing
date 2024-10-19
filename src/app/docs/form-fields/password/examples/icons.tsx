@@ -1,6 +1,6 @@
 import { Flex, LabelIcon, Password, usySpacing } from "@usy-ui/base";
 
-export const Icon = () => {
+export const Icons = () => {
   return (
     <Flex
       direction="column"

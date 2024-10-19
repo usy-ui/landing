@@ -1,6 +1,6 @@
 import { Flex, Input, usySpacing } from "@usy-ui/base";
 
-export const Size = () => {
+export const Types = () => {
   return (
     <Flex
       direction="column"
@@ -9,9 +9,8 @@ export const Size = () => {
       gap={usySpacing.px20}
       widthProps={{ maxWidth: "300px" }}
     >
-      <Input label="Small" size="small" value="A small text" />
-      <Input label="Medium" size="medium" value="A medium text" />
-      <Input label="Large" size="large" value="A large text" />
+      <Input type="text" placeholder="This is a text input" />
+      <Input type="number" placeholder="This is a number input" />
     </Flex>
   );
 };

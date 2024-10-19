@@ -14,21 +14,21 @@ import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 import { PasswordPropsRowsConst } from "./constants";
 import { Default } from "./examples/default";
 import { Form } from "./examples/form";
-import { Icon } from "./examples/icon";
-import { Size } from "./examples/size";
+import { Icons } from "./examples/icons";
+import { Sizes } from "./examples/sizes";
 
 const Password = () => {
   const sourceUrl = getCompSourceUrl("Password");
   const reportIssueUrl = getReportIssueUrl("Password");
   const {
     default: defaultExampleCode,
-    size: sizeExampleCode,
-    icon: iconExampleCode,
+    sizes: sizesExampleCode,
+    icons: iconsExampleCode,
     form: formExampleCode,
   } = useExamplesPreviews({
     root: "form-fields",
     compName: "password",
-    examplesTypes: ["default", "size", "icon", "form"],
+    examplesTypes: ["default", "sizes", "icons", "form"],
   });
 
   /**
@@ -52,14 +52,14 @@ const Password = () => {
           code={defaultExampleCode}
         />
         <ExamplePreview
-          type="size"
-          uiPreview={<Size />}
-          code={sizeExampleCode}
+          type="sizes"
+          uiPreview={<Sizes />}
+          code={sizesExampleCode}
         />
         <ExamplePreview
-          type="icon"
-          uiPreview={<Icon />}
-          code={iconExampleCode}
+          type="icons"
+          uiPreview={<Icons />}
+          code={iconsExampleCode}
         />
         <ExamplePreview
           type="form"
