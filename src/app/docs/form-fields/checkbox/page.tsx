@@ -13,15 +13,17 @@ import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 
 import { CheckboxPropsRowsConst } from "./constants";
 import { Default } from "./examples/default";
+import { Form } from "./examples/form";
 
 const Checkbox = () => {
   const sourceUrl = getCompSourceUrl("Checkbox");
   const reportIssueUrl = getReportIssueUrl("Checkbox");
-  const { default: defaultExampleCode } = useExamplesPreviews({
-    root: "form-fields",
-    compName: "checkbox",
-    examplesTypes: ["default"],
-  });
+  const { default: defaultExampleCode, form: formExampleCode } =
+    useExamplesPreviews({
+      root: "form-fields",
+      compName: "checkbox",
+      examplesTypes: ["default", "form"],
+    });
 
   /**
    * Render
@@ -42,6 +44,11 @@ const Checkbox = () => {
           type="default"
           uiPreview={<Default />}
           code={defaultExampleCode}
+        />
+        <ExamplePreview
+          type="form"
+          uiPreview={<Form />}
+          code={formExampleCode}
         />
       </ExamplesSection>
     </>

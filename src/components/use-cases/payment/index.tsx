@@ -15,7 +15,6 @@ import {
   Separator,
   Switch,
   Toast,
-  toastIns,
   Typography,
   UserIcon,
   usyColor,
@@ -80,20 +79,24 @@ export const Payment = () => {
         direction="column"
         gap={usySpacing.px10}
       >
-        <Button
-          width="200px"
-          variant="primary"
-          size="small"
-          radius="full"
-          onClick={() => {
-            toastIns.success({
-              title: "Payment success",
-              description: "Your item will be shipped within 2 days",
-            });
-          }}
-        >
-          Pay out
-        </Button>
+        <Toast>
+          {({ selfToast }) => (
+            <Button
+              width="200px"
+              variant="primary"
+              size="small"
+              radius="full"
+              onClick={() => {
+                selfToast.success({
+                  title: "Payment success",
+                  content: "Your item will be shipped within 2 days",
+                });
+              }}
+            >
+              Pay out
+            </Button>
+          )}
+        </Toast>
         <Button width="200px" variant="invisible" size="small" radius="full">
           Go back
         </Button>
@@ -191,28 +194,25 @@ export const Payment = () => {
   };
 
   return (
-    <>
-      <Toast />
-      <Panel>
-        <Flex justifyContent="center" alignItems="center" direction="column">
-          <Image
-            src="https://raw.githubusercontent.com/usy-ui/landing/refs/heads/main/public/illustration.png"
-            alt="Payment"
-            width={150}
-            height={150}
-          />
-          <Typography size="large" weight="semibold">
-            Order Details
-          </Typography>
-          <Typography tag="em" size="small">
-            Please check the below details
-          </Typography>
-        </Flex>
-        {renderOrderDetails()}
-        <Separator />
-        {renderTotalAmount()}
-        {renderCTA()}
-      </Panel>
-    </>
+    <Panel>
+      <Flex justifyContent="center" alignItems="center" direction="column">
+        <Image
+          src="https://raw.githubusercontent.com/usy-ui/landing/refs/heads/main/public/illustration.png"
+          alt="Payment"
+          width={150}
+          height={150}
+        />
+        <Typography size="large" weight="semibold">
+          Order Details
+        </Typography>
+        <Typography tag="em" size="small">
+          Please check the below details
+        </Typography>
+      </Flex>
+      {renderOrderDetails()}
+      <Separator />
+      {renderTotalAmount()}
+      {renderCTA()}
+    </Panel>
   );
 };

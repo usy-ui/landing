@@ -8,11 +8,11 @@ import {
 import { DocsLayout } from "@/components/docs/docs-layout";
 import { QuickNavItemType } from "@/components/docs/docs-layout/types";
 
-type CheckboxLayoutProps = {
+type InputLayoutProps = {
   children: ReactNode;
 };
 
-const CheckboxLayout: FC<CheckboxLayoutProps> = ({ children }) => {
+const InputLayout: FC<InputLayoutProps> = ({ children }) => {
   const docsQuickNavItemsMemo = useMemo(
     () =>
       [
@@ -23,6 +23,9 @@ const CheckboxLayout: FC<CheckboxLayoutProps> = ({ children }) => {
         ]),
         ...getSortedItemByOrder([
           DocsQuickNavSubItemConst.default,
+          DocsQuickNavSubItemConst.type,
+          DocsQuickNavSubItemConst.size,
+          DocsQuickNavSubItemConst.icon,
           DocsQuickNavSubItemConst.form,
         ]),
       ] as QuickNavItemType[],
@@ -34,4 +37,4 @@ const CheckboxLayout: FC<CheckboxLayoutProps> = ({ children }) => {
   );
 };
 
-export default CheckboxLayout;
+export default InputLayout;

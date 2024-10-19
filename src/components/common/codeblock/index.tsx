@@ -13,12 +13,14 @@ type CodeBlockProps = {
   code: string;
   language?: SupportedLanguages;
   showLineNumbers?: boolean;
+  fontSize?: string;
 };
 
 export const CodeBlock: FC<CodeBlockProps> = ({
   code,
   language = "tsx",
   showLineNumbers = true,
+  fontSize = usyFontSize.medium,
 }) => {
   return (
     <CodeBlockContainer>
@@ -28,7 +30,7 @@ export const CodeBlock: FC<CodeBlockProps> = ({
         text={code}
         showLineNumbers={showLineNumbers}
         customStyle={{
-          fontSize: usyFontSize.medium,
+          fontSize,
           fontFamily: fontJetBrainsMono.style.fontFamily,
           backgroundColor: "transparent",
         }}

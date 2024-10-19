@@ -6,7 +6,10 @@ export type DocsQuickNavMainItemUnion =
 export type DocsQuickNavSubItemUnion =
   | "default"
   | "variant"
+  | "type"
   | "size"
   | "color"
   | "radius"
-  | "fallback";
+  | "icon"
+  | "fallback"
+  | "form";

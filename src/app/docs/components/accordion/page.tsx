@@ -36,7 +36,6 @@ const Accordion = () => {
       <ExamplesSection>
         <ExamplePreview
           type="default"
-          description="The pure component with default props"
           uiPreview={<Default />}
           code={defaultExampleCode}
         />
