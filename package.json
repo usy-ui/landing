@@ -12,7 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@usy-ui/base": "file:C:\\Users\\anhth\\OneDrive\\Desktop\\usy-ui\\base\\usy-ui-base-1.0.1.tgz",
+    "@usy-ui/base": "file:usy-ui-base-1.0.1.tgz",
     "next": "14.2.5",
     "react": "^18",
     "react-code-blocks": "^0.1.6",
