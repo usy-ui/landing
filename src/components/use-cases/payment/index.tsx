@@ -12,9 +12,9 @@ import {
   MapPinAltIcon,
   Panel,
   Popover,
+  rootToast,
   Separator,
   Switch,
-  Toast,
   Typography,
   UserIcon,
   usyColor,
@@ -79,24 +79,20 @@ export const Payment = () => {
         direction="column"
         gap={usySpacing.px10}
       >
-        <Toast>
-          {({ selfToast }) => (
-            <Button
-              width="200px"
-              variant="primary"
-              size="small"
-              radius="full"
-              onClick={() => {
-                selfToast.success({
-                  title: "Payment success",
-                  content: "Your item will be shipped within 2 days",
-                });
-              }}
-            >
-              Pay out
-            </Button>
-          )}
-        </Toast>
+        <Button
+          width="200px"
+          variant="primary"
+          size="small"
+          radius="full"
+          onClick={() => {
+            rootToast.success({
+              title: "Payment success",
+              content: "Your item will be shipped within 2 days",
+            });
+          }}
+        >
+          Pay out
+        </Button>
         <Button width="200px" variant="invisible" size="small" radius="full">
           Go back
         </Button>

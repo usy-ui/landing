@@ -9,11 +9,15 @@ import {
   Password,
   RadioGroup,
   RadioType,
+  rootToast,
   Select,
   SelectItemType,
   usySpacing,
 } from "@usy-ui/base";
 import { Controller, useForm } from "react-hook-form";
+
+import { ToastJsonStylesConst } from "@/app/docs/form-fields/constants";
+import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
 
 import { Countries, Genders, ValidateRules } from "./constants";
 
@@ -40,8 +44,16 @@ export const CreateAccount = () => {
   });
 
   const formSubmit = (values: FormFieldsProps) => {
-    alert("Check the console tab on Developer tool to see the data");
-    console.log("Create Account Form", values);
+    const normalizeValues = {
+      ...values,
+      country: { ...values.country, labelElement: undefined },
+    };
+
+    rootToast.basic({
+      timeout: 7000,
+      content: <CodeBlock {...getJsonPreset(normalizeValues)} />,
+      styles: ToastJsonStylesConst,
+    });
   };
 
   return (

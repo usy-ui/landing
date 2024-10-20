@@ -1,5 +1,6 @@
 import { FC } from "react";
 
+import { Toast } from "@usy-ui/base";
 import type { Metadata } from "next";
 
 import { fontPoppins } from "@/constants/fonts.constants";
@@ -29,6 +30,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
         <StyledComponentsRegistry>
           <Header />
           <Main>{children}</Main>
+          <Toast />
         </StyledComponentsRegistry>
       </body>
     </html>

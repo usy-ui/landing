@@ -1,7 +1,7 @@
-import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/helpers/get-common-comp-props-rows";
+import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/types";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
-import { PropsTypesConst } from "@/components/props-types/constants";
+import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
 
 export const InputPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -14,7 +14,7 @@ export const InputPropsRowsConst: APIsSectionRowType[] = [
     propName: "type",
     required: false,
     type: "text | number",
-    defVault: "",
+    defVault: "text",
   },
   {
     propName: "size",
@@ -78,25 +78,25 @@ export const InputPropsRowsConst: APIsSectionRowType[] = [
     propName: "onChange",
     required: false,
     type: "(value: string) => void",
-    defVault: "false",
+    defVault: "",
   },
   {
     propName: "onBlur",
     required: false,
     type: "(value: string) => void",
-    defVault: "false",
+    defVault: "",
   },
   {
     propName: "transformOnChange",
     required: false,
     type: "(value: string) => void",
-    defVault: "false",
+    defVault: "",
   },
   {
     propName: "transformOnBlur",
     required: false,
     type: "(value: string) => void",
-    defVault: "false",
+    defVault: "",
   },
   {
     propName: "widthProps",

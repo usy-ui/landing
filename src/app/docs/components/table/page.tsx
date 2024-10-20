@@ -1,5 +1,5 @@
 const Table = () => {
-  return <div>Table</div>;
+  return <div>Table is available. Updating document...</div>;
 };
 
 export default Table;

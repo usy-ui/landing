@@ -17,7 +17,7 @@ export const Direction = () => {
     <Flex
       direction="column"
       justifyContent="center"
-      gap={usySpacing.px20}
+      gap={usySpacing.px32}
       widthProps={{ maxWidth: "250px" }}
       marginProps={{ margin: "auto" }}
     >

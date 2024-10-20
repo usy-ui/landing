@@ -1,5 +1,5 @@
 const Textarea = () => {
-  return <div>Textarea</div>;
+  return <div>Textarea is available. Updating document...</div>;
 };
 
 export default Textarea;

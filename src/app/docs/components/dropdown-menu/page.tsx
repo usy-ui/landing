@@ -1,5 +1,5 @@
 const DropdownMenu = () => {
-  return <div>DropdownMenu</div>;
+  return <div>DropdownMenu is available. Updating document...</div>;
 };
 
 export default DropdownMenu;

@@ -1,5 +1,5 @@
 const Tags = () => {
-  return <div>Tags</div>;
+  return <div>Tags is available. Updating document...</div>;
 };
 
 export default Tags;

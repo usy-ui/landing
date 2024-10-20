@@ -22,7 +22,7 @@ export const Default = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      gap={usySpacing.px20}
+      gap={usySpacing.px32}
     >
       <RadioGroup
         name="select-option"

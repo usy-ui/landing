@@ -1,5 +1,5 @@
 const Typography = () => {
-  return <div>Typography</div>;
+  return <div>Typography is available. Updating document...</div>;
 };
 
 export default Typography;

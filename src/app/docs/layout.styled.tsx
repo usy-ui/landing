@@ -22,7 +22,7 @@ export const DocsContainer = styled.div`
 
 export const MenuScrollableContainer = styled(Scrollable)`
   width: 100%;
-  max-width: 260px;
+  max-width: 220px;
   max-height: calc(100vh - ${HEADER_HEIGHT} - ${MAIN_PADDING_TOP} - 40px);
   padding-bottom: ${usySpacing.px56};
   position: sticky;

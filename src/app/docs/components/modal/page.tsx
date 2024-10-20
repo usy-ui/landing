@@ -1,5 +1,5 @@
 const Modal = () => {
-  return <div>Modal</div>;
+  return <div>Modal is available. Updating document...</div>;
 };
 
 export default Modal;

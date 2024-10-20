@@ -1,5 +1,5 @@
 const TogglePanel = () => {
-  return <div>TogglePanel</div>;
+  return <div>TogglePanel is available. Updating document...</div>;
 };
 
 export default TogglePanel;

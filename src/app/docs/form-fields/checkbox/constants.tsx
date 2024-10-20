@@ -1,5 +1,5 @@
-import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/helpers/get-common-comp-props-rows";
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/types";
+import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
 
 export const CheckboxPropsRowsConst: APIsSectionRowType[] = [
   {
