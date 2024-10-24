@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Typography, usySpacing } from "@usy-ui/base";
+import { Badge, Box, Button, Flex, Typography, usySpacing } from "@usy-ui/base";
 import Link from "next/link";
 
 import { Blog } from "@/components/use-cases/blog";
@@ -30,6 +30,13 @@ const UseCases = () => {
         <Typography tag="h5" size="medium" weight="normal" color="dark-1">
           All components are ready for saving your time
         </Typography>
+        <Typography tag="em" size="small">
+          <Badge variant="filled" color="amber" size="small" radius="full">
+            Notes
+          </Badge>
+          &nbsp; All components in the docs are implemented, but some of them
+          are not documented.
+        </Typography>
         <Flex
           justifyContent="center"
           gap={usySpacing.px20}
@@ -40,7 +47,7 @@ const UseCases = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="https://github.com/usy-ui/base">
+          <Link href="https://github.com/usy-ui/base" target="_blank">
             <Button variant="outline" size="small">
               View Github
             </Button>

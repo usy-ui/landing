@@ -73,7 +73,7 @@ export const Header = () => {
     return (
       <SearchDocsAndLinksContainer>
         <SearchDocsInput>Search documents...</SearchDocsInput>
-        <Link href={process.env.GITHUB_URL || ""} target="_blank">
+        <Link href={process.env.REPO_URL || ""} target="_blank">
           <Tooltip content="View Github" position="bottom">
             <BrandGithubIcon width="24px" height="24px" />
           </Tooltip>

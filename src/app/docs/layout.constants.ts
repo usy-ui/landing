@@ -2,6 +2,7 @@
 export enum DocsRoute {
   OVERVIEW = "/overview",
   LAYOUT = "/layout",
+  FORM_FIELDS = "/form-fields",
   COMPONENTS = "/components",
   UTILITIES = "/utilities",
 }
@@ -127,7 +128,7 @@ const UtilitiesMenuConst: MenuItemType = {
   url: "utilities",
   label: "Utilities",
   items: [
-    { id: "utls-formatting", url: "formatting", label: "Formatting" },
+    { id: "utls-format", url: "format", label: "Format" },
     { id: "utls-helpers", url: "helpers", label: "Helpers" },
   ],
 };

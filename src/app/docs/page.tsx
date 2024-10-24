@@ -5,7 +5,7 @@ import { DocsRoute } from "./layout.constants";
 
 const Docs = () => {
   const pathname = usePathname();
-  redirect(`${pathname}${DocsRoute.OVERVIEW}`);
+  redirect(`${pathname}${DocsRoute.FORM_FIELDS}`);
 };
 
 export default Docs;
