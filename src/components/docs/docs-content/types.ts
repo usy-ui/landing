@@ -13,4 +13,11 @@ export type DocsQuickNavSubItemUnion =
   | "radius"
   | "icons"
   | "fallback"
+  | "display"
+  | "justifyContent"
+  | "alignItems"
+  | "grow"
+  | "shrink"
+  | "wrap"
+  | "gap"
   | "form";

@@ -4,7 +4,7 @@ import { DocsQuickNavSubItemUnion } from "@/components/docs/docs-content/types";
 import { readFile } from "@/utils";
 
 type UseExamplePreviewProps = {
-  root: "components" | "form-fields";
+  root: "components" | "form-fields" | "layout";
   compName: string;
   examplesTypes: DocsQuickNavSubItemUnion[];
 };

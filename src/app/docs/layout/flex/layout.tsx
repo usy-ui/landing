@@ -21,7 +21,16 @@ const FlexLayout: FC<FlexLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst.display,
+          DocsQuickNavSubItemConst.directions,
+          DocsQuickNavSubItemConst.justifyContent,
+          DocsQuickNavSubItemConst.alignItems,
+          DocsQuickNavSubItemConst.grow,
+          DocsQuickNavSubItemConst.shrink,
+          DocsQuickNavSubItemConst.wrap,
+          DocsQuickNavSubItemConst.gap,
+        ]),
       ] as QuickNavItemType[],
     []
   );

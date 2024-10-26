@@ -1,0 +1,15 @@
+type BaseSemanticTagUnion =
+  | "header"
+  | "footer"
+  | "main"
+  | "section"
+  | "summary"
+  | "nav"
+  | "details"
+  | "article"
+  | "aside"
+  | "figcaption"
+  | "figure"
+  | "mark"
+  | "div"
+  | "span";

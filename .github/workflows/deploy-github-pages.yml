@@ -30,7 +30,7 @@ jobs:
         with:
           version: 9.1.1
 
-      - name: Setup Pages
+      - name: Setup pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
@@ -38,7 +38,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build with Next.js
+      - name: Build NextJS app
+        env:
+          NEXT_PUBLIC_DISCORD_URL: ${{ secrets.NEXT_PUBLIC_DISCORD_URL }}
+          NEXT_PUBLIC_REPO_URL: ${{ secrets.NEXT_PUBLIC_REPO_URL }}
         run: pnpm build
 
       - name: Upload artifact
