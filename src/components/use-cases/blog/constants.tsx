@@ -17,9 +17,11 @@ export const QUESTIONS: AccordionItemType[] = [
     content: (
       <>
         <Typography>
-          React is the library for web and native user interfaces. Build user
-          interfaces out of individual pieces called components written in
-          JavaScript.
+          React.js is an open-source JavaScript library, crafted with precision
+          by Facebook, that aims to simplify the intricate process of building
+          interactive user interfaces. Imagine a user interface built with React
+          as a collection of components, each responsible for outputting a
+          small, reusable piece of HTML code.
         </Typography>
         <Box marginProps={{ marginTop: usySpacing.px20 }}>
           <ParagraphHeading title="Install" titleSize="medium" />

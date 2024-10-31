@@ -62,7 +62,11 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
   };
 
   const renderChildren = () => {
-    return <Flex direction="column">{children}</Flex>;
+    return (
+      <Flex direction="column" widthProps={{ width: "100%" }}>
+        {children}
+      </Flex>
+    );
   };
 
   return (

@@ -71,6 +71,7 @@ const UseCases = () => {
           <CreateAccount />
           <Blog />
           <FAQ />
+          <ContactForm />
         </CreAccBlogFaqFlex>
       </TwoThirdColumnsFlex>
     );
@@ -81,7 +82,6 @@ const UseCases = () => {
       <OneThirdColumnFlex gap={usySpacing.px32}>
         <TeamMembers />
         <Payment />
-        <ContactForm />
       </OneThirdColumnFlex>
     );
   };

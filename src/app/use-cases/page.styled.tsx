@@ -18,17 +18,11 @@ export const CreAccBlogFaqFlex = styled(Flex)`
 
   & > div {
     width: calc(50% - ${usySpacing.px16});
+  }
 
-    &:nth-child(1) {
-      order: 1;
-    }
-
-    &:nth-child(2) {
-      order: 3;
-    }
-
-    &:nth-child(3) {
-      order: 2;
+  @media only screen and (max-width: ${usyBreakpoints.laptop}) {
+    & > div {
+      width: 100%;
     }
   }
 `;
@@ -44,7 +38,7 @@ export const OneThirdColumnFlex = styled(Flex)`
     flex-direction: row;
 
     & > div {
-      width: calc(50% - 25px);
+      width: calc(50% - ${usySpacing.px16});
 
       &:nth-child(1) {
         order: 3;
@@ -52,10 +46,6 @@ export const OneThirdColumnFlex = styled(Flex)`
 
       &:nth-child(2) {
         order: 1;
-      }
-
-      &:nth-child(3) {
-        order: 2;
       }
     }
   }
