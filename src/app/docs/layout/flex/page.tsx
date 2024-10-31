@@ -12,15 +12,31 @@ import {
 import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
 
 import { FlexPropsRowsConst } from "./constants";
-import { Display } from "./examples/display";
+import { AlignContent } from "./examples/align-content";
+import { AlignItems } from "./examples/align-items";
+import { Directions } from "./examples/directions";
+import { JustifyContent } from "./examples/justify-content";
+import { Wrap } from "./examples/wrap";
 
 const Flex = () => {
   const sourceUrl = getCompSourceUrl("Flex");
   const reportIssueUrl = getReportIssueUrl("Flex");
-  const { display: displayExampleCode } = useExamplesPreviews({
+  const {
+    directions: directionsExampleCode,
+    "justify-content": justifyContentExampleCode,
+    "align-items": alignItemsExampleCode,
+    "align-content": alignContentExampleCode,
+    wrap: wrapExampleCode,
+  } = useExamplesPreviews({
     root: "layout",
     compName: "flex",
-    examplesTypes: ["display", "directions"],
+    examplesTypes: [
+      "directions",
+      "justify-content",
+      "align-items",
+      "align-content",
+      "wrap",
+    ],
   });
 
   return (
@@ -35,9 +51,29 @@ const Flex = () => {
       <ApisSection dataRows={FlexPropsRowsConst} />
       <ExamplesSection>
         <ExamplePreview
-          type="display"
-          uiPreview={<Display />}
-          code={displayExampleCode}
+          type="directions"
+          uiPreview={<Directions />}
+          code={directionsExampleCode}
+        />
+        <ExamplePreview
+          type="justify-content"
+          uiPreview={<JustifyContent />}
+          code={justifyContentExampleCode}
+        />
+        <ExamplePreview
+          type="align-items"
+          uiPreview={<AlignItems />}
+          code={alignItemsExampleCode}
+        />
+        <ExamplePreview
+          type="align-content"
+          uiPreview={<AlignContent />}
+          code={alignContentExampleCode}
+        />
+        <ExamplePreview
+          type="wrap"
+          uiPreview={<Wrap />}
+          code={wrapExampleCode}
         />
       </ExamplesSection>
     </>

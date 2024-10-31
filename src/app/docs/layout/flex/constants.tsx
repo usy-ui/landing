@@ -2,6 +2,12 @@ import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/pro
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/types";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
 import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
+import {
+  getHeightPropsRow,
+  getMarginPropsRow,
+  getPaddingPropsRow,
+  getWidthPropsRow,
+} from "@/components/docs/docs-content/apis-section/utils/get-common-css-props-rows";
 
 export const FlexPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -35,7 +41,7 @@ export const FlexPropsRowsConst: APIsSectionRowType[] = [
   {
     propName: "justifyContent",
     required: false,
-    type: "flex-start | flex-end | center | space-between",
+    type: "flex-start | flex-end | center | space-between | space-around | space-evenly",
     defVault: "",
   },
   {
@@ -51,18 +57,6 @@ export const FlexPropsRowsConst: APIsSectionRowType[] = [
     defVault: "",
   },
   {
-    propName: "grow",
-    required: false,
-    type: "number",
-    defVault: "",
-  },
-  {
-    propName: "shrink",
-    required: false,
-    type: "number",
-    defVault: "",
-  },
-  {
     propName: "gap",
     required: false,
     type: "string",
@@ -74,45 +68,9 @@ export const FlexPropsRowsConst: APIsSectionRowType[] = [
     type: "string",
     defVault: "",
   },
-  {
-    propName: "widthProps",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.WidthCSSType}>
-        {PropsTypesConst.WidthCSSType}
-      </TypesPreview>
-    ),
-    defVault: "",
-  },
-  {
-    propName: "heightProps",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.HeightCSSType}>
-        {PropsTypesConst.HeightCSSType}
-      </TypesPreview>
-    ),
-    defVault: "",
-  },
-  {
-    propName: "marginProps",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.MarginCSSType}>
-        {PropsTypesConst.MarginCSSType}
-      </TypesPreview>
-    ),
-    defVault: "",
-  },
-  {
-    propName: "paddingProps",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.PaddingCSSType}>
-        {PropsTypesConst.PaddingCSSType}
-      </TypesPreview>
-    ),
-    defVault: "",
-  },
+  getWidthPropsRow(),
+  getHeightPropsRow(),
+  getMarginPropsRow(),
+  getPaddingPropsRow(),
   ...getCommonCompPropsRows("flex"),
 ];

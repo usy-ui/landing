@@ -5,11 +5,15 @@ import {
   Input,
   Panel,
   ParagraphHeading,
+  rootToast,
   Tags,
   TextArea,
   usySpacing,
 } from "@usy-ui/base";
 import { Controller, useForm } from "react-hook-form";
+
+import { ToastJsonStylesConst } from "@/app/docs/form-fields/constants";
+import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
 
 import { ValidateRules } from "../create-account/constants";
 
@@ -31,8 +35,11 @@ export const ContactForm = () => {
   });
 
   const formSubmit = (values: FormFieldsProps) => {
-    alert("Check the console tab on Developer tool to see the data");
-    console.log("Contact Form", values);
+    rootToast.basic({
+      timeout: 7000,
+      content: <CodeBlock {...getJsonPreset(values)} />,
+      styles: ToastJsonStylesConst,
+    });
   };
 
   return (

@@ -103,7 +103,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
     hasIndent: true,
     order: 10,
   },
-  justifyContent: {
+  "justify-content": {
     name: "Justify Content",
     description:
       "Align and distribute items within a container along the main axis",
@@ -111,7 +111,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
     hasIndent: true,
     order: 11,
   },
-  alignItems: {
+  "align-items": {
     name: "Align Items",
     description:
       "Control the alignment of items along the cross axis within a flex container",
@@ -119,13 +119,21 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
     hasIndent: true,
     order: 12,
   },
+  "align-content": {
+    name: "Align Content",
+    description:
+      "Manage the spacing and alignment of rows within a flex container, especially when there is extra space along the cross axis",
+    sectionId: "alignContent",
+    hasIndent: true,
+    order: 13,
+  },
   grow: {
     name: "Grow",
     description:
       "Adjust the proportion of space an item takes up within a flex container",
     sectionId: "grow",
     hasIndent: true,
-    order: 13,
+    order: 14,
   },
   shrink: {
     name: "Shrink",
@@ -133,7 +141,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Control how an item reduces in size relative to others in a flex container when space is limited",
     sectionId: "shrink",
     hasIndent: true,
-    order: 14,
+    order: 15,
   },
   wrap: {
     name: "Wrap",
@@ -141,14 +149,14 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Enable items to wrap onto multiple lines within a flex container",
     sectionId: "wrap",
     hasIndent: true,
-    order: 15,
+    order: 16,
   },
   gap: {
     name: "Gap",
     description: "Set consistent spacing between items within a flex container",
     sectionId: "Gap",
     hasIndent: true,
-    order: 16,
+    order: 17,
   },
   form: {
     name: "Form",
@@ -156,6 +164,6 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Create dynamic, accessible forms with a full range of components",
     sectionId: "form",
     hasIndent: true,
-    order: 17,
+    order: 18,
   },
 };
