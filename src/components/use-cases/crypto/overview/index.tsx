@@ -14,7 +14,8 @@ export const Overview: FC<OverviewProps> = ({ isFetching }) => {
   return (
     <>
       <Flex
-        justifyContent="space-between"
+        justifyContent="space-evenly"
+        alignItems="center"
         gap={usySpacing.px20}
         wrap="wrap"
         marginProps={{ marginTop: usySpacing.px32 }}

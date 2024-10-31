@@ -10,9 +10,15 @@ import { Payment } from "@/components/use-cases/payment";
 import { TeamMembers } from "@/components/use-cases/team-members";
 import { fontOswald } from "@/constants/fonts.constants";
 
+import {
+  CreAccBlogFaqFlex,
+  OneThirdColumnFlex,
+  TwoThirdColumnsFlex,
+} from "./page.styled";
+
 const UseCases = () => {
-  return (
-    <Box marginProps={{ marginBottom: "200px" }}>
+  const renderIntro = () => {
+    return (
       <Flex
         direction="column"
         justifyContent="center"
@@ -54,38 +60,42 @@ const UseCases = () => {
           </Link>
         </Flex>
       </Flex>
+    );
+  };
+
+  const renderTwoThirdColumns = () => {
+    return (
+      <TwoThirdColumnsFlex direction="column">
+        <Crypto />
+        <CreAccBlogFaqFlex>
+          <CreateAccount />
+          <Blog />
+          <FAQ />
+        </CreAccBlogFaqFlex>
+      </TwoThirdColumnsFlex>
+    );
+  };
+
+  const renderOnThirdColumn = () => {
+    return (
+      <OneThirdColumnFlex gap={usySpacing.px32}>
+        <TeamMembers />
+        <Payment />
+        <ContactForm />
+      </OneThirdColumnFlex>
+    );
+  };
+
+  return (
+    <Box marginProps={{ marginBottom: "200px" }}>
+      {renderIntro()}
       <Flex
+        wrap="wrap"
         gap={usySpacing.px32}
         marginProps={{ marginBottom: usySpacing.px32 }}
       >
-        <Flex direction="column" widthProps={{ width: "calc(66.66% + 32px)" }}>
-          <Crypto />
-          <Flex
-            gap={usySpacing.px32}
-            marginProps={{ marginTop: usySpacing.px32 }}
-          >
-            <Flex widthProps={{ width: "50%", minWidth: "300px" }}>
-              <CreateAccount />
-            </Flex>
-            <Flex
-              direction="column"
-              gap={usySpacing.px32}
-              widthProps={{ width: "50%", minWidth: "300px" }}
-            >
-              <Blog />
-              <FAQ />
-            </Flex>
-          </Flex>
-        </Flex>
-        <Flex
-          direction="column"
-          gap={usySpacing.px32}
-          widthProps={{ width: "33.33%", minWidth: "400px" }}
-        >
-          <TeamMembers />
-          <Payment />
-          <ContactForm />
-        </Flex>
+        {renderTwoThirdColumns()}
+        {renderOnThirdColumn()}
       </Flex>
     </Box>
   );
