@@ -16,7 +16,7 @@ export const TypesPreview: FC<TypesPreviewProps> = ({ type, children }) => {
   return (
     <Tooltip
       content={
-        <Scrollable heightProps={{ maxHeight: "300px" }}>
+        <Scrollable heightProps={{ maxHeight: "300px" }} showScrollOnHover>
           <CodeBlock code={exampleCode} showLineNumbers={false} />
         </Scrollable>
       }

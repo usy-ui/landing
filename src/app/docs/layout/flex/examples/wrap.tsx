@@ -1,11 +1,17 @@
 "use client";
 import { useMemo, useState } from "react";
 
-import { Flex, RadioGroup, RadioType, usySpacing } from "@usy-ui/base";
+import {
+  Flex,
+  FlexProps,
+  RadioGroup,
+  RadioType,
+  usySpacing,
+} from "@usy-ui/base";
 
 import { StyledFlex, StyledBox } from "./_styled-comps";
 
-type WrapType = "nowrap" | "wrap" | "wrap-reverse";
+type WrapType = FlexProps["wrap"];
 
 export const Wrap = () => {
   const optionsMemo = useMemo<RadioType[]>(

@@ -55,18 +55,14 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
     });
 
     return (
-      <MenuScrollableContainer>
+      <MenuScrollableContainer showScrollOnHover>
         <MenuHierarchyContainer>{itemComponents}</MenuHierarchyContainer>
       </MenuScrollableContainer>
     );
   };
 
   const renderChildren = () => {
-    return (
-      <Flex direction="column" grow={1}>
-        {children}
-      </Flex>
-    );
+    return <Flex direction="column">{children}</Flex>;
   };
 
   return (

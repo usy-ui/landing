@@ -1,17 +1,17 @@
 "use client";
 import { useMemo, useState } from "react";
 
-import { Flex, RadioGroup, RadioType, usySpacing } from "@usy-ui/base";
+import {
+  Flex,
+  FlexProps,
+  RadioGroup,
+  RadioType,
+  usySpacing,
+} from "@usy-ui/base";
 
 import { StyledFlex, StyledBox } from "./_styled-comps";
 
-type JustifyContentType =
-  | "flex-start"
-  | "center"
-  | "flex-end"
-  | "space-between"
-  | "space-around"
-  | "space-evenly";
+type JustifyContentType = FlexProps["justifyContent"];
 
 export const JustifyContent = () => {
   const optionsMemo = useMemo<RadioType[]>(

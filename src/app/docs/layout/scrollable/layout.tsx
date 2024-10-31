@@ -21,7 +21,10 @@ const ScrollableLayout: FC<ScrollableLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst["scroll-type"],
+          DocsQuickNavSubItemConst["show-scroll-on-hover"],
+        ]),
       ] as QuickNavItemType[],
     []
   );

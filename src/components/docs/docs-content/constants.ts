@@ -154,9 +154,25 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
   gap: {
     name: "Gap",
     description: "Set consistent spacing between items within a flex container",
-    sectionId: "Gap",
+    sectionId: "gap",
     hasIndent: true,
     order: 17,
+  },
+  "scroll-type": {
+    name: "Scroll Type",
+    description:
+      "Define the scrolling behavior, choosing horizontal or vertical direction to gain user navigation experience",
+    sectionId: "scroll-type",
+    hasIndent: true,
+    order: 18,
+  },
+  "show-scroll-on-hover": {
+    name: "Show Scroll on Hover",
+    description:
+      "Display scrollbars only when hovering over the container, keeping the design clean",
+    sectionId: "show-scroll-on-hover",
+    hasIndent: true,
+    order: 19,
   },
   form: {
     name: "Form",
@@ -164,6 +180,6 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Create dynamic, accessible forms with a full range of components",
     sectionId: "form",
     hasIndent: true,
-    order: 18,
+    order: 20,
   },
 };

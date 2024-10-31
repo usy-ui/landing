@@ -21,4 +21,6 @@ export type DocsQuickNavSubItemUnion =
   | "shrink"
   | "wrap"
   | "gap"
+  | "scroll-type"
+  | "show-scroll-on-hover"
   | "form";
