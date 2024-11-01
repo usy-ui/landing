@@ -21,7 +21,11 @@ const SwitchLayout: FC<SwitchLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst.default,
+          DocsQuickNavSubItemConst.sizes,
+          DocsQuickNavSubItemConst.form,
+        ]),
       ] as QuickNavItemType[],
     []
   );
