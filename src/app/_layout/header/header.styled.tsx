@@ -1,5 +1,7 @@
 "use client";
 import {
+  AlignLeftIcon,
+  usyBreakpoints,
   usyColor,
   usyElement,
   usyFontSize,
@@ -32,6 +34,20 @@ export const HeaderContainer = styled.header`
 export const LogoAndNavContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const BrandLink = styled(Link)`
+  @media only screen and (max-width: ${usyBreakpoints.laptop}) {
+    display: none;
+  }
+`;
+
+export const MenuDrawerTriggerIcon = styled(AlignLeftIcon)`
+  cursor: pointer;
+
+  @media only screen and (min-width: ${usyBreakpoints.laptop}) {
+    display: none;
+  }
 `;
 
 export const SearchDocsAndLinksContainer = styled.div`

@@ -15,7 +15,7 @@ import { PanelPropsRowsConst } from "./constants";
 import { Default } from "./examples/default";
 
 const Panel = () => {
-  const sourceUrl = getCompSourceUrl("Panel");
+  const sourceUrl = getCompSourceUrl("Panel", "_Layout");
   const reportIssueUrl = getReportIssueUrl("Panel");
   const { default: defaultExampleCode } = useExamplesPreviews({
     root: "layout",

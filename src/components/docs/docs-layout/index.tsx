@@ -8,8 +8,8 @@ import {
   QuickNavHeading,
   QuickNavMainItemStyled,
   QuickNavSubItemStyled,
-} from "./styled";
-import { QuickNavItemType } from "./types";
+} from "./docs-layout.styled";
+import { QuickNavItemType } from "./docs-layout.types";
 
 type DocsLayoutProps = {
   children: ReactNode;

@@ -1,7 +1,10 @@
-import { QuickNavItemType } from "../docs-layout/types";
+import { QuickNavItemType } from "../docs-layout/docs-layout.types";
 
-export const getCompSourceUrl = (compName: string) => {
-  return `${process.env.REPO_URL}/tree/main/src/components/${compName}`;
+export const getCompSourceUrl = (
+  compName: string,
+  groupName?: "_Form" | "_Layout"
+) => {
+  return `${process.env.REPO_URL}/tree/main/src/components/${groupName || ""}/${compName}`;
 };
 
 export const getReportIssueUrl = (compName: string) => {

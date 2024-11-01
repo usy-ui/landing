@@ -1,5 +1,5 @@
+import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
-import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/types";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
 import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
 import {

@@ -1,8 +1,8 @@
 "use client";
 import { Badge, TableColumnType, Typography } from "@usy-ui/base";
 
-import { RequiredIcon } from "../styled";
-import { APIsSectionRowType } from "../types";
+import { RequiredIcon } from "../apis-section.styled";
+import { APIsSectionRowType } from "../apis-section.types";
 
 export const getApisSectionColumnProps =
   (): TableColumnType<APIsSectionRowType>[] => [

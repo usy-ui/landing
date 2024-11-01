@@ -7,7 +7,7 @@ import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
 import { DocsQuickNavMainItemConst } from "../constants";
 
-import { APIsSectionRowType } from "./types";
+import { APIsSectionRowType } from "./apis-section.types";
 import { getApisSectionColumnProps } from "./utils/get-apis-section-column-props";
 
 type ApisSectionProps = {

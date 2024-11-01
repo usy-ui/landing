@@ -6,7 +6,7 @@ import {
 } from "@/components/docs/docs-content/constants";
 import { getSortedItemByOrder } from "@/components/docs/docs-content/utils";
 import { DocsLayout } from "@/components/docs/docs-layout";
-import { QuickNavItemType } from "@/components/docs/docs-layout/types";
+import { QuickNavItemType } from "@/components/docs/docs-layout/docs-layout.types";
 
 type AccordionLayoutProps = {
   children: ReactNode;

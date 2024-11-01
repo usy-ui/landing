@@ -1,7 +1,7 @@
 import { FC, ReactNode, useMemo } from "react";
 
 import { DocsLayout } from "@/components/docs/docs-layout";
-import { QuickNavItemType } from "@/components/docs/docs-layout/types";
+import { QuickNavItemType } from "@/components/docs/docs-layout/docs-layout.types";
 
 import {
   QuickNavGetStartMainItemConst,

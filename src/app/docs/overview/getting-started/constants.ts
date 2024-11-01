@@ -1,4 +1,4 @@
-import { QuickNavItemType } from "@/components/docs/docs-layout/types";
+import { QuickNavItemType } from "@/components/docs/docs-layout/docs-layout.types";
 
 export const QuickNavGetStartMainItemConst: Record<
   "gettingStarted" | "installation",

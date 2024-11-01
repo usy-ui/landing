@@ -1,4 +1,10 @@
-import { usyColor, usyFontSize, usyFontWeight, usySpacing } from "@usy-ui/base";
+import {
+  usyBreakpoints,
+  usyColor,
+  usyFontSize,
+  usyFontWeight,
+  usySpacing,
+} from "@usy-ui/base";
 import styled, { css } from "styled-components";
 
 import { HEADER_HEIGHT, MAIN_PADDING_TOP } from "@/constants/layout.constants";
@@ -27,6 +33,10 @@ export const QuickNavContainer = styled.aside`
   padding-left: ${usySpacing.px40};
   position: sticky;
   top: calc(${HEADER_HEIGHT} + ${MAIN_PADDING_TOP});
+
+  @media only screen and (max-width: ${usyBreakpoints.desktop}) {
+    display: none;
+  }
 `;
 
 export const QuickNavHeading = styled.h3`
