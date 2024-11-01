@@ -16,6 +16,8 @@ import { QUICK_NAV_MAIN_TO_SUB_SPACING } from "@/constants/layout.constants";
 import { DocsQuickNavSubItemConst } from "../../constants";
 import { DocsQuickNavSubItemUnion } from "../../types";
 
+import { StyledScrollable } from "./example-preview.styled";
+
 type ExamplePreviewProps = {
   type: DocsQuickNavSubItemUnion;
   description?: string;
@@ -54,7 +56,11 @@ export const ExamplePreview: FC<ExamplePreviewProps> = ({
       {
         id: "code",
         label: "Code",
-        content: <CodeBlock code={code} />,
+        content: (
+          <StyledScrollable heightProps={{ maxHeight: "500px" }}>
+            <CodeBlock code={code} />
+          </StyledScrollable>
+        ),
       },
     ],
     [uiPreview, code]

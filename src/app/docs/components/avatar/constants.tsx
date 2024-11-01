@@ -10,7 +10,7 @@ export const AvatarPropsRowsConst: APIsSectionRowType[] = [
     propName: "url",
     required: true,
     type: "string",
-    defVault: "",
+    defaultVal: "",
   },
   {
     propName: "size",
@@ -26,7 +26,7 @@ export const AvatarPropsRowsConst: APIsSectionRowType[] = [
         </TypesPreview>
       </>
     ),
-    defVault: "medium",
+    defaultVal: "medium",
   },
   {
     propName: "color",
@@ -40,31 +40,31 @@ export const AvatarPropsRowsConst: APIsSectionRowType[] = [
         <Typography size="small">random</Typography>
       </>
     ),
-    defVault: "black",
+    defaultVal: "black",
   },
   {
     propName: "radius",
     required: false,
     type: "BaseRadius",
-    defVault: "small",
+    defaultVal: "small",
   },
   {
     propName: "fallback",
     required: false,
     type: "ReactNode",
-    defVault: "A",
+    defaultVal: "A",
   },
   {
     propName: "imgAlt",
     required: false,
     type: "string",
-    defVault: "avatar",
+    defaultVal: "avatar",
   },
   {
     propName: "onClick",
     required: false,
     type: "() => void",
-    defVault: "",
+    defaultVal: "",
   },
   CommonCompPropsConst.className(),
   CommonCompPropsConst.name("avatar"),

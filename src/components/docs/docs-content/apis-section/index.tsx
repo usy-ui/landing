@@ -48,13 +48,13 @@ const ApiSectionColumnsConst: TableColumnType<APIsSectionRowType>[] = [
       ),
   },
   {
-    key: "defVault",
+    key: "defaultVal",
     title: "Default",
     widthProps: {
       width: "130px",
     },
-    renderRow: ({ defVault }) => (
-      <Typography size="small">{defVault}</Typography>
+    renderRow: ({ defaultVal }) => (
+      <Typography size="small">{defaultVal}</Typography>
     ),
   },
 ];
@@ -74,9 +74,9 @@ export const ApisSection: FC<ApisSectionProps> = ({
 }) => {
   const flattenDataRows = useMemo(
     () =>
-      dataRows.map(({ defVault, ...restProps }) => ({
+      dataRows.map(({ defaultVal, ...restProps }) => ({
         ...restProps,
-        defVault: defVault ? defVault : "-",
+        defaultVal: defaultVal ? defaultVal : "-",
       })),
     [dataRows]
   );

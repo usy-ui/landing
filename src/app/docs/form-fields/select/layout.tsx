@@ -21,7 +21,10 @@ const SelectLayout: FC<SelectLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst.default,
+          DocsQuickNavSubItemConst.form,
+        ]),
       ] as QuickNavItemType[],
     []
   );

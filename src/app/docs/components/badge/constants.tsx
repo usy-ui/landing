@@ -14,7 +14,7 @@ export const BadgePropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.BaseVariantUnion}
       </TypesPreview>
     ),
-    defVault: "outline",
+    defaultVal: "outline",
   },
   {
     propName: "size",
@@ -24,7 +24,7 @@ export const BadgePropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.BaseSizeUnion}
       </TypesPreview>
     ),
-    defVault: "medium",
+    defaultVal: "medium",
   },
   {
     propName: "color",
@@ -38,7 +38,7 @@ export const BadgePropsRowsConst: APIsSectionRowType[] = [
         <Typography size="small">random</Typography>
       </>
     ),
-    defVault: "primary",
+    defaultVal: "primary",
   },
   {
     propName: "radius",
@@ -48,13 +48,13 @@ export const BadgePropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.BaseRadiusUnion}
       </TypesPreview>
     ),
-    defVault: "small",
+    defaultVal: "small",
   },
   {
     propName: "children",
     required: false,
     type: "ReactNode",
-    defVault: "",
+    defaultVal: "",
   },
   CommonCompPropsConst.className(),
   CommonCompPropsConst.name("badge"),

@@ -2,6 +2,8 @@ import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/
 import {
   CommonCompPropsConst,
   CssSpacingPropsConst,
+  FieldLabelPropsConst,
+  FormFieldPropsConst,
 } from "@/components/docs/docs-content/apis-section/constants";
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
@@ -15,48 +17,19 @@ export const SelectPropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.SelectItemType}[]
       </TypesPreview>
     ),
-    defVault: "",
+    defaultVal: "",
   },
   {
     propName: "isOpen",
     required: false,
     type: "boolean",
-    defVault: "",
+    defaultVal: "false",
   },
-  {
-    propName: "label",
-    required: false,
-    type: "string",
-    defVault: "",
-  },
-  {
-    propName: "hasAsterisk",
-    required: false,
-    type: "boolean",
-    defVault: "",
-  },
-  {
-    propName: "value",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.SelectItemType}>
-        {PropsTypesConst.SelectItemType}
-      </TypesPreview>
-    ),
-    defVault: "",
-  },
-  {
-    propName: "disabled",
-    required: false,
-    type: "boolean",
-    defVault: "false",
-  },
-  {
-    propName: "onChange",
-    required: false,
-    type: `(value: ${PropsTypesConst.SelectItemType}) => void`,
-    defVault: "",
-  },
+  FieldLabelPropsConst.label(),
+  FieldLabelPropsConst.hasAsterisk(),
+  FormFieldPropsConst.value({ valueType: PropsTypesConst.SelectItemType }),
+  FormFieldPropsConst.disabled(),
+  FormFieldPropsConst.onChange({ valueType: PropsTypesConst.SelectItemType }),
   CssSpacingPropsConst.widthProps(),
   CommonCompPropsConst.className(),
   CommonCompPropsConst.name("select"),

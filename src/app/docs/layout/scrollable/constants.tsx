@@ -11,7 +11,7 @@ export const ScrollablePropsRowsConst: APIsSectionRowType[] = [
     propName: "children",
     required: true,
     type: "ReactNode",
-    defVault: "",
+    defaultVal: "",
   },
   {
     propName: "tag",
@@ -21,19 +21,19 @@ export const ScrollablePropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.BaseSemanticTagUnion}
       </TypesPreview>
     ),
-    defVault: "div",
+    defaultVal: "div",
   },
   {
     propName: "scrollType",
     required: false,
     type: "vertical | horizontal | both",
-    defVault: "vertical",
+    defaultVal: "vertical",
   },
   {
     propName: "showScrollOnHover",
     required: false,
     type: "boolean",
-    defVault: "false",
+    defaultVal: "false",
   },
   CssSpacingPropsConst.widthProps(),
   CssSpacingPropsConst.heightProps(),

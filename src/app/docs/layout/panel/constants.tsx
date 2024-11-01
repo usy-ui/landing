@@ -11,7 +11,7 @@ export const PanelPropsRowsConst: APIsSectionRowType[] = [
     propName: "children",
     required: true,
     type: "ReactNode",
-    defVault: "",
+    defaultVal: "",
   },
   {
     propName: "tag",
@@ -21,13 +21,13 @@ export const PanelPropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.BaseSemanticTagUnion}
       </TypesPreview>
     ),
-    defVault: "div",
+    defaultVal: "div",
   },
   {
     propName: "title",
     required: false,
     type: "ReactNode",
-    defVault: "",
+    defaultVal: "",
   },
   CssSpacingPropsConst.widthProps(),
   CssSpacingPropsConst.heightProps(),

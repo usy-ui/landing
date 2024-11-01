@@ -3,18 +3,18 @@ export const CommonCompPropsConst = Object.freeze({
     propName: "className",
     required: false,
     type: "string",
-    defVault: "",
+    defaultVal: "",
   }),
   name: (compName: string) => ({
     propName: "name",
     required: false,
     type: "string",
-    defVault: compName,
+    defaultVal: compName,
   }),
   testId: (compName: string) => ({
     propName: "testId",
     required: false,
     type: "string",
-    defVault: compName,
+    defaultVal: compName,
   }),
 });

@@ -1,5 +1,9 @@
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
-import { CommonCompPropsConst } from "@/components/docs/docs-content/apis-section/constants";
+import {
+  CommonCompPropsConst,
+  FieldLabelPropsConst,
+  FormFieldPropsConst,
+} from "@/components/docs/docs-content/apis-section/constants";
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
 
@@ -12,42 +16,21 @@ export const RadioGroupPropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.RadioType}[]
       </TypesPreview>
     ),
-    defVault: "",
-  },
-  {
-    propName: "value",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.RadioType}>
-        {PropsTypesConst.RadioType}
-      </TypesPreview>
-    ),
-    defVault: "items[0]",
+    defaultVal: "",
   },
   {
     propName: "direction",
     required: false,
     type: "vertical | horizontal",
-    defVault: "horizontal",
+    defaultVal: "horizontal",
   },
-  {
-    propName: "label",
-    required: false,
-    type: "string",
-    defVault: "",
-  },
-  {
-    propName: "disabled",
-    required: false,
-    type: "boolean",
-    defVault: "false",
-  },
-  {
-    propName: "onChange",
-    required: false,
-    type: `(value: ${PropsTypesConst.RadioType}) => void`,
-    defVault: "",
-  },
+  FieldLabelPropsConst.label(),
+  FormFieldPropsConst.disabled(),
+  FormFieldPropsConst.value({
+    valueType: PropsTypesConst.RadioType,
+    defaultVal: "items[0]",
+  }),
+  FormFieldPropsConst.onChange({ valueType: PropsTypesConst.RadioType }),
   CommonCompPropsConst.className(),
   CommonCompPropsConst.name("radio-group"),
   CommonCompPropsConst.testId("radio-group"),

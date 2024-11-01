@@ -15,7 +15,7 @@ export const AccordionPropsRowsConst: APIsSectionRowType[] = [
         {PropsTypesConst.AccordionItemType}[]
       </TypesPreview>
     ),
-    defVault: "",
+    defaultVal: "",
   },
   CssSpacingPropsConst.widthProps(),
   CssSpacingPropsConst.marginProps(),

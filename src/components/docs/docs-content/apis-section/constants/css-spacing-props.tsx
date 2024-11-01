@@ -10,7 +10,7 @@ export const CssSpacingPropsConst = Object.freeze({
         {PropsTypesConst.WidthCSSType}
       </TypesPreview>
     ),
-    defVault: "",
+    defaultVal: "",
   }),
   heightProps: () => ({
     propName: "heightProps",
@@ -20,7 +20,7 @@ export const CssSpacingPropsConst = Object.freeze({
         {PropsTypesConst.HeightCSSType}
       </TypesPreview>
     ),
-    defVault: "",
+    defaultVal: "",
   }),
   marginProps: () => ({
     propName: "marginProps",
@@ -30,7 +30,7 @@ export const CssSpacingPropsConst = Object.freeze({
         {PropsTypesConst.MarginCSSType}
       </TypesPreview>
     ),
-    defVault: "",
+    defaultVal: "",
   }),
   paddingProps: () => ({
     propName: "paddingProps",
@@ -40,6 +40,6 @@ export const CssSpacingPropsConst = Object.freeze({
         {PropsTypesConst.PaddingCSSType}
       </TypesPreview>
     ),
-    defVault: "",
+    defaultVal: "",
   }),
 });

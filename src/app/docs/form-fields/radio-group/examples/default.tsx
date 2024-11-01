@@ -26,7 +26,7 @@ export const Default = () => {
     >
       <RadioGroup
         name="select-option"
-        label="Select option"
+        label="Select item"
         items={items}
         onChange={(item) =>
           rootToast.basic({
@@ -37,7 +37,7 @@ export const Default = () => {
       />
       <RadioGroup
         name="disabled-option"
-        label="Disabled option"
+        label="Disabled select"
         items={items}
         disabled
         onChange={(item) =>

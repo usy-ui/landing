@@ -4,9 +4,9 @@ import { useMemo } from "react";
 import {
   Button,
   Flex,
-  RadioGroup,
   RadioType,
   rootToast,
+  Select,
   usySpacing,
 } from "@usy-ui/base";
 import { useForm, Controller } from "react-hook-form";
@@ -34,6 +34,8 @@ export const Form = () => {
   });
 
   const onSubmit = (values: FormFields) => {
+    console.log(values);
+
     rootToast.basic({
       content: <CodeBlock {...getJsonPreset(values)} />,
       styles: ToastJsonStylesConst,
@@ -46,7 +48,13 @@ export const Form = () => {
         name="option"
         control={control}
         render={({ field }) => (
-          <RadioGroup {...field} label="Select item" items={items} />
+          <Select
+            {...field}
+            label="Select item"
+            items={items}
+            widthProps={{ width: "260px" }}
+            hasAsterisk
+          />
         )}
       />
       <Flex
