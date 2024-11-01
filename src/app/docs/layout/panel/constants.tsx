@@ -1,13 +1,10 @@
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
+import {
+  CommonCompPropsConst,
+  CssSpacingPropsConst,
+} from "@/components/docs/docs-content/apis-section/constants";
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
-import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
-import {
-  getHeightPropsRow,
-  getMarginPropsRow,
-  getPaddingPropsRow,
-  getWidthPropsRow,
-} from "@/components/docs/docs-content/apis-section/utils/get-common-css-props-rows";
 
 export const PanelPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -32,9 +29,11 @@ export const PanelPropsRowsConst: APIsSectionRowType[] = [
     type: "ReactNode",
     defVault: "",
   },
-  getWidthPropsRow(),
-  getHeightPropsRow(),
-  getMarginPropsRow(),
-  getPaddingPropsRow(),
-  ...getCommonCompPropsRows("panel"),
+  CssSpacingPropsConst.widthProps(),
+  CssSpacingPropsConst.heightProps(),
+  CssSpacingPropsConst.marginProps(),
+  CssSpacingPropsConst.paddingProps(),
+  CommonCompPropsConst.className(),
+  CommonCompPropsConst.name("panel"),
+  CommonCompPropsConst.testId("panel"),
 ];

@@ -17,7 +17,7 @@ import { Direction } from "./examples/directions";
 import { Form } from "./examples/form";
 
 const RadioGroup = () => {
-  const sourceUrl = getCompSourceUrl("RadioGroup");
+  const sourceUrl = getCompSourceUrl("RadioGroup", "_Form");
   const reportIssueUrl = getReportIssueUrl("RadioGroup");
   const { default: defaultExampleCode, form: formExampleCode } =
     useExamplesPreviews({

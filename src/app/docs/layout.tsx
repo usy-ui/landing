@@ -13,7 +13,7 @@ type DocsLayoutProps = {
 const DocsLayout: FC<DocsLayoutProps> = ({ children }) => {
   return (
     <DocsContainer>
-      <DocsHierarchyScrollable>
+      <DocsHierarchyScrollable showScrollOnHover>
         <DocsHierarchy />
       </DocsHierarchyScrollable>
       <Flex direction="column" widthProps={{ width: "100%" }}>

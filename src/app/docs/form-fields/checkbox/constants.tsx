@@ -1,5 +1,5 @@
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
-import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
+import { CommonCompPropsConst } from "@/components/docs/docs-content/apis-section/constants";
 
 export const CheckboxPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -26,5 +26,7 @@ export const CheckboxPropsRowsConst: APIsSectionRowType[] = [
     type: "(value: boolean) => void",
     defVault: "",
   },
-  ...getCommonCompPropsRows("checkbox"),
+  CommonCompPropsConst.className(),
+  CommonCompPropsConst.name("checkbox"),
+  CommonCompPropsConst.testId("checkbox"),
 ];

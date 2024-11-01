@@ -1,9 +1,9 @@
 import { Typography } from "@usy-ui/base";
 
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
+import { CommonCompPropsConst } from "@/components/docs/docs-content/apis-section/constants";
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
-import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
 
 export const BadgePropsRowsConst: APIsSectionRowType[] = [
   {
@@ -56,5 +56,7 @@ export const BadgePropsRowsConst: APIsSectionRowType[] = [
     type: "ReactNode",
     defVault: "",
   },
-  ...getCommonCompPropsRows("badge"),
+  CommonCompPropsConst.className(),
+  CommonCompPropsConst.name("badge"),
+  CommonCompPropsConst.testId("badge"),
 ];

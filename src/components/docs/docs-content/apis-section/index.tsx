@@ -1,14 +1,67 @@
 "use client";
 import { FC, useMemo } from "react";
 
-import { Box, ParagraphHeading, Table, usySpacing } from "@usy-ui/base";
+import {
+  Badge,
+  Box,
+  ParagraphHeading,
+  Table,
+  TableColumnType,
+  Typography,
+  usySpacing,
+} from "@usy-ui/base";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
 
 import { DocsQuickNavMainItemConst } from "../constants";
 
+import { RequiredIcon } from "./apis-section.styled";
 import { APIsSectionRowType } from "./apis-section.types";
-import { getApisSectionColumnProps } from "./utils/get-apis-section-column-props";
+
+/**
+ * Constants
+ */
+
+const ApiSectionColumnsConst: TableColumnType<APIsSectionRowType>[] = [
+  {
+    key: "propName",
+    title: "Prop",
+    renderRow: ({ propName }) => (
+      <Badge variant="filled" radius="medium">
+        {propName}
+      </Badge>
+    ),
+  },
+  {
+    key: "required",
+    title: "Required",
+    renderRow: ({ required }) => (required ? <RequiredIcon /> : "-"),
+  },
+  {
+    key: "type",
+    title: "Type",
+    renderRow: ({ type }) =>
+      typeof type === "string" ? (
+        <Typography size="small">{type}</Typography>
+      ) : (
+        type
+      ),
+  },
+  {
+    key: "defVault",
+    title: "Default",
+    widthProps: {
+      width: "130px",
+    },
+    renderRow: ({ defVault }) => (
+      <Typography size="small">{defVault}</Typography>
+    ),
+  },
+];
+
+/**
+ * Component
+ */
 
 type ApisSectionProps = {
   description?: string;
@@ -41,7 +94,7 @@ export const ApisSection: FC<ApisSectionProps> = ({
       />
       <Table
         rowKey="propName"
-        columns={getApisSectionColumnProps()}
+        columns={ApiSectionColumnsConst}
         dataRows={flattenDataRows}
         styles={{}}
       />

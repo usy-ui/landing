@@ -19,7 +19,7 @@ import { Sizes } from "./examples/sizes";
 import { Types } from "./examples/types";
 
 const Input = () => {
-  const sourceUrl = getCompSourceUrl("Input");
+  const sourceUrl = getCompSourceUrl("Input", "_Form");
   const reportIssueUrl = getReportIssueUrl("Input");
   const {
     default: defaultExampleCode,

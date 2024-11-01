@@ -6,39 +6,21 @@ import {
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
 
-export const PasswordPropsRowsConst: APIsSectionRowType[] = [
+export const SelectPropsRowsConst: APIsSectionRowType[] = [
   {
-    propName: "value",
-    required: false,
-    type: "string",
-    defVault: "",
-  },
-  {
-    propName: "size",
-    required: false,
+    propName: "items",
+    required: true,
     type: (
-      <TypesPreview type={PropsTypesConst.BaseSizeUnion}>
-        {PropsTypesConst.BaseSizeUnion}
+      <TypesPreview type={PropsTypesConst.SelectItemType}>
+        {PropsTypesConst.SelectItemType}[]
       </TypesPreview>
     ),
-    defVault: "medium",
-  },
-  {
-    propName: "iconLeft",
-    required: false,
-    type: "ReactNode",
     defVault: "",
   },
   {
-    propName: "placeholder",
+    propName: "isOpen",
     required: false,
-    type: "string",
-    defVault: "",
-  },
-  {
-    propName: "description",
-    required: false,
-    type: "string",
+    type: "boolean",
     defVault: "",
   },
   {
@@ -51,13 +33,17 @@ export const PasswordPropsRowsConst: APIsSectionRowType[] = [
     propName: "hasAsterisk",
     required: false,
     type: "boolean",
-    defVault: "false",
+    defVault: "",
   },
   {
-    propName: "hasError",
+    propName: "value",
     required: false,
-    type: "boolean",
-    defVault: "false",
+    type: (
+      <TypesPreview type={PropsTypesConst.SelectItemType}>
+        {PropsTypesConst.SelectItemType}
+      </TypesPreview>
+    ),
+    defVault: "",
   },
   {
     propName: "disabled",
@@ -68,17 +54,11 @@ export const PasswordPropsRowsConst: APIsSectionRowType[] = [
   {
     propName: "onChange",
     required: false,
-    type: "(value: string) => void",
-    defVault: "false",
-  },
-  {
-    propName: "onBlur",
-    required: false,
-    type: "(value: string) => void",
-    defVault: "false",
+    type: `(value: ${PropsTypesConst.SelectItemType}) => void`,
+    defVault: "",
   },
   CssSpacingPropsConst.widthProps(),
   CommonCompPropsConst.className(),
-  CommonCompPropsConst.name("password"),
-  CommonCompPropsConst.testId("password"),
+  CommonCompPropsConst.name("select"),
+  CommonCompPropsConst.testId("select"),
 ];

@@ -1,8 +1,10 @@
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
+import {
+  CommonCompPropsConst,
+  CssSpacingPropsConst,
+} from "@/components/docs/docs-content/apis-section/constants";
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
-import { getCommonCompPropsRows } from "@/components/docs/docs-content/apis-section/utils/get-common-comp-props-rows";
-import { getWidthPropsRow } from "@/components/docs/docs-content/apis-section/utils/get-common-css-props-rows";
 
 export const InputPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -99,6 +101,8 @@ export const InputPropsRowsConst: APIsSectionRowType[] = [
     type: "(value: string) => void",
     defVault: "",
   },
-  getWidthPropsRow(),
-  ...getCommonCompPropsRows("input"),
+  CssSpacingPropsConst.widthProps(),
+  CommonCompPropsConst.className(),
+  CommonCompPropsConst.name("input"),
+  CommonCompPropsConst.testId("input"),
 ];

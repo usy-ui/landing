@@ -16,7 +16,7 @@ import { Default } from "./examples/default";
 import { Form } from "./examples/form";
 
 const Checkbox = () => {
-  const sourceUrl = getCompSourceUrl("Checkbox");
+  const sourceUrl = getCompSourceUrl("Checkbox", "_Form");
   const reportIssueUrl = getReportIssueUrl("Checkbox");
   const { default: defaultExampleCode, form: formExampleCode } =
     useExamplesPreviews({

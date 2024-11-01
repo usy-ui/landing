@@ -18,7 +18,7 @@ import { Icons } from "./examples/icons";
 import { Sizes } from "./examples/sizes";
 
 const Password = () => {
-  const sourceUrl = getCompSourceUrl("Password");
+  const sourceUrl = getCompSourceUrl("Password", "_Form");
   const reportIssueUrl = getReportIssueUrl("Password");
   const {
     default: defaultExampleCode,
