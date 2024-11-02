@@ -1,13 +1,18 @@
 import { PropsTypesConst } from "../props-types/constants";
 import { TypesPreview } from "../types-preview";
 
-type SizeParams = {
-  includeExtra?: boolean;
-  defaultVal: string;
-};
-
 export const DefinedTypeProps = Object.freeze({
-  size: (params?: SizeParams) => ({
+  color: (params?: { defaultVal?: string }) => ({
+    propName: "color",
+    required: false,
+    type: (
+      <TypesPreview type={PropsTypesConst.BaseColorUnion}>
+        {PropsTypesConst.BaseSizeUnion}
+      </TypesPreview>
+    ),
+    defaultVal: params?.defaultVal || "primary",
+  }),
+  size: (params?: { includeExtra?: boolean; defaultVal?: string }) => ({
     propName: "size",
     required: false,
     type: (

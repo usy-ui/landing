@@ -1,7 +1,8 @@
-import { Typography } from "@usy-ui/base";
-
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
-import { CommonCompPropsConst } from "@/components/docs/docs-content/apis-section/constants";
+import {
+  CommonCompPropsConst,
+  DefinedTypeProps,
+} from "@/components/docs/docs-content/apis-section/constants";
 import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
 import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
 
@@ -16,30 +17,8 @@ export const BadgePropsRowsConst: APIsSectionRowType[] = [
     ),
     defaultVal: "outline",
   },
-  {
-    propName: "size",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.BaseSizeUnion}>
-        {PropsTypesConst.BaseSizeUnion}
-      </TypesPreview>
-    ),
-    defaultVal: "medium",
-  },
-  {
-    propName: "color",
-    required: false,
-    type: (
-      <>
-        <TypesPreview type={PropsTypesConst.BaseColorUnion}>
-          {PropsTypesConst.BaseColorUnion}
-        </TypesPreview>
-        {" | "}
-        <Typography size="small">random</Typography>
-      </>
-    ),
-    defaultVal: "primary",
-  },
+  DefinedTypeProps.size({ includeExtra: true }),
+  DefinedTypeProps.color({ defaultVal: "primary" }),
   {
     propName: "radius",
     required: false,
