@@ -81,7 +81,6 @@ const ComponentMenuConst: MenuItemType = {
       id: "cpn-image-gallery",
       url: "image-gallery",
       label: "Image Gallery",
-      hasWarning: true,
     },
     { id: "cpn-modal", url: "modal", label: "Modal", hasWarning: true },
     {
@@ -95,7 +94,6 @@ const ComponentMenuConst: MenuItemType = {
       id: "cpn-skeleton",
       url: "skeleton",
       label: "Skeleton",
-      hasWarning: true,
     },
     { id: "cpn-table", url: "table", label: "Table", hasWarning: true },
     { id: "cpn-tabs", url: "tabs", label: "Tabs" },

@@ -1,9 +1,8 @@
-import { Typography } from "@usy-ui/base";
-
 import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/apis-section.types";
-import { CommonCompPropsConst } from "@/components/docs/docs-content/apis-section/constants";
-import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
-import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
+import {
+  CommonCompPropsConst,
+  DefinedTypeProps,
+} from "@/components/docs/docs-content/apis-section/constants";
 
 export const AvatarPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -12,42 +11,9 @@ export const AvatarPropsRowsConst: APIsSectionRowType[] = [
     type: "string",
     defaultVal: "",
   },
-  {
-    propName: "size",
-    required: false,
-    type: (
-      <>
-        <TypesPreview type={PropsTypesConst.BaseSizeUnion}>
-          {PropsTypesConst.BaseSizeUnion}
-        </TypesPreview>
-        {" | "}
-        <TypesPreview type={PropsTypesConst.BaseSizeExtraUnion}>
-          {PropsTypesConst.BaseSizeExtraUnion}
-        </TypesPreview>
-      </>
-    ),
-    defaultVal: "medium",
-  },
-  {
-    propName: "color",
-    required: false,
-    type: (
-      <>
-        <TypesPreview type={PropsTypesConst.BaseColorUnion}>
-          {PropsTypesConst.BaseColorUnion}
-        </TypesPreview>
-        {" | "}
-        <Typography size="small">random</Typography>
-      </>
-    ),
-    defaultVal: "black",
-  },
-  {
-    propName: "radius",
-    required: false,
-    type: "BaseRadius",
-    defaultVal: "small",
-  },
+  DefinedTypeProps.size({ includeExtra: true }),
+  DefinedTypeProps.color({ hasRandom: true, defaultVal: "black" }),
+  DefinedTypeProps.radius({ defaultVal: "small" }),
   {
     propName: "fallback",
     required: false,

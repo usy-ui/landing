@@ -2,28 +2,26 @@ import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/
 import {
   CommonCompPropsConst,
   CssSpacingPropsConst,
-  DefinedTypeProps,
 } from "@/components/docs/docs-content/apis-section/constants";
 
-export const PanelPropsRowsConst: APIsSectionRowType[] = [
+export const SkeletonPropsRowsConst: APIsSectionRowType[] = [
   {
-    propName: "children",
+    propName: "type",
     required: true,
-    type: "ReactNode",
+    type: "circle | bars",
     defaultVal: "",
   },
-  DefinedTypeProps.tag(),
   {
-    propName: "title",
+    propName: "numOfBars",
     required: false,
-    type: "ReactNode",
-    defaultVal: "",
+    type: "number",
+    defaultVal: "1",
   },
   CssSpacingPropsConst.widthProps(),
   CssSpacingPropsConst.heightProps(),
   CssSpacingPropsConst.marginProps(),
   CssSpacingPropsConst.paddingProps(),
   CommonCompPropsConst.className(),
-  CommonCompPropsConst.name("panel"),
-  CommonCompPropsConst.testId("panel"),
+  CommonCompPropsConst.name("tabs"),
+  CommonCompPropsConst.testId("tabs"),
 ];

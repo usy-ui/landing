@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import {
-  BarSkeleton,
+  Skeleton,
   Box,
   Button,
   Drawer,
@@ -42,9 +42,9 @@ export const CoinBrief = ({
           alignItems="center"
           heightProps={{ height: "110px" }}
         >
-          <BarSkeleton />
-          <BarSkeleton />
-          <BarSkeleton />
+          <Skeleton type="bars" />
+          <Skeleton type="bars" />
+          <Skeleton type="bars" />
         </Flex>
       );
     }

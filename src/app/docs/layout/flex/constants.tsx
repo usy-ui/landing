@@ -2,9 +2,8 @@ import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/
 import {
   CommonCompPropsConst,
   CssSpacingPropsConst,
+  DefinedTypeProps,
 } from "@/components/docs/docs-content/apis-section/constants";
-import { PropsTypesConst } from "@/components/docs/docs-content/apis-section/props-types/constants";
-import { TypesPreview } from "@/components/docs/docs-content/apis-section/types-preview";
 
 export const FlexPropsRowsConst: APIsSectionRowType[] = [
   {
@@ -13,16 +12,7 @@ export const FlexPropsRowsConst: APIsSectionRowType[] = [
     type: "ReactNode",
     defaultVal: "",
   },
-  {
-    propName: "tag",
-    required: false,
-    type: (
-      <TypesPreview type={PropsTypesConst.BaseSemanticTagUnion}>
-        {PropsTypesConst.BaseSemanticTagUnion}
-      </TypesPreview>
-    ),
-    defaultVal: "div",
-  },
+  DefinedTypeProps.tag(),
   {
     propName: "display",
     required: false,
