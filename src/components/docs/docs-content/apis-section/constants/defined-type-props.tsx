@@ -18,6 +18,29 @@ export const DefinedTypeProps = Object.freeze({
     defaultVal: params?.defaultVal || "outline",
   }),
   /**
+   * Position
+   */
+  position: (params?: { includeExtra?: boolean; defaultVal?: string }) => ({
+    propName: "position",
+    required: false,
+    type: (
+      <>
+        <TypesPreview type={PropsTypesConst.BasePositionUnion}>
+          {PropsTypesConst.BasePositionUnion}
+        </TypesPreview>
+        {params?.includeExtra && (
+          <>
+            {" | "}
+            <TypesPreview type={PropsTypesConst.BasePositionExtraUnion}>
+              {PropsTypesConst.BasePositionExtraUnion}
+            </TypesPreview>
+          </>
+        )}
+      </>
+    ),
+    defaultVal: params?.defaultVal || "top",
+  }),
+  /**
    * Color
    */
   color: (params?: { hasRandom?: boolean; defaultVal?: string }) => ({

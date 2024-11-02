@@ -7,6 +7,7 @@ export type DocsQuickNavSubItemUnion =
   | "default"
   | "variants"
   | "types"
+  | "positions"
   | "directions"
   | "sizes"
   | "colors"

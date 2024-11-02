@@ -3,15 +3,11 @@ import {
   CommonCompPropsConst,
   CssSpacingPropsConst,
   DefinedTypeProps,
+  FrequentlyUsedProps,
 } from "@/components/docs/docs-content/apis-section/constants";
 
 export const BoxPropsRowsConst: APIsSectionRowType[] = [
-  {
-    propName: "children",
-    required: true,
-    type: "ReactNode",
-    defaultVal: "",
-  },
+  FrequentlyUsedProps.children(),
   DefinedTypeProps.tag(),
   {
     propName: "id",

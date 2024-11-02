@@ -102,9 +102,8 @@ const ComponentMenuConst: MenuItemType = {
       id: "cpn-toggle-panel",
       url: "toggle-panel",
       label: "Toggle Panel",
-      hasWarning: true,
     },
-    { id: "cpn-tooltip", url: "tooltip", label: "Tooltip", hasWarning: true },
+    { id: "cpn-tooltip", url: "tooltip", label: "Tooltip" },
     {
       id: "cpn-typography",
       url: "typography",

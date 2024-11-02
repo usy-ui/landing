@@ -3,3 +3,4 @@ export * from "./css-spacing-props";
 export * from "./defined-type-props";
 export * from "./field-label-props";
 export * from "./form-field-props";
+export * from "./frequently-used-props";

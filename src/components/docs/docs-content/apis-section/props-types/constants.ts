@@ -1,5 +1,7 @@
 export enum PropsTypesConst {
   BaseColorUnion = "BaseColorUnion",
+  BasePositionExtraUnion = "BasePositionExtraUnion",
+  BasePositionUnion = "BasePositionUnion",
   BaseRadiusUnion = "BaseRadiusUnion",
   BaseSemanticTagUnion = "BaseSemanticTagUnion",
   BaseSizeExtraUnion = "BaseSizeExtraUnion",

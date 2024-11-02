@@ -19,6 +19,6 @@ export const ImageGalleryPropsRowsConst: APIsSectionRowType[] = [
   },
   DefinedTypeProps.tag(),
   CommonCompPropsConst.className(),
-  CommonCompPropsConst.name("tabs"),
-  CommonCompPropsConst.testId("tabs"),
+  CommonCompPropsConst.name("image-gallery"),
+  CommonCompPropsConst.testId("image-gallery"),
 ];

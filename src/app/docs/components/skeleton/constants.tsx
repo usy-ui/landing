@@ -22,6 +22,6 @@ export const SkeletonPropsRowsConst: APIsSectionRowType[] = [
   CssSpacingPropsConst.marginProps(),
   CssSpacingPropsConst.paddingProps(),
   CommonCompPropsConst.className(),
-  CommonCompPropsConst.name("tabs"),
-  CommonCompPropsConst.testId("tabs"),
+  CommonCompPropsConst.name("skeleton"),
+  CommonCompPropsConst.testId("skeleton"),
 ];

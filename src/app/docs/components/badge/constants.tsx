@@ -2,6 +2,7 @@ import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/
 import {
   CommonCompPropsConst,
   DefinedTypeProps,
+  FrequentlyUsedProps,
 } from "@/components/docs/docs-content/apis-section/constants";
 
 export const BadgePropsRowsConst: APIsSectionRowType[] = [
@@ -9,12 +10,7 @@ export const BadgePropsRowsConst: APIsSectionRowType[] = [
   DefinedTypeProps.size({ includeExtra: true }),
   DefinedTypeProps.color({ defaultVal: "primary" }),
   DefinedTypeProps.radius({ defaultVal: "small" }),
-  {
-    propName: "children",
-    required: false,
-    type: "ReactNode",
-    defaultVal: "",
-  },
+  FrequentlyUsedProps.children(),
   CommonCompPropsConst.className(),
   CommonCompPropsConst.name("badge"),
   CommonCompPropsConst.testId("badge"),

@@ -4,9 +4,11 @@ import { FC, useMemo } from "react";
 import {
   Badge,
   Box,
+  InfoCircleIcon,
   ParagraphHeading,
   Table,
   TableColumnType,
+  Tooltip,
   Typography,
   usySpacing,
 } from "@usy-ui/base";
@@ -56,6 +58,21 @@ const ApiSectionColumnsConst: TableColumnType<APIsSectionRowType>[] = [
     renderRow: ({ defaultVal }) => (
       <Typography size="small">{defaultVal}</Typography>
     ),
+  },
+  {
+    key: "detail",
+    title: "Detail",
+    widthProps: {
+      width: "70px",
+    },
+    renderRow: ({ detail }) =>
+      typeof detail === "string" ? (
+        <Tooltip content={detail}>
+          <InfoCircleIcon />
+        </Tooltip>
+      ) : (
+        "-"
+      ),
   },
 ];
 

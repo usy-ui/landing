@@ -5,4 +5,5 @@ export type APIsSectionRowType = {
   required: boolean;
   type: string | ReactNode;
   defaultVal: string;
+  detail?: string;
 };

@@ -2,24 +2,32 @@ import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/
 import {
   CommonCompPropsConst,
   CssSpacingPropsConst,
-  DefinedTypeProps,
   FrequentlyUsedProps,
 } from "@/components/docs/docs-content/apis-section/constants";
 
-export const PanelPropsRowsConst: APIsSectionRowType[] = [
+export const TogglePanelPropsRowsConst: APIsSectionRowType[] = [
   FrequentlyUsedProps.children(),
-  DefinedTypeProps.tag(),
   {
     propName: "title",
     required: false,
-    type: "ReactNode",
+    type: "string | ReactNode",
+    defaultVal: "",
+  },
+  {
+    propName: "isExpand",
+    required: false,
+    type: "boolean",
+    defaultVal: "false",
+  },
+  {
+    propName: "onToggle",
+    required: false,
+    type: "(isExpand: boolean) => void",
     defaultVal: "",
   },
   CssSpacingPropsConst.widthProps(),
-  CssSpacingPropsConst.heightProps(),
   CssSpacingPropsConst.marginProps(),
-  CssSpacingPropsConst.paddingProps(),
   CommonCompPropsConst.className(),
-  CommonCompPropsConst.name("panel"),
-  CommonCompPropsConst.testId("panel"),
+  CommonCompPropsConst.name("toggle-panel"),
+  CommonCompPropsConst.testId("toggle-panel"),
 ];

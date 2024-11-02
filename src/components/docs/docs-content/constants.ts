@@ -51,49 +51,13 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
     hasIndent: true,
     order: 3,
   },
-  sizes: {
-    name: "Sizes",
-    description: "Easily adjust component sizes to fit any design",
-    sectionId: "size",
+  positions: {
+    name: "Positions",
+    description:
+      "Control the placement of elements with properties for top, right, bottom, left and more",
+    sectionId: "type",
     hasIndent: true,
     order: 4,
-  },
-  colors: {
-    name: "Colors",
-    description: "Apply color schemes to identity and enhance visual appeal.",
-    sectionId: "color",
-    hasIndent: true,
-    order: 5,
-  },
-  radius: {
-    name: "Radius",
-    description: "Customize border radius effortlessly to achieve either sharp",
-    sectionId: "radius",
-    hasIndent: true,
-    order: 6,
-  },
-  icons: {
-    name: "Icons",
-    description:
-      "Utilize a wide range of customizable icons to enhance clarity",
-    sectionId: "icons",
-    hasIndent: true,
-    order: 7,
-  },
-  fallback: {
-    name: "Fallback",
-    description: "Maintain the styles even when primary resources fail",
-    sectionId: "fallback",
-    hasIndent: true,
-    order: 8,
-  },
-  display: {
-    name: "Display",
-    description:
-      "Create adaptable layouts, aligning and distributing space efficiently across items in a container",
-    sectionId: "display",
-    hasIndent: true,
-    order: 9,
   },
   directions: {
     name: "Directions",
@@ -101,15 +65,60 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Control layout direction for both horizontal and vertical orientations",
     sectionId: "direction",
     hasIndent: true,
+    order: 5,
+  },
+  sizes: {
+    name: "Sizes",
+    description: "Easily adjust component sizes to fit any design",
+    sectionId: "size",
+    hasIndent: true,
+    order: 6,
+  },
+  colors: {
+    name: "Colors",
+    description: "Apply color schemes to identity and enhance visual appeal.",
+    sectionId: "color",
+    hasIndent: true,
+    order: 7,
+  },
+  radius: {
+    name: "Radius",
+    description: "Customize border radius effortlessly to achieve either sharp",
+    sectionId: "radius",
+    hasIndent: true,
+    order: 8,
+  },
+  icons: {
+    name: "Icons",
+    description:
+      "Utilize a wide range of customizable icons to enhance clarity",
+    sectionId: "icons",
+    hasIndent: true,
+    order: 9,
+  },
+  fallback: {
+    name: "Fallback",
+    description: "Maintain the styles even when primary resources fail",
+    sectionId: "fallback",
+    hasIndent: true,
     order: 10,
   },
+  display: {
+    name: "Display",
+    description:
+      "Create adaptable layouts, aligning and distributing space efficiently across items in a container",
+    sectionId: "display",
+    hasIndent: true,
+    order: 11,
+  },
+
   "justify-content": {
     name: "Justify Content",
     description:
       "Align and distribute items within a container along the main axis",
     sectionId: "justifyContent",
     hasIndent: true,
-    order: 11,
+    order: 12,
   },
   "align-items": {
     name: "Align Items",
@@ -117,7 +126,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Control the alignment of items along the cross axis within a flex container",
     sectionId: "alignItems",
     hasIndent: true,
-    order: 12,
+    order: 13,
   },
   "align-content": {
     name: "Align Content",
@@ -125,7 +134,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Manage the spacing and alignment of rows within a flex container, especially when there is extra space along the cross axis",
     sectionId: "alignContent",
     hasIndent: true,
-    order: 13,
+    order: 14,
   },
   grow: {
     name: "Grow",
@@ -133,7 +142,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Adjust the proportion of space an item takes up within a flex container",
     sectionId: "grow",
     hasIndent: true,
-    order: 14,
+    order: 15,
   },
   shrink: {
     name: "Shrink",
@@ -141,7 +150,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Control how an item reduces in size relative to others in a flex container when space is limited",
     sectionId: "shrink",
     hasIndent: true,
-    order: 15,
+    order: 16,
   },
   wrap: {
     name: "Wrap",
@@ -149,14 +158,14 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Enable items to wrap onto multiple lines within a flex container",
     sectionId: "wrap",
     hasIndent: true,
-    order: 16,
+    order: 17,
   },
   gap: {
     name: "Gap",
     description: "Set consistent spacing between items within a flex container",
     sectionId: "gap",
     hasIndent: true,
-    order: 17,
+    order: 18,
   },
   "scroll-type": {
     name: "Scroll Type",
@@ -164,7 +173,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Define the scrolling behavior, choosing horizontal or vertical direction to gain user navigation experience",
     sectionId: "scroll-type",
     hasIndent: true,
-    order: 18,
+    order: 19,
   },
   "show-scroll-on-hover": {
     name: "Show Scroll on Hover",
@@ -172,7 +181,7 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Display scrollbars only when hovering over the container, keeping the design clean",
     sectionId: "show-scroll-on-hover",
     hasIndent: true,
-    order: 19,
+    order: 20,
   },
   form: {
     name: "Form",
@@ -180,6 +189,6 @@ export const DocsQuickNavSubItemConst: DocsQuickNavSubItemType = {
       "Create dynamic, accessible forms with a full range of components",
     sectionId: "form",
     hasIndent: true,
-    order: 20,
+    order: 21,
   },
 };

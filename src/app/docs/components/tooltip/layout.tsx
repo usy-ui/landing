@@ -21,7 +21,7 @@ const TooltipLayout: FC<TooltipLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([DocsQuickNavSubItemConst.positions]),
       ] as QuickNavItemType[],
     []
   );
