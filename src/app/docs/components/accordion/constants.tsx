@@ -16,7 +16,6 @@ export const AccordionPropsRowsConst: APIsSectionRowType[] = [
       </TypesPreview>
     ),
     defaultVal: "",
-    description: "aaa",
   },
   CssSpacingPropsConst.widthProps(),
   CssSpacingPropsConst.marginProps(),
