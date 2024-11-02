@@ -34,6 +34,7 @@ export const Form = () => {
         justifyContent="center"
         alignItems="center"
         gap={usySpacing.px20}
+        widthProps={{ width: "300px" }}
       >
         <Controller
           name="name"
@@ -53,7 +54,6 @@ export const Form = () => {
                 errors.name?.message || "Auto transform to uppercase"
               }
               transformOnChange={(value) => value.toUpperCase()}
-              widthProps={{ width: "300px" }}
               hasAsterisk
             />
           )}
