@@ -2,5 +2,6 @@ export type MenuItemType = {
   id: string;
   label: string;
   url: string;
-  items?: MenuItemType[];
+  items?: Omit<MenuItemType, "items">[];
+  hasWarning?: boolean;
 };

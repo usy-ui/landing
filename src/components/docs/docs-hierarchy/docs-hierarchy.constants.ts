@@ -48,7 +48,11 @@ const FormFieldsMenuConst: MenuItemType = {
     { id: "cpn-select", url: "select", label: "Select" },
     { id: "cpn-switch", url: "switch", label: "Switch" },
     { id: "cpn-tags", url: "tags", label: "Tags" },
-    { id: "cpn-textarea", url: "textarea", label: "Textarea" },
+    {
+      id: "cpn-textarea",
+      url: "textarea",
+      label: "Textarea",
+    },
   ],
 };
 
@@ -60,37 +64,56 @@ const ComponentMenuConst: MenuItemType = {
     { id: "cpn-accordion", url: "accordion", label: "Accordion" },
     { id: "cpn-avatar", url: "avatar", label: "Avatar" },
     { id: "cpn-badge", url: "badge", label: "Badge" },
-    { id: "cpn-button", url: "button", label: "Button" },
-    { id: "cpn-copyable", url: "copyable", label: "Copyable" },
-    { id: "cpn-drawer", url: "drawer", label: "Drawer" },
+    { id: "cpn-button", url: "button", label: "Button", hasWarning: true },
+    {
+      id: "cpn-copyable",
+      url: "copyable",
+      label: "Copyable",
+      hasWarning: true,
+    },
+    { id: "cpn-drawer", url: "drawer", label: "Drawer", hasWarning: true },
     {
       id: "cpn-dropdown-menu",
       url: "dropdown-menu",
       label: "Dropdown Menu",
+      hasWarning: true,
     },
     {
       id: "cpn-image-gallery",
       url: "image-gallery",
       label: "Image Gallery",
+      hasWarning: true,
     },
-    { id: "cpn-modal", url: "modal", label: "Modal" },
+    { id: "cpn-modal", url: "modal", label: "Modal", hasWarning: true },
     {
       id: "cpn-paragraph-heading",
       url: "paragraph-heading",
       label: "Paragraph Heading",
+      hasWarning: true,
     },
-    { id: "cpn-popover", url: "popover", label: "Popover" },
-    { id: "cpn-skeleton", url: "skeleton", label: "Skeleton" },
-    { id: "cpn-table", url: "table", label: "Table" },
-    { id: "cpn-tabs", url: "tabs", label: "Tabs" },
-    { id: "cpn-toast", url: "toast", label: "Toast" },
+    { id: "cpn-popover", url: "popover", label: "Popover", hasWarning: true },
+    {
+      id: "cpn-skeleton",
+      url: "skeleton",
+      label: "Skeleton",
+      hasWarning: true,
+    },
+    { id: "cpn-table", url: "table", label: "Table", hasWarning: true },
+    { id: "cpn-tabs", url: "tabs", label: "Tabs", hasWarning: true },
+    { id: "cpn-toast", url: "toast", label: "Toast", hasWarning: true },
     {
       id: "cpn-toggle-panel",
       url: "toggle-panel",
       label: "Toggle Panel",
+      hasWarning: true,
     },
-    { id: "cpn-tooltip", url: "tooltip", label: "Tooltip" },
-    { id: "cpn-typography", url: "typography", label: "Typography" },
+    { id: "cpn-tooltip", url: "tooltip", label: "Tooltip", hasWarning: true },
+    {
+      id: "cpn-typography",
+      url: "typography",
+      label: "Typography",
+      hasWarning: true,
+    },
   ],
 };
 
@@ -99,13 +122,23 @@ const VariablesMenuConst: MenuItemType = {
   label: "Variables",
   url: "variables",
   items: [
-    { id: "var-color", url: "color", label: "Color" },
-    { id: "var-element", url: "element", label: "Element" },
-    { id: "var-font-size", url: "font-size", label: "Font size" },
-    { id: "var-font-weight", url: "font-weight", label: "Font weight" },
-    { id: "var-layout", url: "layout", label: "Layout" },
-    { id: "var-spacing", url: "spacing", label: "Spacing" },
-    { id: "var-z-index", url: "z-index", label: "Z-index" },
+    { id: "var-color", url: "color", label: "Color", hasWarning: true },
+    { id: "var-element", url: "element", label: "Element", hasWarning: true },
+    {
+      id: "var-font-size",
+      url: "font-size",
+      label: "Font size",
+      hasWarning: true,
+    },
+    {
+      id: "var-font-weight",
+      url: "font-weight",
+      label: "Font weight",
+      hasWarning: true,
+    },
+    { id: "var-layout", url: "layout", label: "Layout", hasWarning: true },
+    { id: "var-spacing", url: "spacing", label: "Spacing", hasWarning: true },
+    { id: "var-z-index", url: "z-index", label: "Z-index", hasWarning: true },
   ],
 };
 
@@ -114,8 +147,8 @@ const UtilitiesMenuConst: MenuItemType = {
   url: "utilities",
   label: "Utilities",
   items: [
-    { id: "utls-format", url: "format", label: "Format" },
-    { id: "utls-helpers", url: "helpers", label: "Helpers" },
+    { id: "utils-format", url: "format", label: "Format", hasWarning: true },
+    { id: "utils-helpers", url: "helpers", label: "Helpers", hasWarning: true },
   ],
 };
 

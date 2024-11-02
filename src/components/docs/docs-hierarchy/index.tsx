@@ -1,6 +1,7 @@
 "use client";
 import { FC, useMemo } from "react";
 
+import { ClockIcon, usyColor } from "@usy-ui/base";
 import { usePathname } from "next/navigation";
 
 import { MenuHierarchyConst } from "./docs-hierarchy.constants";
@@ -49,6 +50,8 @@ export const DocsHierarchy: FC<DocsHierarchyProps> = ({ onItemClick }) => {
           $isActivated={pathname.endsWith(item.url)}
         >
           {item.label}
+          &nbsp;
+          {item.hasWarning && <ClockIcon color={usyColor.amber} />}
         </MenuItemLink>
       );
     });

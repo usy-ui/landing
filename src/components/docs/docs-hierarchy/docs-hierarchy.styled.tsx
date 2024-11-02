@@ -18,7 +18,7 @@ export const MenuHeading = styled.h3`
 export const MenuItemLink = styled(Link)<{
   $isActivated: boolean;
 }>`
-  width: 170px;
+  width: 190px;
   padding: ${usySpacing.px4} ${usySpacing.px12};
   margin: ${usySpacing.px4} 0;
   font-weight: ${usyFontWeight.light};
@@ -28,6 +28,8 @@ export const MenuItemLink = styled(Link)<{
   border-bottom-left-radius: ${usySpacing.px2};
   border-top-right-radius: ${usySpacing.px10};
   border-bottom-right-radius: ${usySpacing.px10};
+  display: flex;
+  align-items: center;
 
   ${({ $isActivated }) =>
     $isActivated &&

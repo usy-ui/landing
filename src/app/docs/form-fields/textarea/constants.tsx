@@ -2,31 +2,11 @@ import { APIsSectionRowType } from "@/components/docs/docs-content/apis-section/
 import {
   CommonCompPropsConst,
   CssSpacingPropsConst,
-  DefinedTypeProps,
   FieldLabelPropsConst,
   FormFieldPropsConst,
 } from "@/components/docs/docs-content/apis-section/constants";
 
-export const InputPropsRowsConst: APIsSectionRowType[] = [
-  {
-    propName: "type",
-    required: false,
-    type: "text | number",
-    defaultVal: "text",
-  },
-  DefinedTypeProps.size(),
-  {
-    propName: "iconLeft",
-    required: false,
-    type: "ReactNode",
-    defaultVal: "",
-  },
-  {
-    propName: "iconRight",
-    required: false,
-    type: "ReactNode",
-    defaultVal: "",
-  },
+export const TextAreaPropsRowsConst: APIsSectionRowType[] = [
   {
     propName: "placeholder",
     required: false,
@@ -39,18 +19,6 @@ export const InputPropsRowsConst: APIsSectionRowType[] = [
     type: "string",
     defaultVal: "",
   },
-  {
-    propName: "transformOnChange",
-    required: false,
-    type: "(value: string) => void",
-    defaultVal: "",
-  },
-  {
-    propName: "transformOnBlur",
-    required: false,
-    type: "(value: string) => void",
-    defaultVal: "",
-  },
   FieldLabelPropsConst.label(),
   FieldLabelPropsConst.hasAsterisk(),
   FormFieldPropsConst.value({ valueType: "string" }),
@@ -59,7 +27,8 @@ export const InputPropsRowsConst: APIsSectionRowType[] = [
   FormFieldPropsConst.onChange({ valueType: "string" }),
   FormFieldPropsConst.onBlur({ valueType: "string" }),
   CssSpacingPropsConst.widthProps(),
+  CssSpacingPropsConst.heightProps(),
   CommonCompPropsConst.className(),
-  CommonCompPropsConst.name("input"),
-  CommonCompPropsConst.testId("input"),
+  CommonCompPropsConst.name("textarea"),
+  CommonCompPropsConst.testId("textarea"),
 ];
