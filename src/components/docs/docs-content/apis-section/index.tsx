@@ -60,14 +60,14 @@ const ApiSectionColumnsConst: TableColumnType<APIsSectionRowType>[] = [
     ),
   },
   {
-    key: "detail",
-    title: "Detail",
+    key: "desc",
+    title: "Desc",
     widthProps: {
       width: "70px",
     },
-    renderRow: ({ detail }) =>
-      typeof detail === "string" ? (
-        <Tooltip content={detail}>
+    renderRow: ({ desc }) =>
+      typeof desc === "string" ? (
+        <Tooltip content={desc}>
           <InfoCircleIcon />
         </Tooltip>
       ) : (

@@ -11,7 +11,7 @@ export const FAQ = () => {
   return (
     <Panel title={<ParagraphHeading title="FAQ" />}>
       <Scrollable heightProps={{ maxHeight: "400px" }} showScrollOnHover>
-        <TogglePanel title="What is Bitcoin?" expand>
+        <TogglePanel title="What is Bitcoin?" isExpand>
           <Typography>
             Bitcoin (BTC) is a cryptocurrency (a virtual currency) designed to
             act as money and a form of payment outside the control of any one

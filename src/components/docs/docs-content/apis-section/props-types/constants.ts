@@ -5,6 +5,7 @@ export enum PropsTypesConst {
   BaseRadiusUnion = "BaseRadiusUnion",
   BaseSemanticTagUnion = "BaseSemanticTagUnion",
   BaseSizeExtraUnion = "BaseSizeExtraUnion",
+  BaseSizeGigantUnion = "BaseSizeGigantUnion",
   BaseSizeUnion = "BaseSizeUnion",
   BaseVariantUnion = "BaseVariantUnion",
 
