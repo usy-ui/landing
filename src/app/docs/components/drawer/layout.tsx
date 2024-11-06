@@ -21,7 +21,10 @@ const DrawerLayout: FC<DrawerLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst.default,
+          DocsQuickNavSubItemConst.sides,
+        ]),
       ] as QuickNavItemType[],
     []
   );

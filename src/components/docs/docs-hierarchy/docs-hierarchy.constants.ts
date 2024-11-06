@@ -70,7 +70,7 @@ const ComponentMenuConst: MenuItemType = {
       url: "copyable",
       label: "Copyable",
     },
-    { id: "cpn-drawer", url: "drawer", label: "Drawer", hasWarning: true },
+    { id: "cpn-drawer", url: "drawer", label: "Drawer" },
     {
       id: "cpn-dropdown-menu",
       url: "dropdown-menu",
