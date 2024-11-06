@@ -9,10 +9,18 @@ import {
   DrawerHeader,
   Flex,
   Scrollable,
+  Typography,
   usySpacing,
 } from "@usy-ui/base";
 
-import { loremIpsumLongConst, loremIpsumShortConst } from "./_constants";
+import {
+  loremIpsumHeader1,
+  loremIpsumHeader2,
+  loremIpsumHeader3,
+  loremIpsumParagraph1,
+  loremIpsumParagraph2,
+  loremIpsumParagraph3,
+} from "@/mock/lorem-ipsum";
 
 export const Default = () => {
   const [pureDrawerOpen, setPureDrawerOpen] = useState(false);
@@ -27,7 +35,12 @@ export const Default = () => {
         <Button onClick={openDrawer}>Pure Drawer</Button>
         {pureDrawerOpen && (
           <Drawer onClose={closeDrawer}>
-            <DrawerContent>{loremIpsumShortConst}</DrawerContent>
+            <DrawerContent>
+              <Typography size="large" weight="bold">
+                {loremIpsumHeader1}
+              </Typography>
+              <Typography>{loremIpsumParagraph1}</Typography>
+            </DrawerContent>
           </Drawer>
         )}
       </>
@@ -65,7 +78,20 @@ export const Default = () => {
         {fullDrawerOpen && (
           <Drawer header={headerComp} footer={footerComp} onClose={closeDrawer}>
             <Scrollable>
-              <DrawerContent>{loremIpsumLongConst}</DrawerContent>
+              <DrawerContent>
+                <Typography size="large" weight="bold">
+                  {loremIpsumHeader1}
+                </Typography>
+                <Typography>{loremIpsumParagraph1}</Typography>
+                <Typography size="large" weight="bold">
+                  {loremIpsumHeader2}
+                </Typography>
+                <Typography>{loremIpsumParagraph2}</Typography>
+                <Typography size="large" weight="bold">
+                  {loremIpsumHeader3}
+                </Typography>
+                <Typography>{loremIpsumParagraph3}</Typography>
+              </DrawerContent>
             </Scrollable>
           </Drawer>
         )}

@@ -82,7 +82,7 @@ const ComponentMenuConst: MenuItemType = {
       url: "image-gallery",
       label: "Image Gallery",
     },
-    { id: "cpn-modal", url: "modal", label: "Modal", hasWarning: true },
+    { id: "cpn-modal", url: "modal", label: "Modal" },
     {
       id: "cpn-paragraph-heading",
       url: "paragraph-heading",

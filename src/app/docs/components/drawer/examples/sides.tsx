@@ -10,10 +10,11 @@ import {
   DrawerProps,
   Flex,
   Scrollable,
+  Typography,
   usySpacing,
 } from "@usy-ui/base";
 
-import { loremIpsumLongConst } from "./_constants";
+import { loremIpsumHeader1, loremIpsumParagraph1 } from "@/mock/lorem-ipsum";
 
 export const Sides = () => {
   const [side, setSide] = useState<DrawerProps["side"]>("right");
@@ -52,8 +53,8 @@ export const Sides = () => {
 
   return (
     <Flex justifyContent="center" alignItems="center" gap={usySpacing.px20}>
-      <Button onClick={openLeftDrawer}>Left Drawer</Button>
-      <Button onClick={openRightDrawer}>Right Drawer</Button>
+      <Button onClick={openLeftDrawer}>Left Side</Button>
+      <Button onClick={openRightDrawer}>Right Side</Button>
       {isDrawerOpen && (
         <Drawer
           side={side}
@@ -62,7 +63,12 @@ export const Sides = () => {
           onClose={closeDrawer}
         >
           <Scrollable>
-            <DrawerContent>{loremIpsumLongConst}</DrawerContent>
+            <DrawerContent>
+              <Typography size="large" weight="bold">
+                {loremIpsumHeader1}
+              </Typography>
+              <Typography>{loremIpsumParagraph1}</Typography>
+            </DrawerContent>
           </Scrollable>
         </Drawer>
       )}
