@@ -21,7 +21,13 @@ const ButtonLayout: FC<ButtonLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst.default,
+          DocsQuickNavSubItemConst.variants,
+          DocsQuickNavSubItemConst.sizes,
+          DocsQuickNavSubItemConst.radius,
+          DocsQuickNavSubItemConst.icons,
+        ]),
       ] as QuickNavItemType[],
     []
   );

@@ -64,7 +64,7 @@ const ComponentMenuConst: MenuItemType = {
     { id: "cpn-accordion", url: "accordion", label: "Accordion" },
     { id: "cpn-avatar", url: "avatar", label: "Avatar" },
     { id: "cpn-badge", url: "badge", label: "Badge" },
-    { id: "cpn-button", url: "button", label: "Button", hasWarning: true },
+    { id: "cpn-button", url: "button", label: "Button" },
     {
       id: "cpn-copyable",
       url: "copyable",
