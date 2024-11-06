@@ -8,7 +8,7 @@ import {
 
 export const BoxPropsRowsConst: APIsSectionRowType[] = [
   FrequentlyUsedProps.children(),
-  DefinedTypeProps.tag(),
+  DefinedTypeProps.semanticTag(),
   {
     propName: "id",
     required: false,

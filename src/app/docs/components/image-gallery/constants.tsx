@@ -17,7 +17,7 @@ export const ImageGalleryPropsRowsConst: APIsSectionRowType[] = [
     ),
     defaultVal: "",
   },
-  DefinedTypeProps.tag(),
+  DefinedTypeProps.semanticTag(),
   CommonCompPropsConst.className(),
   CommonCompPropsConst.name("image-gallery"),
   CommonCompPropsConst.testId("image-gallery"),

@@ -80,10 +80,10 @@ export const Payment = () => {
         gap={usySpacing.px10}
       >
         <Button
-          width="200px"
           variant="primary"
           size="small"
           radius="full"
+          widthProps={{ width: "200px" }}
           onClick={() => {
             rootToast.success({
               title: "Payment success",
@@ -93,7 +93,12 @@ export const Payment = () => {
         >
           Pay out
         </Button>
-        <Button width="200px" variant="invisible" size="small" radius="full">
+        <Button
+          variant="invisible"
+          size="small"
+          radius="full"
+          widthProps={{ width: "200px" }}
+        >
           Go back
         </Button>
       </Flex>

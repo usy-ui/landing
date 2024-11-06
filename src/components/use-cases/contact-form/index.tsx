@@ -98,7 +98,11 @@ export const ContactForm = () => {
               />
             )}
           />
-          <Button type="submit" variant="primary" width="100%">
+          <Button
+            type="submit"
+            variant="primary"
+            widthProps={{ width: "100%" }}
+          >
             Send
           </Button>
         </Flex>

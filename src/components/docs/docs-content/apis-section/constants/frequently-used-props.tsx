@@ -5,4 +5,10 @@ export const FrequentlyUsedProps = Object.freeze({
     type: "ReactNode",
     defaultVal: "",
   }),
+  content: () => ({
+    propName: "content",
+    required: true,
+    type: "string | ReactNode",
+    defaultVal: "",
+  }),
 });

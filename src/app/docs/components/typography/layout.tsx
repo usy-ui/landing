@@ -21,7 +21,14 @@ const TypographyLayout: FC<TypographyLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst["tags"],
+          DocsQuickNavSubItemConst["weight"],
+          DocsQuickNavSubItemConst.colors,
+          DocsQuickNavSubItemConst.sizes,
+          DocsQuickNavSubItemConst.align,
+          DocsQuickNavSubItemConst.wrap,
+        ]),
       ] as QuickNavItemType[],
     []
   );

@@ -8,7 +8,7 @@ import {
 
 export const FlexPropsRowsConst: APIsSectionRowType[] = [
   FrequentlyUsedProps.children(),
-  DefinedTypeProps.tag(),
+  DefinedTypeProps.semanticTag(),
   {
     propName: "display",
     required: false,

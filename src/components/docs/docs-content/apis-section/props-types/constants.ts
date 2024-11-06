@@ -7,6 +7,8 @@ export enum PropsTypesConst {
   BaseSizeExtraUnion = "BaseSizeExtraUnion",
   BaseSizeGigantUnion = "BaseSizeGigantUnion",
   BaseSizeUnion = "BaseSizeUnion",
+  BaseTypoTagUnion = "BaseTypoTagUnion",
+  BaseTypoWeightUnion = "BaseTypoWeightUnion",
   BaseVariantUnion = "BaseVariantUnion",
 
   WidthCSSType = "WidthCSSType",

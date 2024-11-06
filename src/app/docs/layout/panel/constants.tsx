@@ -8,7 +8,7 @@ import {
 
 export const PanelPropsRowsConst: APIsSectionRowType[] = [
   FrequentlyUsedProps.children(),
-  DefinedTypeProps.tag(),
+  DefinedTypeProps.semanticTag(),
   {
     propName: "title",
     required: false,

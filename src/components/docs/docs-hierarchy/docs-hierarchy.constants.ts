@@ -88,7 +88,7 @@ const ComponentMenuConst: MenuItemType = {
       url: "paragraph-heading",
       label: "Paragraph Heading",
     },
-    { id: "cpn-popover", url: "popover", label: "Popover", hasWarning: true },
+    { id: "cpn-popover", url: "popover", label: "Popover" },
     {
       id: "cpn-skeleton",
       url: "skeleton",
@@ -107,7 +107,6 @@ const ComponentMenuConst: MenuItemType = {
       id: "cpn-typography",
       url: "typography",
       label: "Typography",
-      hasWarning: true,
     },
   ],
 };

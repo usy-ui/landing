@@ -155,7 +155,7 @@ export const CreateAccount = () => {
             type="submit"
             variant="primary"
             disabled={!watch("isAgreeTermAndCondition")}
-            width="100%"
+            widthProps={{ width: "100%" }}
           >
             Create
           </Button>

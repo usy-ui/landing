@@ -64,7 +64,11 @@ export const DefinedTypeProps = Object.freeze({
   /**
    * Size
    */
-  size: (params?: { includeExtra?: boolean; defaultVal?: string }) => ({
+  size: (params?: {
+    includeExtra?: boolean;
+    includeGigant?: boolean;
+    defaultVal?: string;
+  }) => ({
     propName: "size",
     required: false,
     type: (
@@ -77,6 +81,14 @@ export const DefinedTypeProps = Object.freeze({
             {" | "}
             <TypesPreview type={PropsTypesConst.BaseSizeExtraUnion}>
               {PropsTypesConst.BaseSizeExtraUnion}
+            </TypesPreview>
+          </>
+        )}
+        {params?.includeGigant && (
+          <>
+            {" | "}
+            <TypesPreview type={PropsTypesConst.BaseSizeGigantUnion}>
+              {PropsTypesConst.BaseSizeGigantUnion}
             </TypesPreview>
           </>
         )}
@@ -100,7 +112,7 @@ export const DefinedTypeProps = Object.freeze({
   /**
    * Tag
    */
-  tag: (params?: { defaultVal?: string }) => ({
+  semanticTag: (params?: { defaultVal?: string }) => ({
     propName: "tag",
     required: false,
     type: (

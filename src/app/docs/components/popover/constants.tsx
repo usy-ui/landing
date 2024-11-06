@@ -5,11 +5,11 @@ import {
   FrequentlyUsedProps,
 } from "@/components/docs/docs-content/apis-section/constants";
 
-export const TooltipPropsRowsConst: APIsSectionRowType[] = [
+export const PopoverPropsRowsConst: APIsSectionRowType[] = [
   FrequentlyUsedProps.children(),
   FrequentlyUsedProps.content(),
-  DefinedTypeProps.position({ defaultVal: "top" }),
+  DefinedTypeProps.position({ includeExtra: true, defaultVal: "bottom" }),
   CommonCompPropsConst.className(),
-  CommonCompPropsConst.name("tooltip"),
-  CommonCompPropsConst.testId("tooltip"),
+  CommonCompPropsConst.name("popover"),
+  CommonCompPropsConst.testId("popover"),
 ];

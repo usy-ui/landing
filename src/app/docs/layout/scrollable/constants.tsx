@@ -8,7 +8,7 @@ import {
 
 export const ScrollablePropsRowsConst: APIsSectionRowType[] = [
   FrequentlyUsedProps.children(),
-  DefinedTypeProps.tag(),
+  DefinedTypeProps.semanticTag(),
   {
     propName: "scrollType",
     required: false,
