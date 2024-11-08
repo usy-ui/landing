@@ -17,6 +17,7 @@ export const ContentAndQuickContainer = styled.div`
 `;
 
 export const ContentContainer = styled.article`
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;

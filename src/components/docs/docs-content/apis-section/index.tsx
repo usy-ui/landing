@@ -6,6 +6,7 @@ import {
   Box,
   InfoCircleIcon,
   ParagraphHeading,
+  Scrollable,
   Table,
   TableColumnType,
   Tooltip,
@@ -27,7 +28,7 @@ import { APIsSectionRowType } from "./apis-section.types";
 const ApiSectionColumnsConst: TableColumnType<APIsSectionRowType>[] = [
   {
     key: "propName",
-    title: "Prop",
+    title: "Property",
     renderRow: ({ propName }) => (
       <Badge variant="filled" radius="medium">
         {propName}
@@ -61,9 +62,9 @@ const ApiSectionColumnsConst: TableColumnType<APIsSectionRowType>[] = [
   },
   {
     key: "desc",
-    title: "Desc",
+    title: "Description",
     widthProps: {
-      width: "70px",
+      width: "110px",
     },
     renderRow: ({ desc }) =>
       typeof desc === "string" ? (
@@ -109,12 +110,19 @@ export const ApisSection: FC<ApisSectionProps> = ({
         titleSize="huge"
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
-      <Table
-        rowKey="propName"
-        columns={ApiSectionColumnsConst}
-        dataRows={flattenDataRows}
-        styles={{}}
-      />
+      <Scrollable
+        scrollType="horizontal"
+        paddingProps={{ padding: `${usySpacing.px10} 0` }}
+        widthProps={{ maxWidth: "100vw" }}
+      >
+        <Table
+          rowKey="propName"
+          columns={ApiSectionColumnsConst}
+          dataRows={flattenDataRows}
+          styles={{ hideOuterBorder: true }}
+          widthProps={{ minWidth: "600px" }}
+        />
+      </Scrollable>
     </Box>
   );
 };

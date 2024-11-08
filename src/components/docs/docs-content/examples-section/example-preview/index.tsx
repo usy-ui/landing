@@ -46,8 +46,8 @@ export const ExamplePreview: FC<ExamplePreviewProps> = ({
             justifyContent="center"
             alignItems="center"
             gap={usySpacing.px20}
+            wrap="wrap"
             heightProps={{ minHeight: "200px" }}
-            paddingProps={{ padding: usySpacing.px32 }}
           >
             {uiPreview}
           </Flex>

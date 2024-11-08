@@ -9,7 +9,7 @@ import {
   getImportCommand,
   getReportIssueUrl,
 } from "@/components/docs/docs-content/utils";
-import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
+import { useExamplesPreviews } from "@/hooks/useExamplesPreviews";
 
 import { BadgePropsRowsConst } from "./constants";
 import { Colors } from "./examples/colors";

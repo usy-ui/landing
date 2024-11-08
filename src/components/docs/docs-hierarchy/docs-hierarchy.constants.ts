@@ -136,21 +136,10 @@ const VariablesMenuConst: MenuItemType = {
   ],
 };
 
-const UtilitiesMenuConst: MenuItemType = {
-  id: "utilities-menu",
-  url: "utilities",
-  label: "Utilities",
-  items: [
-    { id: "utils-format", url: "format", label: "Format", hasWarning: true },
-    { id: "utils-helpers", url: "helpers", label: "Helpers", hasWarning: true },
-  ],
-};
-
 export const MenuHierarchyConst = [
   OverviewMenuConst,
   LayoutMenuConst,
   FormFieldsMenuConst,
   ComponentMenuConst,
   VariablesMenuConst,
-  UtilitiesMenuConst,
 ];

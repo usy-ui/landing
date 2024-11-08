@@ -1,7 +1,5 @@
 "use client";
 import {
-  AlignLeftIcon,
-  usyBreakpoints,
   usyColor,
   usyElement,
   usyFontSize,
@@ -36,20 +34,6 @@ export const LogoAndNavContainer = styled.div`
   align-items: center;
 `;
 
-export const BrandLink = styled(Link)`
-  @media only screen and (max-width: ${usyBreakpoints.laptop}) {
-    display: none;
-  }
-`;
-
-export const MenuDrawerTriggerIcon = styled(AlignLeftIcon)`
-  cursor: pointer;
-
-  @media only screen and (min-width: ${usyBreakpoints.laptop}) {
-    display: none;
-  }
-`;
-
 export const SearchDocsAndLinksContainer = styled.div`
   display: flex;
   align-items: center;
@@ -65,14 +49,8 @@ export const SearchDocsAndLinksContainer = styled.div`
   }
 `;
 
-export const Navigation = styled.nav`
-  display: flex;
-  align-items: center;
-  margin-left: ${usySpacing.px32};
-`;
-
 export const NavItem = styled(Link)<{ $isActive: boolean }>`
-  margin: 0 ${usySpacing.px16};
+  margin: 0 ${usySpacing.px12};
   font-size: ${usyFontSize.medium};
 
   cursor: pointer;

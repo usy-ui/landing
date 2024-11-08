@@ -9,7 +9,7 @@ import {
   getImportCommand,
   getReportIssueUrl,
 } from "@/components/docs/docs-content/utils";
-import { useExamplesPreviews } from "@/hooks/useExamplesPreview";
+import { useExamplesPreviews } from "@/hooks/useExamplesPreviews";
 
 import { TypographyPropsRowsConst } from "./constants";
 import { Align } from "./examples/align";

@@ -18,6 +18,7 @@ export const Form = () => {
   const isAgree = watch("isAgree");
 
   const onSubmit = (values: FormFields) => {
+    console.log(values);
     rootToast.basic({
       content: <CodeBlock {...getJsonPreset(values)} />,
       styles: ToastJsonStylesConst,
