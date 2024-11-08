@@ -21,7 +21,7 @@ const DropdownMenuLayout: FC<DropdownMenuLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([DocsQuickNavSubItemConst.positions]),
       ] as QuickNavItemType[],
     []
   );

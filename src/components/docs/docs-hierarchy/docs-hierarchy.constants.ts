@@ -75,7 +75,6 @@ const ComponentMenuConst: MenuItemType = {
       id: "cpn-dropdown-menu",
       url: "dropdown-menu",
       label: "Dropdown Menu",
-      hasWarning: true,
     },
     {
       id: "cpn-image-gallery",
