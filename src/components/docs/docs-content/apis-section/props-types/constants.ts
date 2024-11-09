@@ -21,4 +21,5 @@ export enum PropsTypesConst {
   RadioType = "RadioType",
   SelectItemType = "SelectItemType",
   TabItemType = "TabItemType",
+  ToastInstance = "ToastInstance",
 }

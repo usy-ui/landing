@@ -31,12 +31,7 @@ export const DrawerPropsRowsConst: APIsSectionRowType[] = [
     type: "boolean",
     defaultVal: "false",
   },
-  {
-    propName: "containerElement",
-    required: false,
-    type: "HTMLElement",
-    defaultVal: "",
-  },
+  FrequentlyUsedProps.containerElement(),
   {
     propName: "zIndex",
     required: false,

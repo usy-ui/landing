@@ -1,5 +1,5 @@
 "use client";
-import { Flex, rootToast, Tags, usySpacing } from "@usy-ui/base";
+import { Flex, globalToast, Tags, usySpacing } from "@usy-ui/base";
 
 import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
 
@@ -17,13 +17,13 @@ export const Default = () => {
         label="Item tags"
         tags={["Item 1", "Item 2", "Item 3"]}
         onAdd={(tags, addedTags) =>
-          rootToast.basic({
+          globalToast.basic({
             content: <CodeBlock {...getJsonPreset({ tags, addedTags })} />,
             styles: ToastJsonStylesConst,
           })
         }
         onRemove={(tags, removedTags) =>
-          rootToast.basic({
+          globalToast.basic({
             content: <CodeBlock {...getJsonPreset({ tags, removedTags })} />,
             styles: ToastJsonStylesConst,
           })

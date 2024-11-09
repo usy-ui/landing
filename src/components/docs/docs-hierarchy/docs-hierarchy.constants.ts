@@ -95,7 +95,7 @@ const ComponentMenuConst: MenuItemType = {
     },
     { id: "cpn-table", url: "table", label: "Table", hasWarning: true },
     { id: "cpn-tabs", url: "tabs", label: "Tabs" },
-    { id: "cpn-toast", url: "toast", label: "Toast", hasWarning: true },
+    { id: "cpn-toast", url: "toast", label: "Toast" },
     {
       id: "cpn-toggle-panel",
       url: "toggle-panel",

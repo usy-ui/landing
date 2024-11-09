@@ -1,5 +1,5 @@
 "use client";
-import { Button, Flex, rootToast, Tags, usySpacing } from "@usy-ui/base";
+import { Button, Flex, globalToast, Tags, usySpacing } from "@usy-ui/base";
 import { useForm, Controller } from "react-hook-form";
 
 import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
@@ -22,7 +22,7 @@ export const Form = () => {
   const onSubmit = (values: FormFields) => {
     console.log(values);
 
-    rootToast.basic({
+    globalToast.basic({
       content: <CodeBlock {...getJsonPreset(values)} />,
       styles: ToastJsonStylesConst,
     });

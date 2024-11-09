@@ -12,7 +12,7 @@ import {
   MapPinAltIcon,
   Panel,
   Popover,
-  rootToast,
+  globalToast,
   Separator,
   Switch,
   Typography,
@@ -85,7 +85,7 @@ export const Payment = () => {
           radius="full"
           widthProps={{ width: "200px" }}
           onClick={() => {
-            rootToast.success({
+            globalToast.success({
               title: "Payment success",
               content: "Your item will be shipped within 2 days",
             });

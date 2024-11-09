@@ -3,7 +3,7 @@
 import {
   Button,
   Flex,
-  rootToast,
+  globalToast,
   Switch,
   Typography,
   usySpacing,
@@ -26,7 +26,7 @@ export const Form = () => {
   const onSubmit = (values: FormFields) => {
     console.log(values);
 
-    rootToast.basic({
+    globalToast.basic({
       content: <CodeBlock {...getJsonPreset(values)} />,
       styles: ToastJsonStylesConst,
     });

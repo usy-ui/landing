@@ -11,10 +11,12 @@ import {
   TableColumnType,
   Tooltip,
   Typography,
+  usyBreakpoint,
   usySpacing,
 } from "@usy-ui/base";
 
 import { QUICK_NAV_MAIN_TO_MAIN_SPACING } from "@/constants/layout.constants";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 import { DocsQuickNavMainItemConst } from "../constants";
 
@@ -90,6 +92,9 @@ export const ApisSection: FC<ApisSectionProps> = ({
   description = "Comprehensive documentation of available properties, methods and APIs",
   dataRows,
 }) => {
+  const windowWidth = useWindowWidth();
+  const tabletBreakpoint = parseInt(usyBreakpoint.tablet.replace("px", ""));
+
   const flattenDataRows = useMemo(
     () =>
       dataRows.map(({ defaultVal, ...restProps }) => ({
@@ -98,6 +103,40 @@ export const ApisSection: FC<ApisSectionProps> = ({
       })),
     [dataRows]
   );
+
+  /**
+   * Render
+   */
+
+  const renderTable = () => {
+    if (windowWidth < tabletBreakpoint) {
+      return (
+        <Scrollable
+          scrollType="horizontal"
+          paddingProps={{ padding: `${usySpacing.px10} 0` }}
+          widthProps={{ maxWidth: "100vw" }}
+        >
+          <Table
+            rowKey="propName"
+            columns={ApiSectionColumnsConst}
+            dataRows={flattenDataRows}
+            styles={{ hideOuterBorder: true }}
+            widthProps={{ minWidth: "600px" }}
+          />
+        </Scrollable>
+      );
+    }
+
+    return (
+      <Table
+        rowKey="propName"
+        columns={ApiSectionColumnsConst}
+        dataRows={flattenDataRows}
+        styles={{ hideOuterBorder: true }}
+        widthProps={{ minWidth: "600px" }}
+      />
+    );
+  };
 
   return (
     <Box
@@ -110,19 +149,7 @@ export const ApisSection: FC<ApisSectionProps> = ({
         titleSize="huge"
         marginProps={{ marginBottom: usySpacing.px20 }}
       />
-      <Scrollable
-        scrollType="horizontal"
-        paddingProps={{ padding: `${usySpacing.px10} 0` }}
-        widthProps={{ maxWidth: "100vw" }}
-      >
-        <Table
-          rowKey="propName"
-          columns={ApiSectionColumnsConst}
-          dataRows={flattenDataRows}
-          styles={{ hideOuterBorder: true }}
-          widthProps={{ minWidth: "600px" }}
-        />
-      </Scrollable>
+      {renderTable()}
     </Box>
   );
 };

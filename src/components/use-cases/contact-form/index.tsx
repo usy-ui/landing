@@ -5,7 +5,7 @@ import {
   Input,
   Panel,
   ParagraphHeading,
-  rootToast,
+  globalToast,
   Tags,
   TextArea,
   usySpacing,
@@ -35,7 +35,7 @@ export const ContactForm = () => {
   });
 
   const formSubmit = (values: FormFieldsProps) => {
-    rootToast.basic({
+    globalToast.basic({
       timeout: 7000,
       content: <CodeBlock {...getJsonPreset(values)} />,
       styles: ToastJsonStylesConst,

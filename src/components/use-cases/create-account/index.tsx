@@ -9,7 +9,7 @@ import {
   Password,
   RadioGroup,
   RadioType,
-  rootToast,
+  globalToast,
   Select,
   SelectItemType,
   usySpacing,
@@ -49,7 +49,7 @@ export const CreateAccount = () => {
       country: { ...values.country, labelElement: undefined },
     };
 
-    rootToast.basic({
+    globalToast.basic({
       timeout: 7000,
       content: <CodeBlock {...getJsonPreset(normalizeValues)} />,
       styles: ToastJsonStylesConst,

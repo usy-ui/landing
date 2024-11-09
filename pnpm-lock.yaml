@@ -399,7 +399,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
   '@usy-ui/base@file:usy-ui-base-1.0.2.tgz':
-    resolution: {integrity: sha512-0uwBoj07KVd1EOk5MYlpRkyt6dGljp/5SpCmU8JyvmpZApbOHGRNSb6+MXLjEGriRx4lDvwsSo8TBLODuLcC1w==, tarball: file:usy-ui-base-1.0.2.tgz}
+    resolution: {integrity: sha512-wzCA1JRs8HyzWZD9mVxGLy4J/JYGOuYjd4BHleO1QVnmjdsruyEk8ZR9ZNEGim5F2TYUMYFh+9UbLqOaOSilow==, tarball: file:usy-ui-base-1.0.2.tgz}
     version: 1.0.2
     peerDependencies:
       react: '>=16.8.0'

@@ -21,7 +21,11 @@ const ToastLayout: FC<ToastLayoutProps> = ({ children }) => {
           DocsQuickNavMainItemConst.apiReference,
           DocsQuickNavMainItemConst.examples,
         ]),
-        ...getSortedItemByOrder([DocsQuickNavSubItemConst.default]),
+        ...getSortedItemByOrder([
+          DocsQuickNavSubItemConst.default,
+          DocsQuickNavSubItemConst.types,
+          DocsQuickNavSubItemConst.positions,
+        ]),
       ] as QuickNavItemType[],
     []
   );

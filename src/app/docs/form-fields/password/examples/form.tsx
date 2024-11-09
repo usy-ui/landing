@@ -4,7 +4,7 @@ import {
   Flex,
   Input,
   Password,
-  rootToast,
+  globalToast,
   usySpacing,
 } from "@usy-ui/base";
 import { useForm, Controller } from "react-hook-form";
@@ -28,7 +28,7 @@ export const Form = () => {
   });
 
   const onSubmit = (values: FormFields) => {
-    rootToast.basic({
+    globalToast.basic({
       content: <CodeBlock {...getJsonPreset(values)} />,
       styles: ToastJsonStylesConst,
     });

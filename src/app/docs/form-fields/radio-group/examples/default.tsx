@@ -1,7 +1,7 @@
 "use client";
 import { useMemo } from "react";
 
-import { Flex, RadioGroup, rootToast, usySpacing } from "@usy-ui/base";
+import { Flex, RadioGroup, globalToast, usySpacing } from "@usy-ui/base";
 
 import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
 
@@ -29,7 +29,7 @@ export const Default = () => {
         label="Select item"
         items={items}
         onChange={(item) =>
-          rootToast.basic({
+          globalToast.basic({
             content: <CodeBlock {...getJsonPreset(item)} />,
             styles: ToastJsonStylesConst,
           })
@@ -41,7 +41,7 @@ export const Default = () => {
         items={items}
         disabled
         onChange={(item) =>
-          rootToast.basic({
+          globalToast.basic({
             content: <CodeBlock {...getJsonPreset(item)} />,
             styles: ToastJsonStylesConst,
           })

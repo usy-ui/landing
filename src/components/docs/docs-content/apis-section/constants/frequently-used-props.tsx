@@ -11,4 +11,10 @@ export const FrequentlyUsedProps = Object.freeze({
     type: "string | ReactNode",
     defaultVal: "",
   }),
+  containerElement: () => ({
+    propName: "containerElement",
+    required: false,
+    type: "HTMLElement",
+    defaultVal: "",
+  }),
 });

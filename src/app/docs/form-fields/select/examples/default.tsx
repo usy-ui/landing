@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import {
   ArrowRightIcon,
   Flex,
-  rootToast,
+  globalToast,
   Select,
   SelectItemType,
   usySpacing,
@@ -66,7 +66,7 @@ export const Default = () => {
         items={items}
         label="Select item"
         onChange={(item) => {
-          rootToast.basic({
+          globalToast.basic({
             content: (
               <CodeBlock
                 {...getJsonPreset({ ...item, labelElement: undefined })}
@@ -81,7 +81,7 @@ export const Default = () => {
         items={items}
         label="Disabled select"
         onChange={(item) =>
-          rootToast.basic({
+          globalToast.basic({
             content: <CodeBlock {...getJsonPreset(item)} />,
             styles: ToastJsonStylesConst,
           })
