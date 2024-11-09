@@ -1,12 +1,12 @@
 "use client";
-import { Flex, usyBreakpoints, usySpacing } from "@usy-ui/base";
+import { Flex, usyBreakpoint, usySpacing } from "@usy-ui/base";
 import styled from "styled-components";
 
 export const TwoThirdColumnsFlex = styled(Flex)`
   max-width: calc(66.66% - 32px);
   width: 100%;
 
-  @media only screen and (max-width: ${usyBreakpoints.desktop}) {
+  @media only screen and (max-width: ${usyBreakpoint.desktop}) {
     max-width: 100%;
   }
 `;
@@ -20,7 +20,7 @@ export const CreAccBlogFaqFlex = styled(Flex)`
     width: calc(50% - ${usySpacing.px16});
   }
 
-  @media only screen and (max-width: ${usyBreakpoints.laptop}) {
+  @media only screen and (max-width: ${usyBreakpoint.laptop}) {
     & > div {
       width: 100%;
     }
@@ -33,7 +33,7 @@ export const OneThirdColumnFlex = styled(Flex)`
   max-width: 33.33%;
   width: 100%;
 
-  @media only screen and (max-width: ${usyBreakpoints.desktop}) {
+  @media only screen and (max-width: ${usyBreakpoint.desktop}) {
     max-width: 100%;
     flex-direction: row;
 
@@ -50,7 +50,7 @@ export const OneThirdColumnFlex = styled(Flex)`
     }
   }
 
-  @media only screen and (max-width: ${usyBreakpoints.laptop}) {
+  @media only screen and (max-width: ${usyBreakpoint.laptop}) {
     & > div {
       width: 100%;
     }

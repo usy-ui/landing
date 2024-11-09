@@ -11,7 +11,7 @@ import {
   Separator,
   SunIcon,
   Tooltip,
-  usyBreakpoints,
+  usyBreakpoint,
   usySpacing,
 } from "@usy-ui/base";
 import Image from "next/image";
@@ -34,8 +34,8 @@ export const Header = () => {
   const [isMenuDrawerOpen, setIsMenuDrawerOpen] = useState(false);
   const windowWidth = useWindowWidth();
 
-  const mainMenuBreakpoint = parseInt(usyBreakpoints.laptop.replace("px", ""));
-  const docsMenuBreakpoint = parseInt(usyBreakpoints.tablet.replace("px", ""));
+  const mainMenuBreakpoint = parseInt(usyBreakpoint.laptop.replace("px", ""));
+  const docsMenuBreakpoint = parseInt(usyBreakpoint.tablet.replace("px", ""));
 
   const routing = useMemo(() => {
     return [
@@ -104,6 +104,7 @@ export const Header = () => {
           <Flex
             alignItems="center"
             marginProps={{ marginLeft: usySpacing.px32 }}
+            gap={usySpacing.px10}
           >
             {routing.map(({ url, label, isActive }) => (
               <NavItem key={url} href={url} $isActive={isActive}>

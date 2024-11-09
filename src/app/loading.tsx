@@ -1,5 +1,7 @@
+import { Skeleton } from "@usy-ui/base";
+
 const Loading = () => {
-  return "loading...";
+  return <Skeleton type="bars" numOfBars={4} />;
 };
 
 export default Loading;

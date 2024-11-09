@@ -1,5 +1,5 @@
 import {
-  usyBreakpoints,
+  usyBreakpoint,
   usyColor,
   usyFontSize,
   usyFontWeight,
@@ -19,6 +19,7 @@ export const ContentAndQuickContainer = styled.div`
 export const ContentContainer = styled.article`
   width: 100%;
   display: flex;
+  align-items: baseline;
   flex-direction: column;
   flex-grow: 1;
   padding-bottom: 200px;
@@ -35,7 +36,7 @@ export const QuickNavContainer = styled.aside`
   position: sticky;
   top: calc(${HEADER_HEIGHT} + ${MAIN_PADDING_TOP});
 
-  @media only screen and (max-width: ${usyBreakpoints.desktop}) {
+  @media only screen and (max-width: ${usyBreakpoint.desktop}) {
     display: none;
   }
 `;

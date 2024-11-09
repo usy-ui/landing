@@ -115,6 +115,12 @@ const VariablesMenuConst: MenuItemType = {
   label: "Variables",
   url: "variables",
   items: [
+    {
+      id: "var-breakpoint",
+      url: "breakpoint",
+      label: "Breakpoint",
+      hasWarning: true,
+    },
     { id: "var-color", url: "color", label: "Color", hasWarning: true },
     { id: "var-element", url: "element", label: "Element", hasWarning: true },
     {

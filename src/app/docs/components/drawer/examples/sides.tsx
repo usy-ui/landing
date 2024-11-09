@@ -4,12 +4,10 @@ import { useState } from "react";
 import {
   Button,
   Drawer,
-  DrawerContent,
   DrawerFooter,
   DrawerHeader,
   DrawerProps,
   Flex,
-  Scrollable,
   Typography,
   usySpacing,
 } from "@usy-ui/base";
@@ -62,14 +60,10 @@ export const Sides = () => {
           footer={footerComp}
           onClose={closeDrawer}
         >
-          <Scrollable>
-            <DrawerContent>
-              <Typography size="large" weight="bold">
-                {loremIpsumHeader1}
-              </Typography>
-              <Typography>{loremIpsumParagraph1}</Typography>
-            </DrawerContent>
-          </Scrollable>
+          <Typography size="large" weight="bold">
+            {loremIpsumHeader1}
+          </Typography>
+          <Typography>{loremIpsumParagraph1}</Typography>
         </Drawer>
       )}
     </Flex>

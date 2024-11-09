@@ -4,6 +4,7 @@ import { useState } from "react";
 import {
   Button,
   Flex,
+  FlexChild,
   Input,
   Modal,
   Panel,
@@ -30,13 +31,27 @@ export const TeamMembers = () => {
       <Panel title={<ParagraphHeading title="Team Members" />}>
         <Flex
           gap={usySpacing.px6}
+          wrap="wrap"
           marginProps={{ marginBottom: usySpacing.px20 }}
         >
-          <Input placeholder="Type email..." size="small" />
-          <Button variant="outline" size="small" noSole>
+          <FlexChild grow={1}>
+            <Input placeholder="Type email..." size="small" />
+          </FlexChild>
+          <Button
+            variant="outline"
+            size="small"
+            widthProps={{ width: "70px" }}
+            noSole
+          >
             Search
           </Button>
-          <Button variant="primary" size="small" onClick={openModal} noSole>
+          <Button
+            variant="primary"
+            size="small"
+            onClick={openModal}
+            widthProps={{ width: "62px" }}
+            noSole
+          >
             Export
           </Button>
         </Flex>

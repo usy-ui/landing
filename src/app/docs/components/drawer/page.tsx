@@ -17,9 +17,7 @@ import { Sides } from "./examples/sides";
 
 const Drawer = () => {
   const sourceUrl = getCompSourceUrl("Drawer");
-  const reportIssueUrl = getReportIssueUrl(
-    "Drawer, DrawerHeader, DrawerFooter, DrawerContent"
-  );
+  const reportIssueUrl = getReportIssueUrl("Drawer");
   const { default: defaultExampleCode, sides: sidesExampleCode } =
     useExamplesPreviews({
       root: "components",
@@ -38,7 +36,7 @@ const Drawer = () => {
         description="An overlay panel that slides in from the side, providing accessible space for menus, options, or additional content "
         viewSourceUrl={sourceUrl}
         reportAnIssueUrl={reportIssueUrl}
-        importCommand={getImportCommand("Drawer")}
+        importCommand={getImportCommand("Drawer, DrawerHeader, DrawerFooter")}
       />
       <ApisSection dataRows={DrawerPropsRowsConst} />
       <ExamplesSection>

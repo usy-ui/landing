@@ -4,11 +4,9 @@ import { useState } from "react";
 import {
   Button,
   Drawer,
-  DrawerContent,
   DrawerFooter,
   DrawerHeader,
   Flex,
-  Scrollable,
   Typography,
   usySpacing,
 } from "@usy-ui/base";
@@ -35,12 +33,10 @@ export const Default = () => {
         <Button onClick={openDrawer}>Pure Drawer</Button>
         {pureDrawerOpen && (
           <Drawer onClose={closeDrawer}>
-            <DrawerContent>
-              <Typography size="large" weight="bold">
-                {loremIpsumHeader1}
-              </Typography>
-              <Typography>{loremIpsumParagraph1}</Typography>
-            </DrawerContent>
+            <Typography size="large" weight="bold">
+              {loremIpsumHeader1}
+            </Typography>
+            <Typography>{loremIpsumParagraph1}</Typography>
           </Drawer>
         )}
       </>
@@ -77,22 +73,20 @@ export const Default = () => {
         <Button onClick={openDrawer}>Full Drawer</Button>
         {fullDrawerOpen && (
           <Drawer header={headerComp} footer={footerComp} onClose={closeDrawer}>
-            <Scrollable>
-              <DrawerContent>
-                <Typography size="large" weight="bold">
-                  {loremIpsumHeader1}
-                </Typography>
-                <Typography>{loremIpsumParagraph1}</Typography>
-                <Typography size="large" weight="bold">
-                  {loremIpsumHeader2}
-                </Typography>
-                <Typography>{loremIpsumParagraph2}</Typography>
-                <Typography size="large" weight="bold">
-                  {loremIpsumHeader3}
-                </Typography>
-                <Typography>{loremIpsumParagraph3}</Typography>
-              </DrawerContent>
-            </Scrollable>
+            <Typography size="large" weight="bold">
+              {loremIpsumHeader1}
+            </Typography>
+            <Typography>{loremIpsumParagraph1}</Typography>
+            <br />
+            <Typography size="large" weight="bold">
+              {loremIpsumHeader2}
+            </Typography>
+            <Typography>{loremIpsumParagraph2}</Typography>
+            <br />
+            <Typography size="large" weight="bold">
+              {loremIpsumHeader3}
+            </Typography>
+            <Typography>{loremIpsumParagraph3}</Typography>
           </Drawer>
         )}
       </>

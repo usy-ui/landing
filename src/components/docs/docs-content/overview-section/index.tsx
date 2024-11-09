@@ -48,7 +48,7 @@ export const OverviewSection: FC<OverviewSectionProps> = ({
           Report an issue <ArrowRightIcon />
         </Link>
       </Flex>
-      <Copyable text={importCommand} widthProps={{ maxWidth: "400px" }} />
+      <Copyable text={importCommand} />
     </>
   );
 };
