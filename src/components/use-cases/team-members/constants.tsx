@@ -30,7 +30,7 @@ export const TableColumns: TableColumnType<MemberRowType>[] = [
       width: "80px",
     },
     renderRow: ({ avatarUrl }) => (
-      <Avatar url={avatarUrl} radius="full" size="small" />
+      <Avatar src={avatarUrl} radius="full" size="small" />
     ),
   },
   {
