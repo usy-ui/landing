@@ -4,10 +4,10 @@ import { useMemo } from "react";
 import {
   Button,
   Flex,
-  RadioType,
   globalToast,
   Select,
   usySpacing,
+  SelectItemType,
 } from "@usy-ui/base";
 import { useForm, Controller } from "react-hook-form";
 
@@ -15,7 +15,10 @@ import { CodeBlock, getJsonPreset } from "@/components/common/codeblock";
 
 import { ToastJsonStylesConst } from "../../constants";
 
-type FormFields = { option: RadioType };
+type FormFields = {
+  selectOption: SelectItemType;
+  autoCompleteOption: SelectItemType;
+};
 
 export const Form = () => {
   const items = useMemo(
@@ -29,7 +32,8 @@ export const Form = () => {
 
   const { control, handleSubmit } = useForm<FormFields>({
     defaultValues: {
-      option: items[0],
+      selectOption: items[0],
+      autoCompleteOption: items[0],
     },
   });
 
@@ -44,19 +48,36 @@ export const Form = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Controller
-        name="option"
-        control={control}
-        render={({ field }) => (
-          <Select
-            {...field}
-            label="Select item"
-            items={items}
-            widthProps={{ width: "260px" }}
-            hasAsterisk
-          />
-        )}
-      />
+      <Flex direction="column" gap={usySpacing.px32}>
+        <Controller
+          name="selectOption"
+          control={control}
+          render={({ field }) => (
+            <Select
+              {...field}
+              type="select"
+              label="Select item"
+              items={items}
+              widthProps={{ width: "260px" }}
+              hasAsterisk
+            />
+          )}
+        />
+        <Controller
+          name="autoCompleteOption"
+          control={control}
+          render={({ field }) => (
+            <Select
+              {...field}
+              type="autocomplete"
+              label="Search item"
+              items={items}
+              widthProps={{ width: "260px" }}
+              hasAsterisk
+            />
+          )}
+        />
+      </Flex>
       <Flex
         justifyContent="center"
         alignItems="center"
